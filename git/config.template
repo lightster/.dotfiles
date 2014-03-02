@@ -1,0 +1,25 @@
+[user]
+        name = {%{GIT_NAME}%}
+        email = {%{GIT_EMAIL}%}
+[core]
+        editor = vim
+        template = {%{DOT_PATH}%}/git/ignore
+        autocrlf = input
+[merge]
+        tool = vimdiff
+[alias]
+        unstage = reset HEAD --
+        last = log -1 HEAD
+        stat = status
+        staged = diff --staged
+        discard = checkout --
+        log-v = show --name-status
+[push]
+        default = simple
+[commit]
+        template = {%{DOT_PATH}%}/git/commit-template/{%{GIT_TEMPLATE}%}
+[color]
+        branch = auto
+        diff = auto
+        status = auto
+
