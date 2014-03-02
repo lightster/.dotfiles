@@ -1,0 +1,19 @@
+
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+
+BIN_COMPOSER="~/.composer/vendor/bin"
+BIN_HOME="~/bin"
+BIN_JG_PHP="$(brew --prefix josegonzalez/php/php55)/bin"
+BIN_PG_APP="/Applications/Postgres93.app/Contents/MacOS/bin"
+BIN_LOCAL="/usr/local/bin"
+BIN_LOCAL_SYS="/usr/local/sbin"
+BIN_MTR="/usr/local/Cellar/mtr/0.82/sbin"
+
+PATH="$BIN_COMPOSER:$BIN_HOME:$BIN_JG_PHP:$BIN_PG_APP:$BIN_LOCAL:$BIN_LOCAL_SYS:$BIN_MTR:$PATH"
+
+export PSQL_EDITOR="subl -w"
+export GIT_EDITOR="subl -w"
+export PATH
+
