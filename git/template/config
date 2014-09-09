@@ -1,9 +1,9 @@
 [user]
-        name = {%{GIT_NAME}%}
-        email = {%{GIT_EMAIL}%}
+        name = {{GIT_NAME}}
+        email = {{GIT_EMAIL}}
 [core]
         editor = vim
-        excludesfile = {%{DOT_PATH}%}/git/ignore
+        excludesfile = {{DOT_PATH}}/git/ignore
         autocrlf = input
 [merge]
         tool = vimdiff
@@ -18,7 +18,7 @@
 [push]
         default = simple
 [commit]
-        template = {%{DOT_PATH}%}/git/commit-template/{%{GIT_TEMPLATE}%}
+        template = {{DOT_PATH}}/git/commit-template/{{GIT_TEMPLATE}}
 [color]
         branch = auto
         diff = auto
