@@ -1,0 +1,86 @@
+#!/bin/sh
+
+set -e
+
+DEFAULT_GIT_TEMPLATE="blank"
+DEFAULT_SSH_REPO=".ssh"
+DEFAULT_DOTFILES_REPO=".dotfiles"
+
+echo "Validating for sudo... "
+sudo -v
+
+# https://mths.be/osx
+# Keep-alive: update existing `sudo` time stamp until this script has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+read    -p "What name should be used when git committing? " GIT_NAME
+read    -p "What email address should be used when git committing? " GIT_EMAIL
+read    -p "What git commit template should be used [blank]? " GIT_TEMPLATE
+read    -p "What is your GitHub username? " GITHUB_USERNAME
+read -s -p "What is your GitHub 2FA token? " GITHUB_PASSWORD
+echo ""
+read    -p "What is the name of your '.ssh' repo [.ssh]? " SSH_REPO
+read    -p "What is the name of your '.dotfiles' repo [.dotfiles]? " DOT_FILES
+read    -p "What do you want to name this computer (lightster-xyz)? " COMPUTER_NAME
+
+if [ "$GIT_TEMPLATE" == "" ]; then
+    GIT_TEMPLATE=$DEFAULT_GIT_TEMPLATE
+fi
+if [ "$SSH_REPO" == "" ]; then
+    SSH_REPO=$DEFAULT_SSH_REPO
+fi
+if [ "$DOTFILES_REPO" == "" ]; then
+    DOTFILES_REPO=$DEFAULT_DOTFILES_REPO
+fi
+
+echo ""
+echo "Setting the name of the computer..."
+sudo scutil --set ComputerName "${COMPUTER_NAME}"
+sudo scutil --set HostName "${COMPUTER_NAME}.local"
+sudo scutil --set LocalHostName "${COMPUTER_NAME}"
+
+SSH_REPO_URL="https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com/${GITHUB_USERNAME}/${SSH_REPO}.git"
+
+echo "Removing ~/.gitconfig if it exists"
+rm -f ~/.gitconfig
+
+echo "Setting the git user.name and user.email options"
+git config --global user.name "${GIT_NAME}"
+git config --global user.email "${GIT_EMAIL}"
+
+echo "Setting the git push.default option to simple"
+git config --global push.default simple
+
+echo ""
+echo "Cloning the .ssh repo"
+git clone "${SSH_REPO_URL}" "${HOME}/.ssh"
+
+echo ""
+echo "Creating a new SSH key..."
+ssh-keygen -t rsa -f "${HOME}/.ssh/id_rsa.${COMPUTER_NAME}"
+
+echo ""
+echo "Committing new public key..."
+cd ~/.ssh
+git config remote.origin.url "${SSH_REPO_URL}"
+git add "${HOME}/.ssh/id_rsa.${COMPUTER_NAME}.pub"
+git commit -m "Adding public key for ${COMPUTER_NAME}"
+git push
+./bin/sshk-update
+git remote remove origin
+git remote add origin "git@github.com:${GITHUB_USERNAME}/${SSH_REPO}.git"
+cd - >/dev/null
+
+echo ""
+echo "Cloning the .dotfiles repo..."
+git clone "git@github.com:${GITHUB_USERNAME}/${DOTFILES_REPO}.git" "${HOME}/.dotfiles"
+
+echo ""
+echo "Setting up .dotfiles"
+cd ~/.dotfiles
+echo "${GIT_NAME}" >git/config.user.name
+echo "${GIT_EMAIL}" >git/config.user.email
+echo "${HOME}/.dotfiles" >git/config.dot.path
+echo "${GIT_TEMPLATE}" >git/config.dot.commit_template
+make install
+cd - >/dev/null
