@@ -20,7 +20,7 @@ read    -p "What is your GitHub username? " GITHUB_USERNAME
 read -s -p "What is your GitHub 2FA token? " GITHUB_PASSWORD
 echo ""
 read    -p "What is the name of your '.ssh' repo [.ssh]? " SSH_REPO
-read    -p "What is the name of your '.dotfiles' repo [.dotfiles]? " DOT_FILES
+read    -p "What is the name of your '.dotfiles' repo [.dotfiles]? " DOTFILES_REPO
 read    -p "What do you want to name this computer (lightster-xyz)? " COMPUTER_NAME
 
 if [ "$GIT_TEMPLATE" == "" ]; then
