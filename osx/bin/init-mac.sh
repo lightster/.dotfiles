@@ -69,6 +69,9 @@ git push
 ./bin/sshk-update
 git remote remove origin
 git remote add origin "git@github.com:${GITHUB_USERNAME}/${SSH_REPO}.git"
+BRANCH_NAME=$(git symbolic-ref --short HEAD)
+git pull origin $BRANCH_NAME
+git branch --set-upstream-to="origin/${BRANCH_NAME}" "${BRANCH_NAME}"
 cd - >/dev/null
 
 echo ""
