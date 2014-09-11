@@ -6,6 +6,18 @@ DEFAULT_GIT_TEMPLATE="blank"
 DEFAULT_SSH_REPO=".ssh"
 DEFAULT_DOTFILES_REPO=".dotfiles"
 
+echo "Install Dropbox"
+echo "Install Chrome"
+echo "Install 1Password"
+echo "Install 1Password Extensions"
+
+echo "Run 'xcode-select --install'"
+
+echo "Install VirtualBox"
+echo "Install Homebrew"
+echo "Install Vagrant"
+echo "Install Sublime Text"
+
 echo "Validating for sudo... "
 sudo -v
 
