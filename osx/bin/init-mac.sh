@@ -72,6 +72,15 @@ git remote add origin "git@github.com:${GITHUB_USERNAME}/${SSH_REPO}.git"
 cd - >/dev/null
 
 echo ""
+echo "Adding public key to GitHub account..."
+PUB_KEY=$(cat ${HOME}/.ssh/id_rsa.${COMPUTER_NAME}.pub)
+echo $PUB_KEY
+curl -v \
+    -H "Authorization: token ${GITHUB_PASSWORD}" \
+    -d "{\"title\":\"${USER}@${COMPUTER_NAME}\",\"key\":\"${PUB_KEY}\"}" \
+    https://api.github.com/user/keys
+
+echo ""
 echo "Cloning the .dotfiles repo..."
 git clone "git@github.com:${GITHUB_USERNAME}/${DOTFILES_REPO}.git" "${HOME}/.dotfiles"
 
