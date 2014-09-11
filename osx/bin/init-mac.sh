@@ -39,8 +39,6 @@ sudo scutil --set ComputerName "${COMPUTER_NAME}"
 sudo scutil --set HostName "${COMPUTER_NAME}.local"
 sudo scutil --set LocalHostName "${COMPUTER_NAME}"
 
-SSH_REPO_URL="https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com/${GITHUB_USERNAME}/${SSH_REPO}.git"
-
 echo "Removing ~/.gitconfig if it exists"
 rm -f ~/.gitconfig
 
@@ -52,31 +50,12 @@ echo "Setting the git push.default option to simple"
 git config --global push.default simple
 
 echo ""
-echo "Cloning the .ssh repo"
-git clone "${SSH_REPO_URL}" "${HOME}/.ssh"
-
-echo ""
 echo "Creating a new SSH key..."
-ssh-keygen -t rsa -f "${HOME}/.ssh/id_rsa.${COMPUTER_NAME}"
-
-echo ""
-echo "Committing new public key..."
-cd ~/.ssh
-git config remote.origin.url "${SSH_REPO_URL}"
-git add "${HOME}/.ssh/id_rsa.${COMPUTER_NAME}.pub"
-git commit -m "Adding public key for ${COMPUTER_NAME}"
-git push
-./bin/sshk-update
-git remote remove origin
-git remote add origin "git@github.com:${GITHUB_USERNAME}/${SSH_REPO}.git"
-BRANCH_NAME=$(git symbolic-ref --short HEAD)
-git pull origin $BRANCH_NAME
-git branch --set-upstream-to="origin/${BRANCH_NAME}" "${BRANCH_NAME}"
-cd - >/dev/null
+ssh-keygen -t rsa -f "${HOME}/.ssh/id_rsa"
 
 echo ""
 echo "Adding public key to GitHub account..."
-PUB_KEY=$(cat ${HOME}/.ssh/id_rsa.${COMPUTER_NAME}.pub)
+PUB_KEY=$(cat ${HOME}/.ssh/id_rsa.pub)
 echo $PUB_KEY
 curl -v \
     -H "Authorization: token ${GITHUB_PASSWORD}" \
@@ -84,7 +63,28 @@ curl -v \
     https://api.github.com/user/keys
 
 echo ""
-echo "Cloning the .dotfiles repo..."
+echo "Cloning the .ssh repo to ~/ssh..."
+git clone "git@github.com:${GITHUB_USERNAME}/${SSH_REPO}.git" "${HOME}/ssh"
+cp -a "${HOME}/.ssh/id_rsa" "${HOME}/ssh/id_rsa.${COMPUTER_NAME}"
+cp -a "${HOME}/.ssh/id_rsa.pub" "${HOME}/ssh/id_rsa.${COMPUTER_NAME}.pub"
+cd ~/ssh
+git add "id_rsa.${COMPUTER_NAME}.pub"
+git commit -m "Adding public key for ${COMPUTER_NAME}"
+git push
+./bin/sshk-update
+cd - >/dev/null
+
+echo ""
+echo "Moving ~/.ssh to ~/.ssh-tmp"
+mv ~/.ssh ~/.ssh-tmp
+echo "Moving ~/ssh to ~/.ssh"
+mv ~/ssh ~/.ssh
+
+echo "Killing ssh-agent"
+sudo killall ssh-agent
+
+echo ""
+echo "Cloning the .dotfiles repo to ~/.dotfiles..."
 git clone "git@github.com:${GITHUB_USERNAME}/${DOTFILES_REPO}.git" "${HOME}/.dotfiles"
 
 echo ""
@@ -96,3 +96,8 @@ echo "${HOME}/.dotfiles" >git/config.dot.path
 echo "${GIT_TEMPLATE}" >git/config.dot.commit_template
 make install
 cd - >/dev/null
+
+echo ""
+echo "Cleaning up"
+echo "  Removing ~/.ssh-tmp"
+rm -rf ~/.ssh-tmp
