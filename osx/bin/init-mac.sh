@@ -15,6 +15,8 @@ echo "Run 'xcode-select --install'"
 
 echo "Install VirtualBox"
 echo "Install Homebrew"
+echo '  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+echo '  brew doctor'
 echo "Install Vagrant"
 echo "Install Sublime Text"
 
