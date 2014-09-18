@@ -15,6 +15,7 @@ PATHS=(
     "~/bin"
     "${HOME}/.dotfiles/osx/bin"
     "${BIN_HOMEBREW_PHP}"
+    "/Applications/Postgres.app/Contents/Versions/9.3/bin"
     "/Applications/Postgres93.app/Contents/MacOS/bin"
     "/usr/local/bin"
     "/usr/local/sbin"
