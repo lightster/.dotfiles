@@ -13,6 +13,7 @@ fi
 PATHS=(
     "~/.composer/vendor/bin"
     "~/bin"
+    "${HOME}/.dotfiles/osx/bin"
     "${BIN_HOMEBREW_PHP}"
     "/Applications/Postgres93.app/Contents/MacOS/bin"
     "/usr/local/bin"
