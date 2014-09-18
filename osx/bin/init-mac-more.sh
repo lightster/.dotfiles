@@ -27,6 +27,17 @@ if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
 fi;
 
 ###############################################################################
+# Sublime Text                                                                #
+###############################################################################
+
+# Install Sublime Text settings
+curl -o ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package \
+    https://sublime.wbond.net/Package%20Control.sublime-package
+mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+rmdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+ln -sfn ~/Dropbox/Application\ Support/Sublime\ Text\ 3/Packages/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+
+###############################################################################
 # source bash_profile
 ###############################################################################
 
