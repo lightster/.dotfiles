@@ -3,16 +3,34 @@ if [ -f ~/.bashrc ]; then
         . ~/.bashrc
 fi
 
-BIN_COMPOSER="~/.composer/vendor/bin"
-BIN_HOME="~/bin"
-BIN_JG_PHP="$(brew --prefix homebrew/php/php55)/bin"
-BIN_PG_APP="/Applications/Postgres93.app/Contents/MacOS/bin"
-BIN_LOCAL="/usr/local/bin"
-BIN_LOCAL_SYS="/usr/local/sbin"
-BIN_MTR="/usr/local/Cellar/mtr/0.82/sbin"
-BIN_RUBY="/usr/local/opt/ruby/bin"
+BIN_HOMEBREW_PHP=""
+HOMEBREW_PHP=$(brew --prefix homebrew/php/php55 >/dev/null 2>&1)
+EXIT_CODE=$?
+if [ "${EXIT_CODE}" == "0" ] ; then
+    BIN_HOMEBREW_PHP="${HOMEBREW_PHP}/bin"
+fi
 
-PATH="$BIN_COMPOSER:$BIN_HOME:$BIN_JG_PHP:$BIN_PG_APP:$BIN_LOCAL:$BIN_LOCAL_SYS:$BIN_MTR:$BIN_RUBY:$PATH"
+PATHS=(
+    "~/.composer/vendor/bin"
+    "~/bin"
+    "${BIN_HOMEBREW_PHP}"
+    "/Applications/Postgres93.app/Contents/MacOS/bin"
+    "/usr/local/bin"
+    "/usr/local/sbin"
+    "/usr/local/Cellar/mtr/0.82/sbin"
+    "/usr/local/opt/ruby/bin"
+)
+
+FILTERED_PATHS=()
+for FILTERED_PATH in "${PATHS[@]}" ; do
+    if [ -d "${FILTERED_PATH}" ] ; then
+        FILTERED_PATHS+=("${FILTERED_PATH}")
+    fi
+done
+FILTERED_PATHS+=("${PATH}")
+
+PATHS_STR=$(printf ":%s" "${FILTERED_PATHS[@]}")
+PATH=${PATHS_STR:1}
 
 export PSQL_EDITOR="subl -w"
 export GIT_EDITOR="subl -w"
