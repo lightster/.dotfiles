@@ -19,6 +19,9 @@ echo '  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install
 echo '  brew doctor'
 echo "Install Vagrant"
 echo "Install Sublime Text"
+echo "Install Postgres.app (open http://postgresapp.com)"
+echo "Install dnsmasq via brew"
+echo "Setup 'address=/.v.com/192.168.50.11' in dnsmasq"
 
 echo "Validating for sudo... "
 sudo -v
