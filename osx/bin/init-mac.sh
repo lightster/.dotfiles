@@ -22,6 +22,8 @@ echo "Install Sublime Text"
 echo "Install Postgres.app (open http://postgresapp.com)"
 echo "Install dnsmasq via brew"
 echo "Setup 'address=/.v.com/192.168.50.11' in dnsmasq"
+echo "Update git (brew install git)"
+echo "Make sure to disable atomic saves in your editor"
 
 echo "Validating for sudo... "
 sudo -v
