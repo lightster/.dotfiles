@@ -20,6 +20,7 @@ echo '  brew doctor'
 echo "Install Vagrant"
 echo "Install Sublime Text"
 echo "Install Postgres.app (open http://postgresapp.com)"
+echo "Install postgresql via brew (for better command line tools)"
 echo "Install dnsmasq via brew"
 echo "Setup 'address=/.v.com/192.168.50.11' in dnsmasq"
 echo "Update git (brew install git)"
