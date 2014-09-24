@@ -26,6 +26,11 @@ echo "Setup 'address=/.v.com/192.168.50.11' in dnsmasq"
 echo "Update git (brew install git)"
 echo "Make sure to disable atomic saves in your editor"
 echo "Install MacDown"
+echo "Install composer"
+echo '  curl -sS https://getcomposer.org/installer | php'
+echo '  mv composer.phar /usr/local/bin/composer'
+echo 'Install phpcs (composer global require "squizlabs/php_codesniffer=*")'
+echo 'Install php-cs-fixer (composer global require fabpot/php-cs-fixer @stable)'
 
 echo "Validating for sudo... "
 sudo -v
