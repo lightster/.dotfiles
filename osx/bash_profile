@@ -11,8 +11,8 @@ if [ "${EXIT_CODE}" == "0" ] ; then
 fi
 
 PATHS=(
-    "~/.composer/vendor/bin"
-    "~/bin"
+    "${HOME}/.composer/vendor/bin"
+    "${HOME}/bin"
     "${HOME}/.dotfiles/osx/bin"
     "${BIN_HOMEBREW_PHP}"
     "/usr/local/bin"
