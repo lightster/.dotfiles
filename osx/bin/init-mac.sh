@@ -31,6 +31,7 @@ echo '  curl -sS https://getcomposer.org/installer | php'
 echo '  mv composer.phar /usr/local/bin/composer'
 echo 'Install phpcs (composer global require "squizlabs/php_codesniffer=*")'
 echo 'Install php-cs-fixer (composer global require fabpot/php-cs-fixer @stable)'
+echo 'Install Alfred and setup sync to Dropbox'
 
 echo "Validating for sudo... "
 sudo -v
