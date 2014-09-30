@@ -32,6 +32,7 @@ echo '  sudo mv composer.phar /usr/local/bin/composer'
 echo 'Install phpcs (composer global require "squizlabs/php_codesniffer=*")'
 echo 'Install php-cs-fixer (composer global require fabpot/php-cs-fixer @stable)'
 echo 'Install Alfred and setup sync to Dropbox'
+echo 'Install Caffeine'
 
 echo "Validating for sudo... "
 sudo -v
