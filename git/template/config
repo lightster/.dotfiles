@@ -15,6 +15,9 @@
         discard = checkout --
         log-v = show --name-status
         cpm = cherry-pick -m 1 --no-commit
+        co = checkout
+        go = checkout
+        dm = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 [push]
         default = simple
 [commit]
