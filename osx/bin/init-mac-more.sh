@@ -32,6 +32,12 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
+# Enable highlight hover effect for the grid view of a stack (Dock)
+defaults write com.apple.dock mouse-over-hilite-stack -bool true
+
+# Enable spring loading for all Dock items
+defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
+
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
 
