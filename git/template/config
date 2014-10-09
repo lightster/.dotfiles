@@ -10,14 +10,17 @@
 [alias]
         unstage = reset HEAD --
         last = log -1 HEAD
-        stat = status
-        staged = diff --staged
+        st = status
+        sd = diff --staged
+        sh = stash
         discard = checkout --
         log-v = show --name-status
         cpm = cherry-pick -m 1 --no-commit
         co = checkout
         go = checkout
         dm = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+        p = push
+        po = "!git push -u origin $(git symbolic-ref HEAD | sed -e 's#^refs/heads/##')"
 [push]
         default = simple
 [commit]
