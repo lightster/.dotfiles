@@ -18,7 +18,7 @@
         cpm = cherry-pick -m 1 --no-commit
         co = checkout
         go = checkout
-        dm = "!git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+        dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
         p = push
         po = "!git push -u origin $(git symbolic-ref HEAD | sed -e 's#^refs/heads/##')"
 [push]
