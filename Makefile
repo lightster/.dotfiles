@@ -1,7 +1,10 @@
 mkfile_path = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 current_dir = $(patsubst %/,%,$(dir $(mkfile_path)))
 
-all: install
+all: git-pull install
+
+git-pull:
+	git pull
 
 install:
 	cat $(current_dir)/git/template/config \
@@ -14,4 +17,3 @@ install:
 	ln -sfn $(current_dir)/osx/bash_profile ~/.bash_profile
 	ln -sfn $(current_dir)/osx/bashrc ~/.bashrc
 	ln -sfn $(current_dir)/vim/vimrc ~/.vimrc
-
