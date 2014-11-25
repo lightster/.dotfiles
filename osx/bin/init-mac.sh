@@ -112,6 +112,13 @@ echo "Killing ssh-agent"
 sudo killall ssh-agent
 
 echo ""
+echo "Cloning the .ssh-private repo to ~/.ssh/private..."
+git clone "git@github.com:lightster/.ssh-private.git" "${HOME}/.ssh/private"
+cd ~/.ssh
+./bin/sshk-update
+cd - >/dev/null
+
+echo ""
 echo "Cloning the .dotfiles repo to ~/.dotfiles..."
 git clone "git@github.com:${GITHUB_USERNAME}/${DOTFILES_REPO}.git" "${HOME}/.dotfiles"
 
