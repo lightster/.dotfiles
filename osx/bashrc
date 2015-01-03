@@ -4,7 +4,17 @@ force_color_prompt=yes
 source ~/.dotfiles/git/bin/git-completion.sh
 source ~/.dotfiles/git/bin/git-prompt.sh
 
-PS1='\n[\[\033[0;36m\]\h\[\033[1;37m\]:\[\033[0;34m\]\w\[\033[0;33m\]$(__git_ps1 " (%s)")\[\033[1;37m\] \[\033[1;35m\]\t\[\033[1;37m\]]\[\033[1;35m\]\n    \$\[\033[1;37m\] '
+TEAL='\[\033[0;36m\]'
+HOST='\h'
+WHITE='\[\033[1;37m\]'
+BLUE='\[\033[0;34m\]'
+CWD='\w'
+YELLOW='\[\033[0;33m\]'
+GIT='$(__git_ps1 " (%s)")'
+PURPLE='\[\033[1;35m\]'
+TIME='\t'
+PS1="\n[$TEAL$HOST$WHITE:$BLUE$CWD$YELLOW$GIT$PURPLE $TIME$WHITE]"
+PS1="$PS1\n    $PURPLE\$$WHITE "
 
 export HISTFILESIZE=
 export HISTSIZE=
