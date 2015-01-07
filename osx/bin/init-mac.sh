@@ -17,6 +17,7 @@ echo "Install VirtualBox"
 echo "Install Homebrew"
 echo '  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
 echo '  brew doctor'
+echo "Install Cask (brew install caskroom/cask/brew-cask)"
 echo "Install Vagrant"
 echo "Install Sublime Text"
 echo "Install Postgres.app (open http://postgresapp.com)"
