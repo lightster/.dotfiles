@@ -34,5 +34,6 @@ PATH=${PATHS_STR:1}
 
 export PSQL_EDITOR="subl -w"
 export GIT_EDITOR="subl -w"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export PATH
 
