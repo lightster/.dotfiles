@@ -6,35 +6,34 @@ DEFAULT_GIT_TEMPLATE="blank"
 DEFAULT_SSH_REPO=".ssh"
 DEFAULT_DOTFILES_REPO=".dotfiles"
 
-echo "Install Dropbox"
-echo "Install Chrome"
-echo "Install 1Password"
-echo "Install 1Password Extensions"
-
 echo "Run 'xcode-select --install'"
 
-echo "Install VirtualBox"
-echo "Install Homebrew"
-echo '  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
-echo '  brew doctor'
-echo "Install Cask (brew install caskroom/cask/brew-cask)"
-echo "Install Vagrant"
-echo "Install Sublime Text"
+echo 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+echo 'brew doctor'
+echo 'brew install caskroom/cask/brew-cask'
+echo 'brew tap caskroom/versions'
+echo 'brew cask install dropbox'
+echo 'brew cask install google-chrome'
+echo 'brew cask install 1password'
+echo "Install 1Password Extensions"
+echo 'brew cask install virtualbox'
+echo 'brew cask install vagrant'
+echo 'brew cask install sublime-text3'
 echo "Install Postgres.app (open http://postgresapp.com)"
-echo "Install postgresql via brew (for better command line tools)"
-echo "Install dnsmasq via brew"
-echo "Setup 'address=/.v.com/192.168.50.11' in dnsmasq"
-echo "Update git (brew install git)"
+echo "brew install postgresql (for better command line tools)"
+echo "brew install dnsmasq"
+echo "  Setup 'address=/.v.com/192.168.50.11' in dnsmasq"
+echo "brew install git (new version of git)"
 echo "Make sure to disable atomic saves in your editor"
-echo "Install MacDown"
+echo 'brew cask install macdown'
 echo "Install composer"
-echo '  curl -sS https://getcomposer.org/installer | php'
-echo '  sudo mv composer.phar /usr/local/bin/composer'
-echo 'Install phpcs (composer global require "squizlabs/php_codesniffer=*")'
-echo 'Install php-cs-fixer (composer global require fabpot/php-cs-fixer @stable)'
-echo 'Install Alfred and setup sync to Dropbox'
-echo 'Install Dash'
-echo 'Install Caffeine'
+echo 'curl -sS https://getcomposer.org/installer | php'
+echo 'sudo mv composer.phar /usr/local/bin/composer'
+echo 'composer global require "squizlabs/php_codesniffer=*"'
+echo 'composer global require fabpot/php-cs-fixer @stable'
+echo 'brew cask install alfred'
+echo 'Install Dash (App Store)'
+echo 'Install Caffeine (App Store)'
 
 echo "Validating for sudo... "
 sudo -v
