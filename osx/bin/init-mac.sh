@@ -6,7 +6,15 @@ DEFAULT_GIT_TEMPLATE="blank"
 DEFAULT_SSH_REPO=".ssh"
 DEFAULT_DOTFILES_REPO=".dotfiles"
 
-echo "Run 'xcode-select --install'"
+if [ ! -x "/usr/bin/gcc" ]; then
+    echo "xcode tools are NOT installed."
+    echo "xcode tool installation is about to be requested."
+    echo "Please re-run $0 after xcode tools are installed."
+    sudo gcc --version >/dev/null 2>&1
+    exit 1
+else
+    echo "xcode tools are already installed"
+fi
 
 echo 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
 echo 'brew doctor'
