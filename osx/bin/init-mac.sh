@@ -16,8 +16,9 @@ else
     echo "xcode tools are already installed"
 fi
 
-echo 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
-echo 'brew doctor'
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew doctor
+
 echo 'brew install caskroom/cask/brew-cask'
 echo 'brew tap caskroom/versions'
 echo 'brew cask install dropbox'
