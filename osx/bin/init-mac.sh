@@ -23,23 +23,24 @@ echo 'brew tap caskroom/versions'
 echo 'brew cask install dropbox'
 echo 'brew cask install google-chrome'
 echo 'brew cask install 1password'
-echo "Install 1Password Extensions"
 echo 'brew cask install virtualbox'
 echo 'brew cask install vagrant'
 echo 'brew cask install sublime-text3'
-echo "Install Postgres.app (open http://postgresapp.com)"
+echo 'brew cask install alfred'
 echo "brew install postgresql (for better command line tools)"
 echo "brew install dnsmasq"
 echo "  Setup 'address=/.v.com/192.168.50.11' in dnsmasq"
 echo "brew install git (new version of git)"
-echo "Make sure to disable atomic saves in your editor"
 echo 'brew cask install macdown'
 echo "Install composer"
 echo 'curl -sS https://getcomposer.org/installer | php'
 echo 'sudo mv composer.phar /usr/local/bin/composer'
 echo 'composer global require "squizlabs/php_codesniffer=*"'
 echo 'composer global require fabpot/php-cs-fixer @stable'
-echo 'brew cask install alfred'
+
+echo "Make sure to disable atomic saves in your editor"
+echo "Install Postgres.app (open http://postgresapp.com)"
+echo "Install 1Password Extensions"
 echo 'Install Dash (App Store)'
 echo 'Install Caffeine (App Store)'
 
