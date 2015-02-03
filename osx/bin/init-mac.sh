@@ -28,12 +28,12 @@ brew cask install virtualbox
 brew cask install vagrant
 brew cask install sublime-text3
 brew cask install alfred
+brew cask install macdown
 
 echo "brew install postgresql (for better command line tools)"
 echo "brew install dnsmasq"
 echo "  Setup 'address=/.v.com/192.168.50.11' in dnsmasq"
 echo "brew install git (new version of git)"
-echo 'brew cask install macdown'
 echo "Install composer"
 echo 'curl -sS https://getcomposer.org/installer | php'
 echo 'sudo mv composer.phar /usr/local/bin/composer'
