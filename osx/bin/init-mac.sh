@@ -19,15 +19,16 @@ fi
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
 
-echo 'brew install caskroom/cask/brew-cask'
-echo 'brew tap caskroom/versions'
-echo 'brew cask install dropbox'
-echo 'brew cask install google-chrome'
-echo 'brew cask install 1password'
-echo 'brew cask install virtualbox'
-echo 'brew cask install vagrant'
-echo 'brew cask install sublime-text3'
-echo 'brew cask install alfred'
+brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
+brew cask install dropbox
+brew cask install google-chrome
+brew cask install 1password
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install sublime-text3
+brew cask install alfred
+
 echo "brew install postgresql (for better command line tools)"
 echo "brew install dnsmasq"
 echo "  Setup 'address=/.v.com/192.168.50.11' in dnsmasq"
