@@ -34,9 +34,9 @@ echo "brew install postgresql (for better command line tools)"
 echo "brew install dnsmasq"
 echo "  Setup 'address=/.v.com/192.168.50.11' in dnsmasq"
 echo "brew install git (new version of git)"
-echo "Install composer"
-echo 'curl -sS https://getcomposer.org/installer | php'
-echo 'sudo mv composer.phar /usr/local/bin/composer'
+
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
 echo 'composer global require "squizlabs/php_codesniffer=*"'
 echo 'composer global require fabpot/php-cs-fixer @stable'
 
