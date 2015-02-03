@@ -39,6 +39,7 @@ curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 composer global require "squizlabs/php_codesniffer=*"
 composer global require "fabpot/php-cs-fixer=@stable"
+composer global require "lightster/dnsmasq-mgmt=~0.0.1"
 
 echo "Make sure to disable atomic saves in your editor"
 echo "Install Postgres.app (open http://postgresapp.com)"
