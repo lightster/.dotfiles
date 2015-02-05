@@ -31,8 +31,6 @@ brew cask install alfred
 brew cask install macdown
 
 echo "brew install postgresql (for better command line tools)"
-echo "brew install dnsmasq"
-echo "  Setup 'address=/.v.com/192.168.50.11' in dnsmasq"
 echo "brew install git (new version of git)"
 
 curl -sS https://getcomposer.org/installer | php
@@ -41,7 +39,6 @@ composer global require "squizlabs/php_codesniffer=*"
 composer global require "fabpot/php-cs-fixer=@stable"
 composer global require "lightster/dnsmasq-mgmt=~0.0.1"
 
-echo "Make sure to disable atomic saves in your editor"
 echo "Install Postgres.app (open http://postgresapp.com)"
 echo "Install 1Password Extensions"
 echo 'Install Dash (App Store)'
