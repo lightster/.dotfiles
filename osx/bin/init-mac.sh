@@ -37,8 +37,8 @@ brew cask install sublime-text3
 brew cask install alfred
 brew cask install macdown
 
-echo "brew install postgresql (for better command line tools)"
-echo "brew install git (new version of git)"
+brew install postgresql
+brew install git
 
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
