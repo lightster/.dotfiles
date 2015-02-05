@@ -6,6 +6,13 @@ DEFAULT_GIT_TEMPLATE="blank"
 DEFAULT_SSH_REPO=".ssh"
 DEFAULT_DOTFILES_REPO=".dotfiles"
 
+echo "Validating for sudo... "
+sudo -v
+
+# https://mths.be/osx
+# Keep-alive: update existing `sudo` time stamp until this script has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 if [ ! -x "/usr/bin/gcc" ]; then
     echo "xcode tools are NOT installed."
     echo "xcode tool installation is about to be requested."
@@ -43,13 +50,6 @@ echo "Install Postgres.app (open http://postgresapp.com)"
 echo "Install 1Password Extensions"
 echo 'Install Dash (App Store)'
 echo 'Install Caffeine (App Store)'
-
-echo "Validating for sudo... "
-sudo -v
-
-# https://mths.be/osx
-# Keep-alive: update existing `sudo` time stamp until this script has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 read    -p "What name should be used when git committing? " GIT_NAME
 read    -p "What email address should be used when git committing? " GIT_EMAIL
