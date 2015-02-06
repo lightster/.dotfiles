@@ -23,7 +23,14 @@ else
     echo "xcode tools are already installed"
 fi
 
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+WHICH_BREW=`which brew >/dev/null 2>&1`
+HAS_NOT_BREW=$?
+
+if [ "$HAS_NOT_BREW" == "1" ]; then
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+    brew update
+fi
 brew doctor
 
 brew install caskroom/cask/brew-cask
