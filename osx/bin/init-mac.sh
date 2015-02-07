@@ -33,8 +33,9 @@ else
 fi
 brew doctor
 
-brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
+
+brew install caskroom/cask/brew-cask
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install 1password
