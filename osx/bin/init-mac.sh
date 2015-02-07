@@ -36,9 +36,17 @@ brew doctor
 brew tap caskroom/cask
 brew tap caskroom/versions
 
-brew install postgresql
-brew install git
-brew install brew-cask
+FORMULAS=( \
+    postgresql \
+    git \
+    brew-cask \
+)
+for FORMULA in ${FORMULAS[@]}; do
+    FORMULA_VERSIONS=$(brew list --versions $FORMULA)
+    if [ "$FORMULA_VERSIONS" == "" ]; then
+        brew install $FORMULA
+    fi
+done
 
 brew cask install dropbox
 brew cask install google-chrome
