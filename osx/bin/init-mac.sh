@@ -33,11 +33,12 @@ else
 fi
 brew doctor
 
+brew tap caskroom/cask
 brew tap caskroom/versions
 
 brew install postgresql
 brew install git
-brew install caskroom/cask/brew-cask
+brew install brew-cask
 
 brew cask install dropbox
 brew cask install google-chrome
