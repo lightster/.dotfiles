@@ -35,7 +35,10 @@ brew doctor
 
 brew tap caskroom/versions
 
+brew install postgresql
+brew install git
 brew install caskroom/cask/brew-cask
+
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install 1password
@@ -44,9 +47,6 @@ brew cask install vagrant
 brew cask install sublime-text3
 brew cask install alfred
 brew cask install macdown
-
-brew install postgresql
-brew install git
 
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
