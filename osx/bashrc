@@ -30,6 +30,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias g='git'
+alias v='vagrant'
 
 alias s='cd /Volumes/server.local'
 alias ie-dev='cd /Volumes/server.local/Illuminate/vm'
