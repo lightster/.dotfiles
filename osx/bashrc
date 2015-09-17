@@ -24,7 +24,7 @@ alias ll='ls -l'
 
 alias ~='cd ~'
 alias c='cd'
-alias b='cd -'
+alias -- -='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
