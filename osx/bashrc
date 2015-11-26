@@ -35,3 +35,7 @@ alias v='vagrant'
 alias s='cd /Volumes/server.local'
 alias ie-dev='cd /Volumes/server.local/Illuminate/vm'
 
+_docker_env() {
+    eval "$(docker-machine env $1)"
+}
+alias docker-env=_docker_env
