@@ -38,3 +38,5 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HISTCONTROL=ignorespace
 export HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S "
 export PATH
+
+eval "$(docker-machine env default)"
