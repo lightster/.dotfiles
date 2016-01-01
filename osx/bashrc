@@ -34,6 +34,9 @@ alias v='vagrant'
 
 alias s='cd /Volumes/server.local'
 alias ie-dev='cd /Volumes/server.local/Illuminate/vm'
+alias lds='cd /Volumes/server.local/linode'
+alias ldsv='cd /Volumes/server.local/linode/linode-vagrant'
+alias autobox='cd /Volumes/server.local/linode/autobox'
 
 _docker_env() {
     eval "$(docker-machine env $1)"
