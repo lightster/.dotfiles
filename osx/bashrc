@@ -1,6 +1,11 @@
 
 force_color_prompt=yes
 
+source ~/.dotfiles/osx/config.global.sh
+if [ -f ~/.dotfiles/osx/config.local.sh ]; then
+  source ~/.dotfiles/osx/config.local.sh
+fi
+
 source ~/.dotfiles/git/bin/git-completion.sh
 source ~/.dotfiles/git/bin/git-prompt.sh
 
@@ -32,11 +37,11 @@ alias .....='cd ../../../..'
 alias g='git'
 alias v='vagrant'
 
-alias s='cd /Volumes/server.local'
-alias ie-dev='cd /Volumes/server.local/Illuminate/vm'
-alias lds='cd /Volumes/server.local/linode'
-alias ldsv='cd /Volumes/server.local/linode/linode-vagrant'
-alias autobox='cd /Volumes/server.local/linode/autobox'
+alias s="cd ${SERVER_PATH}"
+alias ie-dev="cd ${SERVER_PATH}/Illuminate/vm"
+alias lds="cd ${SERVER_PATH}/linode"
+alias ldsv="cd ${SERVER_PATH}/linode/linode-vagrant"
+alias autobox="cd ${SERVER_PATH}/linode/autobox"
 
 _docker_env() {
     eval "$(docker-machine env $1)"
