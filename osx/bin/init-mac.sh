@@ -65,6 +65,7 @@ composer global require "fabpot/php-cs-fixer=@stable"
 composer global require "lightster/dnsmasq-mgmt=~0.0.4"
 
 echo "Install Postgres.app (open http://postgresapp.com)"
+echo "Install PhpStorm (open https://www.jetbrains.com/phpstorm/)"
 echo "Install 1Password Extensions"
 echo 'Install Dash (App Store)'
 echo 'Install Caffeine (App Store)'
