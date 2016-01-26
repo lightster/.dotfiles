@@ -38,11 +38,10 @@ alias g='git'
 alias v='vagrant'
 
 alias s="cd ${SERVER_PATH}"
-alias ie-dev="cd ${SERVER_PATH}/Illuminate/vm"
-alias lds="cd ${SERVER_PATH}/linode"
-alias ldsv="cd ${SERVER_PATH}/linode/linode-vagrant"
-alias autobox="cd ${SERVER_PATH}/linode/autobox"
-
+alias ie-dev="cd ${SERVER_PATH}/illuminate.local/vm"
+alias lds="cd ${SERVER_PATH}/lightdatasys.local"
+alias ldsv="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant"
+alias autobox="cd ${SERVER_PATH}/lightdatasys.local/autobox"
 _docker_env() {
     eval "$(docker-machine env $1)"
 }
