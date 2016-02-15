@@ -39,4 +39,7 @@ export HISTCONTROL=ignorespace
 export HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S "
 export PATH
 
-eval "$(docker-machine env default)"
+docker-machine -v >/dev/null 2>&1
+if [ $? -eq 0 ]; then
+    eval "$(docker-machine env default)"
+fi
