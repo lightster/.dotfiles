@@ -24,7 +24,7 @@ PS1="$PS1\n    $PURPLE\$$WHITE "
 export HISTFILESIZE=
 export HISTSIZE=
 
-alias ls='ls -GF'
+alias ls='ls -GF --color=auto'
 alias ll='ls -l'
 
 alias ~='cd ~'
