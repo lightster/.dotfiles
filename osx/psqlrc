@@ -1,0 +1,13 @@
+\set QUIET 1
+
+\set PROMPT1 '%033[1;36m%]%M %033[1;34m%]%/ %033[1;33m%]%#%x %033[0m%]'
+\set PROMPT2 '... # '
+
+\set VERBOSITY verbose
+\set COMP_KEYWORD_CASE upper
+
+\pset null '¤'
+
+\timing
+
+\unset QUIET
