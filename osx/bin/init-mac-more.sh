@@ -30,6 +30,9 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
+# Set mouse speed
+defaults write -g com.apple.mouse.scaling 2.0
+
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
 
