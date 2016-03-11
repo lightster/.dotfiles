@@ -40,6 +40,7 @@ FORMULAS=( \
     postgresql \
     git \
     brew-cask \
+    ack \
 )
 for FORMULA in ${FORMULAS[@]}; do
     FORMULA_VERSIONS=$(brew list --versions $FORMULA)
