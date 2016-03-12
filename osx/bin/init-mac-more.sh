@@ -33,6 +33,9 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Set mouse speed
 defaults write -g com.apple.mouse.scaling 2.0
 
+# Set mouse cursor size
+defaults write com.apple.universalaccess mouseDriverCursorSize 1.85
+
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
 
