@@ -58,6 +58,7 @@ brew cask install sublime-text3
 brew cask install alfred
 brew cask install macdown
 brew cask install sequel-pro
+brew cask install spotify
 
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
