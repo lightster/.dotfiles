@@ -37,7 +37,7 @@ brew tap caskroom/cask
 brew tap caskroom/versions
 
 FORMULAS=( \
-    postgresql \
+    postgresql93 \
     git \
     brew-cask \
     ack \
