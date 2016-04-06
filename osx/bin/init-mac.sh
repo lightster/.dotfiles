@@ -60,6 +60,8 @@ brew cask install macdown
 brew cask install sequel-pro
 brew cask install spotify
 
+sudo gem install travis -v 1.8.2 --no-rdoc --no-ri
+
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 composer global require "squizlabs/php_codesniffer=*"
