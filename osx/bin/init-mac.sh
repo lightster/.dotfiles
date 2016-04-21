@@ -23,8 +23,10 @@ else
     echo "xcode tools are already installed"
 fi
 
+set +e
 WHICH_BREW=`which brew >/dev/null 2>&1`
 HAS_NOT_BREW=$?
+set -e
 
 if [ "$HAS_NOT_BREW" == "1" ]; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
