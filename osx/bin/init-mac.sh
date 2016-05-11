@@ -66,9 +66,11 @@ sudo gem install travis -v 1.8.2 --no-rdoc --no-ri
 
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
-composer global require "squizlabs/php_codesniffer=*"
-composer global require "fabpot/php-cs-fixer=@stable"
-composer global require "lightster/dnsmasq-mgmt=~0.0.4"
+composer global require \
+    "lightster/dnsmasq-mgmt=~0.0.4" \
+    "squizlabs/php_codesniffer=*" \
+    "fabpot/php-cs-fixer=@stable" \
+    "phpmd/phpmd=@stable"
 
 echo "Install Postgres.app (open http://postgresapp.com)"
 echo "Install PhpStorm (open https://www.jetbrains.com/phpstorm/)"
