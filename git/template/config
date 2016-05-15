@@ -19,7 +19,7 @@
         co = checkout
         # switch to a branch, creating it if necessary
         go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
-        dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+        dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d && git remote prune origin"
         p = push
         po = "!git push -u origin $(git symbolic-ref HEAD | sed -e 's#^refs/heads/##')"
 [push]
