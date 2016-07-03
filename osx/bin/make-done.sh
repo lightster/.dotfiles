@@ -9,7 +9,7 @@ fi
 
 echo "Switch .dotfiles from https:// to git://"
 cd ~/.dotfiles
-git remote show origin
+git remote show origin >/dev/null
 if [ "$?" != "0" ]; then
     git remote add origin git://github.com/lightster/.dotfiles.git
     git fetch origin
@@ -19,7 +19,7 @@ cd - >/dev/null
 
 echo "Switch .ssh from https:// to git://"
 cd ~/.ssh
-git remote show origin
+git remote show origin >/dev/null
 if [ "$?" != "0" ]; then
     git remote add origin git://github.com/lightster/.ssh.git
     git fetch origin
