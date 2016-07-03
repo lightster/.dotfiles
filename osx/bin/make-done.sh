@@ -7,26 +7,6 @@ if [ ! -f "${HOME}/.ssh/id_rsa.${HOSTNAME}" ]; then
     exit 1
 fi
 
-echo "Switch .dotfiles from https:// to git://"
-cd ~/.dotfiles
-git remote show origin >/dev/null
-if [ "$?" != "0" ]; then
-    git remote add origin git://github.com/lightster/.dotfiles.git
-    git fetch origin
-    git branch -u origin/master
-fi
-cd - >/dev/null
-
-echo "Switch .ssh from https:// to git://"
-cd ~/.ssh
-git remote show origin >/dev/null
-if [ "$?" != "0" ]; then
-    git remote add origin git://github.com/lightster/.ssh.git
-    git fetch origin
-    git branch -u origin/master
-fi
-cd - >/dev/null
-
 echo ""
 echo "Killing ssh-agent"
 sudo killall ssh-agent
@@ -34,6 +14,7 @@ sudo killall ssh-agent
 echo ""
 echo "Cloning the .ssh-private repo to ~/.ssh/private..."
 if [ ! -d ~/.ssh/private ]; then
+    export GIT_SSH_COMMAND="ssh -i ${HOME}/.ssh/id_rsa.${HOSTNAME} -F /dev/null"
     git clone git@github.com:lightster/.ssh-private.git ~/.ssh/private
     cd ~/.ssh
     ./bin/sshk-update

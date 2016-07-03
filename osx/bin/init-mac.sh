@@ -94,7 +94,7 @@ rm -f ~/.gitconfig
 
 echo ""
 echo "Setting up .dotfiles"
-git clone --origin=https https://github.com/lightster/.dotfiles ~/.dotfiles
+git clone git://github.com/lightster/.dotfiles ~/.dotfiles
 cd ~/.dotfiles
 echo "${GIT_NAME}" >git/config.user.name
 echo "${GIT_EMAIL}" >git/config.user.email
@@ -105,4 +105,4 @@ cd - >/dev/null
 
 echo ""
 echo "Setting up .ssh"
-git clone --origin=https https://github.com/lightster/.ssh ~/.ssh
+git clone git://github.com/lightster/.ssh ~/.ssh
