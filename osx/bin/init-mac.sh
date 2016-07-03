@@ -65,7 +65,7 @@ brew cask install macdown
 brew cask install phpstorm
 brew cask install sequel-pro
 brew cask install spotify
-brew cask install sublime-text3
+brew cask install sublime-text
 brew cask install vagrant
 brew cask install virtualbox
 
