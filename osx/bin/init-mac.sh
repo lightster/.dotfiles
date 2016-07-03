@@ -78,11 +78,6 @@ composer global require \
     "fabpot/php-cs-fixer=@stable" \
     "phpmd/phpmd=@stable"
 
-echo "Install Postgres.app (open http://postgresapp.com)"
-echo "Install 1Password Extensions"
-echo 'Install Dash (App Store)'
-echo 'Install Caffeine (App Store)'
-
 echo ""
 echo "Setting the name of the computer..."
 sudo scutil --set ComputerName "${COMPUTER_NAME}"
