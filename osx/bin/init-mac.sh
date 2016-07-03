@@ -46,7 +46,6 @@ fi
 brew doctor
 
 brew tap homebrew/dupes
-brew tap caskroom/cask
 brew tap caskroom/versions
 
 brew install ack
@@ -95,7 +94,7 @@ rm -f ~/.gitconfig
 
 echo ""
 echo "Setting up .dotfiles"
-git clone --origin=https https://github.com/.dotfiles ~/.dotfiles
+git clone --origin=https https://github.com/lightster/.dotfiles ~/.dotfiles
 cd ~/.dotfiles
 echo "${GIT_NAME}" >git/config.user.name
 echo "${GIT_EMAIL}" >git/config.user.email
@@ -106,4 +105,4 @@ cd - >/dev/null
 
 echo ""
 echo "Setting up .ssh"
-git clone --origin=https https://github.com/.ssh ~/.ssh
+git clone --origin=https https://github.com/lightster/.ssh ~/.ssh
