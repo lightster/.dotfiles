@@ -1,12 +1,12 @@
 mkfile_path = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 current_dir = $(patsubst %/,%,$(dir $(mkfile_path)))
 
-all: git-pull install
+all: git-pull configs pretty done
 
 git-pull:
 	git pull
 
-install:
+configs:
 	cat $(current_dir)/git/template/config \
 		| sed "s#{{GIT_NAME}}#`cat $(current_dir)/git/config.user.name`#g" \
 		| sed "s#{{GIT_EMAIL}}#`cat $(current_dir)/git/config.user.email`#g" \
@@ -18,3 +18,12 @@ install:
 	ln -sfn $(current_dir)/osx/bashrc ~/.bashrc
 	ln -sfn $(current_dir)/osx/psqlrc ~/.psqlrc
 	ln -sfn $(current_dir)/vim/vimrc ~/.vimrc
+
+pretty:
+	bash $(current_dir)/osx/bin/init-mac-more.sh
+
+ssh-key:
+	bash $(current_dir)/osx/bin/make-ssh-key.sh
+
+done:
+	bash $(current_dir)/osx/bin/make-done.sh
