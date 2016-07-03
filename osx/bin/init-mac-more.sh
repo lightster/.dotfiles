@@ -9,6 +9,7 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until this script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+HOSTNAME=$(hostname -s)
 
 ###############################################################################
 # General UI/UX                                                               #
@@ -110,6 +111,14 @@ ln -sfn ~/Dropbox/Application\ Support/Sublime\ Text\ 3/Packages/User ~/Library/
 ###############################################################################
 
 source ~/.bash_profile
+
+###############################################################################
+#
+###############################################################################
+
+ln -sfn ~/Dropbox/Application\ Support/dnsmasq-mgmt ~/.dnsmasq-mgmt
+touch ~/Dropbox/Application\ Support/bash_history/$HOSTNAME
+ln -sfn ~/Dropbox/Application\ Support/bash_history/$HOSTNAME ~/.bash_history
 
 ###############################################################################
 # Kill affected applications                                                  #
