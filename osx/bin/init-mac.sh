@@ -92,17 +92,21 @@ sudo scutil --set LocalHostName "${COMPUTER_NAME}"
 echo "Removing ~/.gitconfig if it exists"
 rm -f ~/.gitconfig
 
-echo ""
-echo "Setting up .dotfiles"
-git clone git://github.com/lightster/.dotfiles ~/.dotfiles
-cd ~/.dotfiles
-echo "${GIT_NAME}" >git/config.user.name
-echo "${GIT_EMAIL}" >git/config.user.email
-echo "${HOME}/.dotfiles" >git/config.dot.path
-echo "${GIT_TEMPLATE}" >git/config.dot.commit_template
-make configs
-cd - >/dev/null
+if [ ! -d ~/.dotfiles ]; then
+    echo ""
+    echo "Setting up .dotfiles"
+    git clone git://github.com/lightster/.dotfiles ~/.dotfiles
+    cd ~/.dotfiles
+    echo "${GIT_NAME}" >git/config.user.name
+    echo "${GIT_EMAIL}" >git/config.user.email
+    echo "${HOME}/.dotfiles" >git/config.dot.path
+    echo "${GIT_TEMPLATE}" >git/config.dot.commit_template
+    make configs
+    cd - >/dev/null
+fi
 
-echo ""
-echo "Setting up .ssh"
-git clone git://github.com/lightster/.ssh ~/.ssh
+if [ ! -d ~/.ssh ]; then
+    echo ""
+    echo "Setting up .ssh"
+    git clone git://github.com/lightster/.ssh ~/.ssh
+fi
