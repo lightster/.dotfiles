@@ -89,9 +89,6 @@ sudo scutil --set ComputerName "${COMPUTER_NAME}"
 sudo scutil --set HostName "${COMPUTER_NAME}.local"
 sudo scutil --set LocalHostName "${COMPUTER_NAME}"
 
-echo "Removing ~/.gitconfig if it exists"
-rm -f ~/.gitconfig
-
 if [ ! -d ~/.dotfiles ]; then
     echo ""
     echo "Setting up .dotfiles"
