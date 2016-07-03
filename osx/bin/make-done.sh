@@ -25,7 +25,9 @@ cd - >/dev/null
 
 echo ""
 echo "Killing ssh-agent"
+set +e
 sudo killall ssh-agent
+set -e
 
 echo ""
 echo "Cloning the .ssh-private repo to ~/.ssh/private..."
