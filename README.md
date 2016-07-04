@@ -83,6 +83,12 @@ Install:
 
  - Setup License
 
+# Terminal
+
+Update Preferences:
+ - Keyboard
+    - Uncheck "Scroll alternate screen"
+
 # Acknowledgements
 
 Parts of my .dotfiles repo is inspired, borrowed, or completely ripped from:
