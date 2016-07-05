@@ -89,6 +89,10 @@ Update Preferences:
  - Keyboard
     - Uncheck "Scroll alternate screen"
 
+# Battery Icon
+
+ - Show Percentage
+
 # Acknowledgements
 
 Parts of my .dotfiles repo is inspired, borrowed, or completely ripped from:
