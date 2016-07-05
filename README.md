@@ -73,6 +73,11 @@ Install:
     - Center (Cmd + Opt + Down)
     - Full Screen (Cmd + Opt + Up)
 
+## PHP Storm
+
+ - Import settings from:
+   `/Users/lightster/Dropbox/Application\ Support/phpstorm-lightster.jar`
+
 ## Postgres.app
 
  - Uncheck Show Welcome Window
