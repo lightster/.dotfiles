@@ -84,17 +84,17 @@ Install:
  - Check Start Postgres.app Automatically
  - Data Directory: /Volumes/data/postgres/var-9.5
 
-# Sublime Text
+## Sublime Text
 
  - Setup License
 
-# Terminal
+## Terminal
 
 Update Preferences:
  - Keyboard
     - Uncheck "Scroll alternate screen"
 
-# Battery Icon
+## Battery Icon
 
  - Show Percentage
 
