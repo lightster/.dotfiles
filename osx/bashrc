@@ -48,7 +48,3 @@ alias ie-dev="cd ${SERVER_PATH}/illuminate.local/vm"
 alias lds="cd ${SERVER_PATH}/lightdatasys.local"
 alias ldsv="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant"
 alias autobox="cd ${SERVER_PATH}/lightdatasys.local/autobox"
-_docker_env() {
-    eval "$(docker-machine env $1)"
-}
-alias docker-env=_docker_env
