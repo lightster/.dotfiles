@@ -32,10 +32,9 @@ FILTERED_PATHS+=("${PATH}")
 PATHS_STR=$(printf ":%s" "${FILTERED_PATHS[@]}")
 PATH=${PATHS_STR:1}
 
-export PSQL_EDITOR="subl -w"
-export GIT_EDITOR="subl -w"
+export PSQL_EDITOR="atom-beta -w"
+export GIT_EDITOR="atom-beta -w"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HISTCONTROL=ignorespace
 export HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S "
 export PATH
-
