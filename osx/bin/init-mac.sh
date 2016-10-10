@@ -67,6 +67,7 @@ brew cask install spotify
 brew cask install sublime-text
 brew cask install vagrant
 brew cask install virtualbox
+brew cask install qlmarkdown
 
 sudo gem install travis -v 1.8.2 --no-rdoc --no-ri
 
