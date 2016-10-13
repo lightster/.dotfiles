@@ -9,17 +9,26 @@ fi
 source ~/.dotfiles/git/bin/git-completion.sh
 source ~/.dotfiles/git/bin/git-prompt.sh
 
-TEAL='\[\033[0;36m\]'
+# http://unix.stackexchange.com/a/31697/85908
+RESET=$(tput sgr0)
+BOLD=$(tput bold)
+BLACK=$(tput setaf 0)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+BLUE=$(tput setaf 4)
+MAGENTA=$(tput setaf 5)
+CYAN=$(tput setaf 6)
+WHITE=$(tput setaf 7)
+
 HOST='\h'
-WHITE='\[\033[1;37m\]'
-BLUE='\[\033[0;34m\]'
 CWD='\w'
-YELLOW='\[\033[0;33m\]'
 GIT='$(__git_ps1 " (%s)")'
-PURPLE='\[\033[1;35m\]'
 TIME='\t'
-PS1="\n[$PURPLE$TIME $TEAL$HOST$WHITE:$BLUE$CWD$YELLOW$GIT$WHITE]"
-PS1="$PS1\n    $PURPLE\$$WHITE "
+PS1="\n[$GREEN$TIME $RED$HOST$WHITE:$BLUE$CWD$YELLOW$GIT$WHITE]"
+PS1="$PS1\n    $PURPLE\$$RESET "
+
+
 
 export HISTFILESIZE=
 export HISTSIZE=
