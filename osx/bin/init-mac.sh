@@ -54,12 +54,14 @@ brew install brew-cask
 brew install git
 brew install --with-default-names gnu-sed
 brew install --with-default-names grep
+brew install npm
 brew install postgresql93
 
 brew cask install 1password
 brew cask install alfred
 brew cask install dropbox
 brew cask install google-chrome
+brew cask install hyper
 brew cask install macdown
 brew cask install phpstorm
 brew cask install sequel-pro
