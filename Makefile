@@ -16,6 +16,7 @@ configs:
 	ln -sfn $(current_dir)/git/config ~/.gitconfig
 	ln -sfn $(current_dir)/osx/bash_profile ~/.bash_profile
 	ln -sfn $(current_dir)/osx/bashrc ~/.bashrc
+	ln -sfn $(current_dir)/osx/hyper.js ~/.hyper.js
 	ln -sfn $(current_dir)/osx/psqlrc ~/.psqlrc
 	ln -sfn $(current_dir)/vim/vimrc ~/.vimrc
 
