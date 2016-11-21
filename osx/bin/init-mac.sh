@@ -57,6 +57,7 @@ brew install homebrew/versions/postgresql95
 
 brew cask install 1password
 brew cask install alfred
+brew cask install atom-beta
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install hyper
