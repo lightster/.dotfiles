@@ -77,7 +77,7 @@ sudo mv composer.phar /usr/local/bin/composer
 composer global require \
     "lightster/dnsmasq-mgmt=~0.0.4" \
     "squizlabs/php_codesniffer=*" \
-    "fabpot/php-cs-fixer=@stable" \
+    "friendsofphp/php-cs-fixer=@stable" \
     "phpmd/phpmd=@stable"
 
 echo ""
