@@ -119,6 +119,7 @@ source ~/.bash_profile
 ln -sfn ~/Dropbox/Application\ Support/dnsmasq-mgmt ~/.dnsmasq-mgmt
 touch ~/Dropbox/Application\ Support/bash_history/$HOSTNAME
 ln -sfn ~/Dropbox/Application\ Support/bash_history/$HOSTNAME ~/.bash_history
+ln -sfn ~/Dropbox/Application\ Support/atom ~/.atom
 
 ###############################################################################
 # Kill affected applications                                                  #
