@@ -12,7 +12,6 @@ GIT_EMAIL="$2"
 GIT_TEMPLATE="$3"
 
 GIT_NAME="Matt Light"
-GIT_TEMPLATE="blank"
 SSH_REPO=".ssh"
 DOTFILES_REPO=".dotfiles"
 
