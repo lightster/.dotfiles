@@ -89,7 +89,7 @@ sudo scutil --set LocalHostName "${COMPUTER_NAME}"
 if [ ! -d ~/.dotfiles ]; then
     echo ""
     echo "Setting up .dotfiles"
-    git clone git://github.com/lightster/.dotfiles ~/.dotfiles
+    git clone git://github.com:lightster/.dotfiles ~/.dotfiles
     cd ~/.dotfiles
     echo "${GIT_NAME}" >git/config.user.name
     echo "${GIT_EMAIL}" >git/config.user.email
@@ -102,5 +102,5 @@ fi
 if [ ! -d ~/.ssh ]; then
     echo ""
     echo "Setting up .ssh"
-    git clone git://github.com/lightster/.ssh ~/.ssh
+    git clone git://github.com:lightster/.ssh ~/.ssh
 fi
