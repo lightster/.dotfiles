@@ -12,7 +12,6 @@ GIT_EMAIL="$2"
 GIT_TEMPLATE="$3"
 
 GIT_NAME="Matt Light"
-GIT_TEMPLATE="blank"
 SSH_REPO=".ssh"
 DOTFILES_REPO=".dotfiles"
 
@@ -50,15 +49,15 @@ brew tap caskroom/versions
 
 brew install ack
 brew install ansible
-brew install brew-cask
 brew install git
 brew install --with-default-names gnu-sed
 brew install --with-default-names grep
 brew install npm
-brew install postgresql93
+brew install homebrew/versions/postgresql95
 
 brew cask install 1password
 brew cask install alfred
+brew cask install atom-beta
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install hyper
@@ -78,7 +77,7 @@ sudo mv composer.phar /usr/local/bin/composer
 composer global require \
     "lightster/dnsmasq-mgmt=~0.0.4" \
     "squizlabs/php_codesniffer=*" \
-    "fabpot/php-cs-fixer=@stable" \
+    "friendsofphp/php-cs-fixer=@stable" \
     "phpmd/phpmd=@stable"
 
 echo ""
@@ -90,7 +89,7 @@ sudo scutil --set LocalHostName "${COMPUTER_NAME}"
 if [ ! -d ~/.dotfiles ]; then
     echo ""
     echo "Setting up .dotfiles"
-    git clone git://github.com/lightster/.dotfiles ~/.dotfiles
+    git clone git://github.com:lightster/.dotfiles ~/.dotfiles
     cd ~/.dotfiles
     echo "${GIT_NAME}" >git/config.user.name
     echo "${GIT_EMAIL}" >git/config.user.email
@@ -103,5 +102,5 @@ fi
 if [ ! -d ~/.ssh ]; then
     echo ""
     echo "Setting up .ssh"
-    git clone git://github.com/lightster/.ssh ~/.ssh
+    git clone git://github.com:lightster/.ssh ~/.ssh
 fi

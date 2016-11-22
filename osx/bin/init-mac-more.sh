@@ -38,7 +38,8 @@ defaults write -g com.apple.mouse.scaling 2.0
 defaults write com.apple.universalaccess mouseDriverCursorSize 1.85
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Turn off accent and allow repeating
 defaults write -g ApplePressAndHoldEnabled -bool false
@@ -119,6 +120,7 @@ source ~/.bash_profile
 ln -sfn ~/Dropbox/Application\ Support/dnsmasq-mgmt ~/.dnsmasq-mgmt
 touch ~/Dropbox/Application\ Support/bash_history/$HOSTNAME
 ln -sfn ~/Dropbox/Application\ Support/bash_history/$HOSTNAME ~/.bash_history
+ln -sfn ~/Dropbox/Application\ Support/atom ~/.atom
 
 ###############################################################################
 # Kill affected applications                                                  #
