@@ -38,3 +38,4 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HISTCONTROL=ignorespace
 export HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S "
 export PATH
+export PYTHONPATH="/usr/local/lib/python2.7/site-packages"
