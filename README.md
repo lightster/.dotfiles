@@ -46,8 +46,8 @@ Spotlight:
 ## App Store
 
 Install:
+ - Amphetamine
  - Be Focused Pro
- - Caffeine
  - Dash 2
  - Slack
  - Window Tidy
@@ -57,12 +57,14 @@ Install:
 Install:
  - [Postgres.app](http://postgresapp.com)
 
-## Caffeine
+## Amphetamine
 
- - Automatically start at login
- - Activate Caffeine at launch
- - Do not show launch message
- - Default duration: 1 hour
+ - Default Session Duration: 2 hours
+ - Menu Bar Action: "Left: Start Session"
+ - Launch Amphetamine at Login
+ - Do Not Show Amphetamine in Dock
+ - Disable all notifications except for automatic session end
+ - Icon: Coffee Cup
 
 ## Window Tidy
 
