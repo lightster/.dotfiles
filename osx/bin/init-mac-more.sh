@@ -79,6 +79,9 @@ defaults write com.apple.dock showhidden -bool true
 # Use the dark menu bar
 defaults write NSGlobalDomain AppleInterfaceStyle Dark
 
+# Show the battery percentage
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
 ###############################################################################
 # Terminal
 ###############################################################################
