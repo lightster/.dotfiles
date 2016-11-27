@@ -73,6 +73,7 @@ Install:
     - Right Half (Cmd + Opt + Right)
     - Center (Cmd + Opt + Down)
     - Full Screen (Cmd + Opt + Up)
+  - Launch at Login
 
 ## PHP Storm
 
