@@ -1,1 +1,1 @@
-export SERVER_PATH='/Volumes/data'
+export SERVER_PATH='/Volumes'
