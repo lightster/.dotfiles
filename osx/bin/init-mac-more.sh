@@ -82,6 +82,9 @@ defaults write NSGlobalDomain AppleInterfaceStyle Dark
 # Show the battery percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
+# Hide the siri icon in the menu bar
+defaults write com.apple.Siri StatusMenuVisible -bool false
+
 ###############################################################################
 # Terminal
 ###############################################################################
