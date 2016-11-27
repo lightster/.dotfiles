@@ -107,10 +107,14 @@ fi;
 ###############################################################################
 
 # Install Sublime Text settings
+mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/
 curl -o ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package \
     https://sublime.wbond.net/Package%20Control.sublime-package
-mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-rmdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+SUBLIME_USER_DIR="${HOME}/Library/Application Support/Sublime Text 3/Packages/User"
+mkdir -p "$SUBLIME_USER_DIR"
+if [[ -d "$SUBLIME_USER_DIR" && ! -L "$SUBLIME_USER_DIR" ]]; then
+    rmdir "$SUBLIME_USER_DIR"
+fi
 ln -sfn ~/Dropbox/Application\ Support/Sublime\ Text\ 3/Packages/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 
 ###############################################################################
