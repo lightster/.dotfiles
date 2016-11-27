@@ -20,3 +20,15 @@ if [ ! -d ~/.ssh/private ]; then
     ./bin/sshk-update
     cd - >/dev/null
 fi
+
+if [ -d ~/.ssh ]; then
+    cd ~/.ssh
+    git remote set-url origin git@github.com:lightster/.ssh.git
+    cd - >/dev/null
+fi
+
+if [ -d ~/.dotfiles ]; then
+    cd ~/.dotfiles
+    git remote set-url origin git@github.com:lightster/.dotfiles.git
+    cd - >/dev/null
+fi
