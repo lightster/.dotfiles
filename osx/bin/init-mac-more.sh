@@ -39,7 +39,7 @@ defaults write com.apple.universalaccess mouseDriverCursorSize 1.85
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain InitialKeyRepeat -int 25
 
 # Turn off accent and allow repeating
 defaults write -g ApplePressAndHoldEnabled -bool false
