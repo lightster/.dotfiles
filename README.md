@@ -48,7 +48,6 @@ Spotlight:
 Install:
  - Amphetamine
  - Be Focused Pro
- - Dash 2
  - Slack
  - Window Tidy
 
