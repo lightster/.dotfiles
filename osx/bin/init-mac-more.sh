@@ -18,6 +18,9 @@ HOSTNAME=$(hostname -s)
 # Set text highlight color to beautiful light/apple green
 defaults write NSGlobalDomain AppleHighlightColor -string "0.752941 0.964706 0.678431"
 
+# Ask for a password after 5 seconds of screensaver
+defaults write com.apple.screensaver askForPasswordDelay -int 5
+
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################

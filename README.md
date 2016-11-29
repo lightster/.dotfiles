@@ -43,6 +43,9 @@ make done
 Spotlight:
  - Disable "Show Spotlight search" keyboard shortcut
 
+Screensaver:
+ - Start after: 5 minutes
+
 ## App Store
 
 Install:
