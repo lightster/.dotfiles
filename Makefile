@@ -27,4 +27,5 @@ ssh-key:
 	bash $(current_dir)/osx/bin/make-ssh-key.sh
 
 done:
+	bash $(current_dir)/osx/bin/setup-sudoers.sh
 	bash $(current_dir)/osx/bin/make-done.sh
