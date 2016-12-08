@@ -68,6 +68,11 @@ Install:
  - Disable all notifications except for automatic session end
  - Icon: Coffee Cup
 
+# Flux
+
+ - Set wake up time
+ - Use location to set coordinates
+
 ## Window Tidy
 
  - Setup Security/Privacy System Preference
