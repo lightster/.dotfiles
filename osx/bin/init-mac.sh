@@ -77,6 +77,8 @@ sudo gem install travis -v 1.8.2 --no-rdoc --no-ri
 
 sudo pip install -q awscli boto boto3
 
+sudo npm install -g eslint eslint-config-google
+
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 composer global require \

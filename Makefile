@@ -19,6 +19,7 @@ configs:
 	ln -sfn $(current_dir)/osx/hyper.js ~/.hyper.js
 	ln -sfn $(current_dir)/osx/psqlrc ~/.psqlrc
 	ln -sfn $(current_dir)/vim/vimrc ~/.vimrc
+	ln -sfn $(current_dir)/osx/eslintrc ~/.eslintrc
 
 pretty:
 	bash $(current_dir)/osx/bin/init-mac-more.sh
