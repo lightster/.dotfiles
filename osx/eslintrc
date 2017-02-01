@@ -1,0 +1,15 @@
+{
+  "extends": "google",
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+  "globals": {
+    "window": true,
+    "_": true,
+    "$": true
+  },
+  "rules": {
+    "no-var": 0
+  }
+}
