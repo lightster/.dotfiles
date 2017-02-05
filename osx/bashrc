@@ -57,3 +57,6 @@ alias ie-dev="cd ${SERVER_PATH}/illuminate.local/vm"
 alias lds="cd ${SERVER_PATH}/lightdatasys.local"
 alias ldsv="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant"
 alias autobox="cd ${SERVER_PATH}/lightdatasys.local/autobox"
+
+# added by travis gem
+[ -f /Users/lightster/.travis/travis.sh ] && source /Users/lightster/.travis/travis.sh
