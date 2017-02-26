@@ -53,6 +53,7 @@ brew install git
 brew install --with-default-names gnu-sed
 brew install --with-default-names grep
 brew install npm
+brew install yarn
 brew install homebrew/versions/postgresql95
 
 brew cask install 1password
