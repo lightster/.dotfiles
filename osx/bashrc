@@ -28,7 +28,8 @@ TIME='\t'
 PS1="\n[$GREEN$TIME $RED$HOST$WHITE:$BLUE$CWD$YELLOW$GIT$WHITE]"
 PS1="$PS1\n    $PURPLE\$$RESET "
 
-
+alias cd='echo "💜 💙 💚 " ; cd'
+alias meow='echo "🐶 🐕 🐩 🐈 🐱 "'
 
 export HISTFILESIZE=
 export HISTSIZE=
