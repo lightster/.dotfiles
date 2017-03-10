@@ -29,7 +29,8 @@ PS1="\n[$GREEN$TIME $RED$HOST$WHITE:$BLUE$CWD$YELLOW$GIT$WHITE]"
 PS1="$PS1\n    $PURPLE\$$RESET "
 
 alias cd='echo "💜 💙 💚 " ; cd'
-alias meow='echo "🐶 🐕 🐩 🐈 🐱 "'
+alias meow='echo "🐱 "'
+alias ssh='echo "🚒  🚒   🚒     🚒          🚒            🚒   " ; ssh'
 
 export HISTFILESIZE=
 export HISTSIZE=
