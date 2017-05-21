@@ -1,6 +1,7 @@
 [user]
         name = Matt Light
         email = matt.light@lightdatasys.com
+        signingkey = 009B0CBFEF3FF656
 [core]
         editor = vim
         excludesfile = ~/.dotfiles/git/ignore
@@ -28,6 +29,7 @@
         rebase = true
 [commit]
         template = ~/.dotfiles/git/commit-template/blank
+        gpgsign = true
 [color]
         branch = auto
         diff = auto
