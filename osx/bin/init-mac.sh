@@ -2,14 +2,12 @@
 
 set -e
 
-if [ "$#" != "3" ]; then
-    echo "Usage: $0 computer-name git-email git-template"
+if [ "$#" != "1" ]; then
+    echo "Usage: $0 computer-name"
     exit 1
 fi
 
 COMPUTER_NAME="$1"
-GIT_EMAIL="$2"
-GIT_TEMPLATE="$3"
 
 GIT_NAME="Matt Light"
 SSH_REPO=".ssh"
@@ -103,10 +101,6 @@ if [ ! -d ~/.dotfiles ]; then
     echo "Setting up .dotfiles"
     git clone https://github.com/lightster/.dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
-    echo "${GIT_NAME}" >git/config.user.name
-    echo "${GIT_EMAIL}" >git/config.user.email
-    echo "${HOME}/.dotfiles" >git/config.dot.path
-    echo "${GIT_TEMPLATE}" >git/config.dot.commit_template
     make configs
     cd - >/dev/null
 fi

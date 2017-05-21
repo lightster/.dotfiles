@@ -1,9 +1,9 @@
 [user]
-        name = {{GIT_NAME}}
-        email = {{GIT_EMAIL}}
+        name = Matt Light
+        email = matt.light@lightdatasys.com
 [core]
         editor = vim
-        excludesfile = {{DOT_PATH}}/git/ignore
+        excludesfile = ~/.dotfiles/git/ignore
         autocrlf = input
 [merge]
         tool = vimdiff
@@ -27,9 +27,13 @@
 [pull]
         rebase = true
 [commit]
-        template = {{DOT_PATH}}/git/commit-template/{{GIT_TEMPLATE}}
+        template = ~/.dotfiles/git/commit-template/blank
 [color]
         branch = auto
         diff = auto
         status = auto
 
+[includeIf "gitdir:/home/mlight/public_html/"]
+        path = ~/.dotfiles/git/config-ie
+[includeIf "gitdir:/Volumes/illuminate.local/"]
+        path = ~/.dotfiles/git/config-ie
