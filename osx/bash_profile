@@ -14,11 +14,13 @@ PATHS=(
     "${HOME}/.composer/vendor/bin"
     "${HOME}/bin"
     "${HOME}/.dotfiles/osx/bin"
+    "${HOME}/go/bin"
     "${BIN_HOMEBREW_PHP}"
     "/usr/local/bin"
     "/usr/local/sbin"
     "/usr/local/Cellar/mtr/0.82/sbin"
     "/usr/local/opt/ruby/bin"
+    "${HOME}/.yarn/bin"
 )
 
 FILTERED_PATHS=()
