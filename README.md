@@ -118,6 +118,7 @@ rsync -aP ~/Disks/*.sparsebundle /Volumes/lightster-homedir/${BACKUP_NAME}/
 rsync -aP ~/Library/Messages/ /Volumes/lightster-homedir/${BACKUP_NAME}/Messages/
 rsync -aP ~/.ssh/ /Volumes/lightster-homedir/${BACKUP_NAME}/hidden.ssh/
 rsync -aP ~/Library/Application\ Support/ /Volumes/lightster-homedir/${BACKUP_NAME}/Application\ Support/
+pg_dump -U postgres -F c dev_sqlboss >/Volumes/lightster-homedir/sqlboss.pgc
 ```
 
 # Acknowledgements
