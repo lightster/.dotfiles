@@ -108,6 +108,18 @@ Update Preferences:
 
  - Show Percentage
 
+# What to do when transitioning to a new Mac
+
+On the old Mac:
+
+```bash
+BACKUP_NAME=2017.05.28
+rsync -aP ~/Disks/*.sparsebundle /Volumes/lightster-homedir/${BACKUP_NAME}/
+rsync -aP ~/Library/Messages/ /Volumes/lightster-homedir/${BACKUP_NAME}/Messages/
+rsync -aP ~/.ssh/ /Volumes/lightster-homedir/${BACKUP_NAME}/hidden.ssh/
+rsync -aP ~/Library/Application\ Support/ /Volumes/lightster-homedir/${BACKUP_NAME}/Application\ Support/
+```
+
 # Acknowledgements
 
 Parts of my .dotfiles repo is inspired, borrowed, or completely ripped from:
