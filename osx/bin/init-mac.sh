@@ -63,7 +63,6 @@ brew cask install dropbox
 brew cask install flux
 brew cask install google-chrome
 brew cask install hyper
-brew cask install logitech-control-center
 brew cask install macdown
 brew cask install phpstorm
 brew cask install sequel-pro
