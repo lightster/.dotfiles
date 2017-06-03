@@ -60,6 +60,13 @@ alias lds="cd ${SERVER_PATH}/lightdatasys.local"
 alias ldsv="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant"
 alias autobox="cd ${SERVER_PATH}/lightdatasys.local/autobox"
 
+alias ie='ie-dev'
+alias pd="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase"
+alias qs="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase/quick-switcher"
+alias ravens="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase/ravens"
+alias hodor="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase/hodor-dev"
+alias dotfiles="cd ~/.dotfiles"
+
 # added by travis gem
 [ -f /Users/lightster/.travis/travis.sh ] && source /Users/lightster/.travis/travis.sh
 
