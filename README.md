@@ -46,6 +46,11 @@ Spotlight:
 Screensaver:
  - Start after: 5 minutes
 
+Night Shift:
+
+ - Schedule: Sunset to Sunrise
+ - Color Temperature: 75% (closer to more warm)
+
 ## App Store
 
 Install:
@@ -67,11 +72,6 @@ Install:
  - Do Not Show Amphetamine in Dock
  - Disable all notifications except for automatic session end
  - Icon: Coffee Cup
-
-# Flux
-
- - Set wake up time
- - Use location to set coordinates
 
 ## Window Tidy
 
