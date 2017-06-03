@@ -56,6 +56,7 @@ Night Shift:
 Install:
  - Amphetamine
  - Be Focused Pro
+ - iA Writer
  - Slack
  - Window Tidy
 
@@ -72,6 +73,22 @@ Install:
  - Do Not Show Amphetamine in Dock
  - Disable all notifications except for automatic session end
  - Icon: Coffee Cup
+
+## iA Writer
+
+ - General
+   - Colors: Night mode
+ - Files
+   - Default extension: md
+ - Library
+   - Locations:
+     - iCloud
+     - playbook
+     - Year 31
+     - acloud.guru notes
+ - Editor:
+   - Check grammar with spelling: Uncheck
+   - Indent text using: Spaces
 
 ## Window Tidy
 
