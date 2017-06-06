@@ -44,6 +44,8 @@ Spotlight:
  - Disable "Show Spotlight search" keyboard shortcut
 
 Screensaver:
+ - Download and install [Aerial Screensaver](https://github.com/JohnCoates/Aerial)
+ - Setup screen saver to download the videos
  - Start after: 5 minutes
 
 Night Shift:
