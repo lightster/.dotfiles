@@ -23,6 +23,7 @@
         dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d && git remote prune origin"
         p = push
         po = "!git push -u origin $(git symbolic-ref HEAD | sed -e 's#^refs/heads/##')"
+        changelog = "log --no-merges --date=short --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%Creset'"
 [push]
         default = simple
 [pull]
