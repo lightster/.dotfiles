@@ -1,7 +1,7 @@
 mkfile_path = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 current_dir = $(patsubst %/,%,$(dir $(mkfile_path)))
 
-all: git-pull configs pretty done
+all: git-pull configs app-store pretty done
 
 git-pull:
 	git pull
@@ -14,6 +14,15 @@ configs:
 	ln -sfn $(current_dir)/osx/psqlrc ~/.psqlrc
 	ln -sfn $(current_dir)/vim/vimrc ~/.vimrc
 	ln -sfn $(current_dir)/osx/eslintrc ~/.eslintrc
+
+app-store:
+	mas signin lightster@gmail.com
+	mas install 937984704 # Amphetamine
+	mas install 961632517 # Be Focused Pro
+	mas install 775737590 # iA Writer
+	mas install 405399194 # Kindle
+	mas install 803453959 # Slack
+	mas install 456609775 # Window Tidy
 
 pretty:
 	bash $(current_dir)/osx/bin/init-mac-more.sh

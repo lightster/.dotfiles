@@ -53,15 +53,6 @@ Night Shift:
  - Schedule: Sunset to Sunrise
  - Color Temperature: 75% (closer to more warm)
 
-## App Store
-
-Install:
- - Amphetamine
- - Be Focused Pro
- - iA Writer
- - Slack
- - Window Tidy
-
 ## Other Applications
 
 Install:
