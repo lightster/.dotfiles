@@ -23,6 +23,11 @@ bash /tmp/init.mac.sh computer-name git-email git-template
 
 Sign into Google accounts
 
+## Setup GPG
+
+- `gpg --import --allow-secret-key-import /path/to/private-key.asc`
+- Import private key into GPG keychain
+
 ## Finish Terminal Setup
 
 ```bash
@@ -118,11 +123,6 @@ Install:
 ## Battery Icon
 
  - Show Percentage
-
-## Setup GPG
-
- - `gpg --import --allow-secret-key-import /path/to/private-key.asc`
- - Import private key into GPG keychain
 
 # What to do when transitioning to a new Mac
 
