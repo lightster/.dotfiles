@@ -119,6 +119,11 @@ Install:
 
  - Show Percentage
 
+## Setup GPG
+
+ - `gpg --import --allow-secret-key-import /path/to/private-key.asc`
+ - Import private key into GPG keychain
+
 # What to do when transitioning to a new Mac
 
 On the old Mac:

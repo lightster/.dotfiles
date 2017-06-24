@@ -14,6 +14,7 @@ configs:
 	ln -sfn $(current_dir)/osx/psqlrc ~/.psqlrc
 	ln -sfn $(current_dir)/vim/vimrc ~/.vimrc
 	ln -sfn $(current_dir)/osx/eslintrc ~/.eslintrc
+	ln -sfn $(current_dir)/osx/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
 app-store:
 	bash $(current_dir)/osx/bin/make-app-store.sh
