@@ -108,12 +108,6 @@ Install:
 
  - Setup License
 
-## Terminal
-
-Update Preferences:
- - Keyboard
-    - Uncheck "Scroll alternate screen"
-
 ## Battery Icon
 
  - Show Percentage
