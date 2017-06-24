@@ -92,12 +92,16 @@ if [ ! -d ~/.dotfiles ]; then
     cd ~/.dotfiles
     make configs
     cd - >/dev/null
+else
+    echo ".dotfiles already setup"
 fi
 
 if [ ! -d ~/.ssh ]; then
     echo ""
     echo "Setting up .ssh"
     git clone https://github.com/lightster/.ssh.git ~/.ssh
+else
+    echo ".ssh already setup"
 fi
 
 source ~/.bash_profile
