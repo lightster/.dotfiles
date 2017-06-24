@@ -20,16 +20,6 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until this script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-if [ ! -x "/usr/bin/gcc" ]; then
-    echo "xcode tools are NOT installed."
-    echo "xcode tool installation is about to be requested."
-    echo "Please re-run $0 after xcode tools are installed."
-    sudo gcc --version >/dev/null 2>&1
-    exit 1
-else
-    echo "xcode tools are already installed"
-fi
-
 set +e
 WHICH_BREW=`which brew >/dev/null 2>&1`
 HAS_NOT_BREW=$?
@@ -51,6 +41,7 @@ brew install git
 brew install --with-default-names gnu-sed
 brew install gpg
 brew install --with-default-names grep
+brew install mas
 brew install npm
 brew install postgresql
 brew install yarn
