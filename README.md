@@ -37,6 +37,8 @@ make done
 
 1. Setup Powerpack License
 2. Setup Sync folder to "~/Dropbox/Application Support/Alfred"
+3. Set theme to Alfred Dark
+4. Set hotkey to Cmd+Space
 
 ## System Preferences
 
