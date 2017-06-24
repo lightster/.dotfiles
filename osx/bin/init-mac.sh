@@ -99,3 +99,5 @@ if [ ! -d ~/.ssh ]; then
     echo "Setting up .ssh"
     git clone https://github.com/lightster/.ssh.git ~/.ssh
 fi
+
+echo "👨🏼‍💻 😌 "
