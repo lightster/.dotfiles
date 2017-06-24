@@ -104,8 +104,6 @@ else
     echo ".ssh already setup"
 fi
 
-source ~/.bash_profile
-
-rvm alias create default system
+~/.rvm/bin/rvm alias create default system
 
 echo "👨🏼‍💻 😌 "
