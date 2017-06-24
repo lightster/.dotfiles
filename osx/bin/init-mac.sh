@@ -71,8 +71,6 @@ sudo pip install -q awscli boto boto3
 
 npm install -g eslint eslint-config-google http-server
 
-rvm alias create default system
-
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 composer global require \
@@ -101,5 +99,9 @@ if [ ! -d ~/.ssh ]; then
     echo "Setting up .ssh"
     git clone https://github.com/lightster/.ssh.git ~/.ssh
 fi
+
+source ~/.bash_profile
+
+rvm alias create default system
 
 echo "👨🏼‍💻 😌 "
