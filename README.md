@@ -102,9 +102,14 @@ Install:
 
 ## Postgres.app
 
- - Uncheck Show Welcome Window
- - Check Start Postgres.app Automatically
- - Data Directory: /Volumes/data/postgres/var-9.5
+ - Remove default server
+ - Add server
+   - Name: 9.6
+   - Version: 9.6
+   - Disks: /Users/lightster/Disks/Postgres/var-9.6
+   - Port: 5432
+   - Server settings: Automatically start server
+   - Initialize
 
 ## Sublime Text
 
