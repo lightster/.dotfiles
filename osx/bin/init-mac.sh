@@ -32,7 +32,6 @@ else
 fi
 brew doctor
 
-brew tap homebrew/dupes
 brew tap caskroom/versions
 
 brew install ack
@@ -70,6 +69,8 @@ sudo gem install travis -v 1.8.2 --no-rdoc --no-ri
 sudo pip install -q awscli boto boto3
 
 npm install -g eslint eslint-config-google http-server
+
+rvm alias create default system
 
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
