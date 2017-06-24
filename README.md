@@ -1,7 +1,7 @@
 .dotfiles
 =========
 
-The *nix dot files I use on my machines
+The dot files I use on my machines
 
 ## Initial Setup
 
