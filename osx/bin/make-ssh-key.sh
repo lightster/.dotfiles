@@ -4,7 +4,9 @@ set -e
 
 HOSTNAME=$(hostname -s)
 
-#ssh-keygen -t rsa -f "${HOME}/.ssh/id_rsa.${HOSTNAME}"
+if [ ! -f "${HOME}/.ssh/id_rsa.${HOSTNAME}" ]; then
+    ssh-keygen -t rsa -f "${HOME}/.ssh/id_rsa.${HOSTNAME}"
+fi
 
 echo ""
 echo "Upload ${HOME}/.ssh/id_rsa.${HOSTNAME}.pub to ~/.dotfiles"
