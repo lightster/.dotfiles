@@ -67,7 +67,7 @@ Install:
  - Launch Amphetamine at Login
  - Do Not Show Amphetamine in Dock
  - Disable all notifications except for automatic session end
- - Icon: Coffee Cup
+ - Icon: Coffee Mug
 
 ## iA Writer
 
