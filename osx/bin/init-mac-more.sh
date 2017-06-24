@@ -135,4 +135,6 @@ touch ~/Dropbox/Application\ Support/bash_history/$HOSTNAME
 ln -sfn ~/Dropbox/Application\ Support/bash_history/$HOSTNAME ~/.bash_history
 ln -sfn ~/Dropbox/Application\ Support/atom ~/.atom
 
+dockutil --remove all
+
 echo "Done. Some changes require a logout/restart to take effect."
