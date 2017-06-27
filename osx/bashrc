@@ -53,8 +53,9 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias g='git'
 alias v='vagrant'
+alias a='atom-beta'
+alias atom='a'
 
-alias s="cd ${SERVER_PATH}"
 alias ie-dev="cd ${SERVER_PATH}/illuminate.local/vm"
 alias lds="cd ${SERVER_PATH}/lightdatasys.local"
 alias ldsv="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant"
@@ -67,6 +68,7 @@ alias ravens="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase/raven
 alias hodor="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase/hodor-dev"
 alias dotfiles="cd ~/.dotfiles"
 alias pb='cd ~/Dropbox/playbook'
+alias atd='cd ${SERVER_PATH}/illuminate.local/vm/illuminate/codebase/allthedata/master'
 
 # added by travis gem
 [ -f /Users/lightster/.travis/travis.sh ] && source /Users/lightster/.travis/travis.sh
