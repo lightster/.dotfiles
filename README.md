@@ -124,6 +124,53 @@ Install:
 
  - Show Percentage
 
+## Finder
+
+Open Finder Preferences (Cmd+,).
+
+General settings:
+
+- Uncheck "External disks" under "Show these items on the desktop"
+- New Finder windows show: lightster
+
+Sidebar settings:
+
+- Favorites
+    - x All My Files
+    - x AirDrop
+    - √ Applications:
+    - √ Downloads
+    - x Movies
+    - x Music
+    - x Pictures
+    - √ lightster
+- iCloud
+    - x iCloud Drive
+    - √ Desktop
+    - x Documents
+- Shared
+    - √ Back to My Mac
+    - √ Connected servers
+    - √ Bonjour computers
+- Devices
+    - √ [Computer]
+    - x Hard Disks
+    - √ External disks
+    - √ CDs, DVDs and iPods
+    - (Drag off Remote Disc)
+- Tags
+    - x Recent Tags
+
+Navigate to Dropbox folder and open "Show View Options" (Cmd+J)
+
+- √ Always Open in List View
+- √ Browse in List View
+- Arrange by Name
+- Sort by Name
+- Icon Size: Larger
+
+Click "Use as Defaults"
+
 # What to do when transitioning to a new Mac
 
 On the old Mac:
