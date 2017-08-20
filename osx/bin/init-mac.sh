@@ -69,7 +69,7 @@ curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
 
 sudo gem install travis -v 1.8.2 --no-rdoc --no-ri
 
-sudo pip install -q awscli boto boto3
+sudo pip2 install -q awscli boto boto3
 
 npm install -g eslint eslint-config-google http-server
 
