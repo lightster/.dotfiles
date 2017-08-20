@@ -7,7 +7,7 @@ The dot files I use on my machines
 
 ```bash
 curl -sS https://raw.githubusercontent.com/lightster/.dotfiles/master/osx/bin/init-mac.sh >/tmp/init.mac.sh
-bash /tmp/init.mac.sh computer-name git-email git-template
+bash /tmp/init.mac.sh computer-name
 ```
 
 ## Dropbox
