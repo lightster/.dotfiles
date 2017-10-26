@@ -1,6 +1,5 @@
 [user]
         name = Matt Light
-        email = matt.light@lightdatasys.com
         signingkey = 009B0CBFEF3FF656
 [core]
         editor = vim
@@ -29,14 +28,19 @@
 [pull]
         rebase = true
 [commit]
-        template = ~/.dotfiles/git/commit-template/blank
         gpgsign = true
 [color]
         branch = auto
         diff = auto
         status = auto
 
+[include]
+        path = ~/.dotfiles/git/config-personal
 [includeIf "gitdir:/home/mlight/public_html/"]
         path = ~/.dotfiles/git/config-ie
 [includeIf "gitdir:/Volumes/illuminate.local/"]
+        path = ~/.dotfiles/git/config-ie
+[includeIf "gitdir:/**/pier-11/"]
+        path = ~/.dotfiles/git/config-personal
+[includeIf "gitdir:/**/pier-11/codebase/illuminateeducation/"]
         path = ~/.dotfiles/git/config-ie

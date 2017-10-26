@@ -1,5 +1,4 @@
 [user]
-        name = Matt Light
         email = matt.light@illuminateed.com
 [commit]
         template = ~/.dotfiles/git/commit-template/illuminate-education
