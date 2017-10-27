@@ -8,7 +8,10 @@ fi
 
 source ~/.dotfiles/git/bin/git-completion.sh
 source ~/.dotfiles/git/bin/git-prompt.sh
-source ~/.dotfiles/osx/bin/source/*.sh
+
+if [ -f /Volumes/*/pier-11/codebase/lightster/pier-cli/bin/bash_functions.sh ]; then
+  source /Volumes/*/pier-11/codebase/lightster/pier-cli/bin/bash_functions.sh
+fi
 
 # http://unix.stackexchange.com/a/31697/85908
 RESET="\[$(tput sgr0)\]"
