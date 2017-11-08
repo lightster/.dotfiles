@@ -74,6 +74,8 @@ alias dotfiles="cd ~/.dotfiles"
 alias pb='cd ~/Dropbox/playbook'
 alias atd='cd ${SERVER_PATH}/illuminate.local/vm/illuminate/codebase/allthedata/master'
 alias pi='cd ${SERVER_PATH}/*.local/pier-11'
+alias m='moor'
+alias p='pier'
 
 # added by travis gem
 [ -f /Users/lightster/.travis/travis.sh ] && source /Users/lightster/.travis/travis.sh
