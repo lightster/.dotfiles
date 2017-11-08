@@ -13,6 +13,8 @@ if [ -f /Volumes/*/pier-11/codebase/lightster/pier-cli/bin/bash_functions.sh ]; 
   source /Volumes/*/pier-11/codebase/lightster/pier-cli/bin/bash_functions.sh
 fi
 
+source ~/.dotfiles/osx/aliases
+
 # http://unix.stackexchange.com/a/31697/85908
 RESET="\[$(tput sgr0)\]"
 BOLD="\[$(tput bold)\]"
@@ -32,50 +34,8 @@ TIME='\t'
 PS1="\n[$GREEN$TIME $RED$HOST$WHITE:$BLUE$CWD$YELLOW$GIT$WHITE]"
 PS1="$PS1\n    $PURPLE\$$RESET "
 
-alias cd='echo "💜 💙 💚 " ; cd'
-alias meow='echo "🐱 "'
-alias ssh='echo "🚒  🚒   🚒     🚒          🚒            🚒   " ; ssh'
-
 export HISTFILESIZE=
 export HISTSIZE=
-
-ls --color=auto >/dev/null 2>&1
-if [ $? -eq 0 ]; then
-    alias ls='ls -GF --color=auto'
-else
-    alias ls='ls -GF'
-fi
-alias ll='ls -l'
-alias sudo='sudo '
-
-alias ~='cd ~'
-alias c='cd'
-alias -- -='cd -'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias g='git'
-alias v='vagrant'
-alias a='atom-beta'
-alias atom='a'
-
-alias ie-dev="cd ${SERVER_PATH}/illuminate.local/vm"
-alias lds="cd ${SERVER_PATH}/lightdatasys.local"
-alias ldsv="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant"
-alias autobox="cd ${SERVER_PATH}/lightdatasys.local/autobox"
-
-alias ie='ie-dev'
-alias pd="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase"
-alias qs="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase/quick-switcher"
-alias ravens="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase/ravens"
-alias hodor="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase/hodor-dev"
-alias dotfiles="cd ~/.dotfiles"
-alias pb='cd ~/Dropbox/playbook'
-alias atd='cd ${SERVER_PATH}/illuminate.local/vm/illuminate/codebase/allthedata/master'
-alias pi='cd ${SERVER_PATH}/*.local/pier-11'
-alias m='moor'
-alias p='pier'
 
 # added by travis gem
 [ -f /Users/lightster/.travis/travis.sh ] && source /Users/lightster/.travis/travis.sh

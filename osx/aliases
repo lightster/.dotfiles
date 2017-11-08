@@ -1,0 +1,41 @@
+alias cd='echo "💜 💙 💚 " ; cd'
+alias meow='echo "🐱 "'
+alias ssh='echo "🚒  🚒   🚒     🚒          🚒            🚒   " ; ssh'
+
+ls --color=auto >/dev/null 2>&1
+if [ $? -eq 0 ]; then
+    alias ls='ls -GF --color=auto'
+else
+    alias ls='ls -GF'
+fi
+alias ll='ls -l'
+alias sudo='sudo '
+
+alias ~='cd ~'
+alias c='cd'
+alias -- -='cd -'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias g='git'
+alias v='vagrant'
+alias a='atom-beta'
+alias atom='a'
+
+alias ie-dev="cd ${SERVER_PATH}/illuminate.local/vm"
+alias lds="cd ${SERVER_PATH}/lightdatasys.local"
+alias ldsv="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant"
+alias autobox="cd ${SERVER_PATH}/lightdatasys.local/autobox"
+
+alias ie='ie-dev'
+alias pd="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase"
+alias qs="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase/quick-switcher"
+alias ravens="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase/ravens"
+alias hodor="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase/hodor-dev"
+alias dotfiles="cd ~/.dotfiles"
+alias pb='cd ~/Dropbox/playbook'
+alias atd='cd ${SERVER_PATH}/illuminate.local/vm/illuminate/codebase/allthedata/master'
+alias pi='cd ${SERVER_PATH}/*.local/pier-11'
+alias m='moor'
+alias p='pier'
