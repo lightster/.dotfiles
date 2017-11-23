@@ -52,7 +52,7 @@ brew cask install alfred
 brew cask install atom-beta
 brew cask install dash2
 brew cask install dropbox
-brew cask install gpgtools
+brew cask install gpg-suite
 brew cask install google-chrome
 brew cask install hyper
 brew cask install macdown
