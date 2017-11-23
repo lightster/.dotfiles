@@ -6,3 +6,4 @@ mas install 775737590 # iA Writer
 mas install 405399194 # Kindle
 mas install 803453959 # Slack
 mas install 456609775 # Window Tidy
+mas install 1091189122 # Bear
