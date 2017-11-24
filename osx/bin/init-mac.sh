@@ -55,14 +55,12 @@ brew cask install dropbox
 brew cask install gpg-suite
 brew cask install google-chrome
 brew cask install hyper
-brew cask install macdown
 brew cask install phpstorm
 brew cask install sequel-pro
 brew cask install spotify
 brew cask install sublime-text
 brew cask install vagrant
 brew cask install virtualbox
-brew cask install qlmarkdown
 
 curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
