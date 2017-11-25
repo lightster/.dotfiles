@@ -44,6 +44,7 @@ brew install --with-default-names grep
 brew install mas
 brew install npm
 brew install postgresql
+brew install the_silver_searcher
 brew install yarn
 
 brew cask install 1password
