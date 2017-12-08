@@ -37,6 +37,7 @@ brew tap caskroom/versions
 brew install ack
 brew install ansible
 brew install dockutil
+brew install jq
 brew install git
 brew install --with-default-names gnu-sed
 brew install gpg
