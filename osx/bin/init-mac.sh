@@ -32,6 +32,7 @@ else
 fi
 brew doctor
 
+brew tap caskroom/drivers
 brew tap caskroom/versions
 
 brew install ack
@@ -58,6 +59,7 @@ brew cask install gpg-suite
 brew cask install google-chrome
 brew cask install hyper
 brew cask install phpstorm
+brew cask install razer-synapse
 brew cask install sequel-pro
 brew cask install spotify
 brew cask install sublime-text
