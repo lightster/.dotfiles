@@ -34,6 +34,7 @@ Sign into Google accounts
 cd ~/.dotfiles
 
 make pretty
+make app-store
 make ssh-key
 make done
 ```
