@@ -39,13 +39,6 @@ make ssh-key
 make done
 ```
 
-## Alfred
-
-1. Setup Powerpack License
-2. Setup Sync folder to "~/Dropbox/Application Support/Alfred"
-3. Set theme to Alfred Dark
-4. Set hotkey to Cmd+Space
-
 ## System Preferences
 
 Spotlight:
@@ -60,6 +53,13 @@ Night Shift:
 
  - Schedule: Sunset to Sunrise
  - Color Temperature: 75% (closer to more warm)
+
+## Alfred
+
+1. Setup Powerpack License
+2. Setup Sync folder to "~/Dropbox/Application Support/Alfred"
+3. Set theme to Alfred Dark
+4. Set hotkey to Cmd+Space
 
 ## Other Applications
 
