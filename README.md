@@ -137,7 +137,7 @@ General settings:
 Sidebar settings:
 
 - Favorites
-    - x All My Files
+    - x Recents
     - x AirDrop
     - √ Applications:
     - √ Downloads
