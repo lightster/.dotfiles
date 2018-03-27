@@ -36,11 +36,5 @@
 
 [include]
         path = ~/.dotfiles/git/config-personal
-[includeIf "gitdir:/home/mlight/public_html/"]
-        path = ~/.dotfiles/git/config-ie
-[includeIf "gitdir:/Volumes/illuminate.local/"]
-        path = ~/.dotfiles/git/config-ie
 [includeIf "gitdir:/**/pier-11/"]
         path = ~/.dotfiles/git/config-personal
-[includeIf "gitdir:/**/pier-11/codebase/illuminateeducation/"]
-        path = ~/.dotfiles/git/config-ie
