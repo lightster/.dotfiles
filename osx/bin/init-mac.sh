@@ -50,14 +50,11 @@ brew install the_silver_searcher
 brew install yarn
 
 brew cask install 1password
-brew cask install aerial
 brew cask install alfred
 brew cask install atom-beta
-brew cask install dash2
 brew cask install dropbox
 brew cask install gpg-suite
 brew cask install google-chrome
-brew cask install hyper
 brew cask install phpstorm
 brew cask install razer-synapse
 brew cask install sequel-pro
