@@ -23,14 +23,6 @@ alias v='vagrant'
 alias a='atom-beta'
 alias atom='a'
 
-alias lds="cd ${SERVER_PATH}/lightdatasys.local"
-alias ldsv="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant"
-alias autobox="cd ${SERVER_PATH}/lightdatasys.local/autobox"
-
-alias pd="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase"
-alias qs="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase/quick-switcher"
-alias ravens="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase/ravens"
-alias hodor="cd ${SERVER_PATH}/lightdatasys.local/linode-vagrant/codebase/hodor-dev"
 alias dotfiles="cd ~/.dotfiles"
 alias pb='cd ~/Dropbox/playbook'
 alias pi='cd ${SERVER_PATH}/*.local/pier-11'
