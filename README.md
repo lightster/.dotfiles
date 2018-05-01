@@ -61,11 +61,6 @@ Night Shift:
 3. Set theme to Alfred Dark
 4. Set hotkey to Cmd+Space
 
-## Other Applications
-
-Install:
- - [Postgres.app](http://postgresapp.com)
-
 ## Amphetamine
 
  - Default Session Duration: 2 hours
@@ -105,17 +100,6 @@ Install:
 
  - Import settings from:
    `/Users/lightster/Dropbox/Application\ Support/phpstorm-lightster.jar`
-
-## Postgres.app
-
- - Remove default server
- - Add server
-   - Name: 9.6
-   - Version: 9.6
-   - Disks: /Users/lightster/Disks/Postgres/var-9.6
-   - Port: 5432
-   - Server settings: Automatically start server
-   - Initialize
 
 ## Sublime Text
 
