@@ -11,6 +11,8 @@ fi
 alias ll='ls -l'
 alias sudo='sudo '
 
+alias git=hub
+
 alias ~='cd ~'
 alias c='cd'
 alias -- -='cd -'

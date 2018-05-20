@@ -43,6 +43,7 @@ brew install git
 brew install --with-default-names gnu-sed
 brew install gpg
 brew install --with-default-names grep
+brew install hub
 brew install mas
 brew install npm
 brew install postgresql
