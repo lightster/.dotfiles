@@ -2,7 +2,7 @@ alias cd='echo "💜 💙 💚 " ; cd'
 alias meow='echo "🐱 "'
 alias ssh='echo "🚒  🚒   🚒     🚒          🚒            🚒   " ; ssh'
 
-ls --color=auto >/dev/null 2>&1
+ls --color=auto &>/dev/null
 if [ $? -eq 0 ]; then
     alias ls='ls -GF --color=auto'
 else
@@ -12,21 +12,23 @@ alias ll='ls -l'
 alias sudo='sudo '
 
 alias git=hub
+alias g=git
+alias v=vagrant
+alias atom=atom-beta
+alias a=atom
+alias c=docker-compose
+alias d=docker
 
 alias ~='cd ~'
-alias c='cd'
 alias -- -='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias g='git'
-alias v='vagrant'
-alias a='atom-beta'
-alias atom='a'
 
 alias dotfiles="cd ~/.dotfiles"
-alias pb='cd ~/Dropbox/playbook'
+alias scrawl="cd ~/Dropbox/Writing/scrawl"
+alias playbook="cd ~/Dropbox/Writing/playbook"
+alias ideas="cd ~/Dropbox/Writing/zu-li-ideas"
+
 alias pi='cd ${SERVER_PATH}/*.local/pier-11'
 alias m='moor'
 alias p='pier'
