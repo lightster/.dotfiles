@@ -41,3 +41,6 @@ Thumbs.db
 *.sublime-workspace
 *.idea
 *.Ulysses*.plist
+
+# Swap files
+*.swp
