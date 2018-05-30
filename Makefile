@@ -15,6 +15,7 @@ configs:
 	ln -sfn $(current_dir)/vim/vimrc ~/.vimrc
 	ln -sfn $(current_dir)/osx/eslintrc ~/.eslintrc
 	ln -sfn $(current_dir)/osx/gpg-agent.conf ~/.gnupg/gpg-agent.conf
+	ln -sfn $(current_dir)/tmux.conf ~/.tmux.conf
 
 app-store:
 	bash $(current_dir)/osx/bin/make-app-store.sh
