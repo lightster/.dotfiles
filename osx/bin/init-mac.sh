@@ -107,6 +107,8 @@ else
     echo ".ssh already setup"
 fi
 
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 ~/.rvm/bin/rvm alias create default system
 
 echo "👨🏼‍💻 😌 "
