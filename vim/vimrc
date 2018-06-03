@@ -35,7 +35,7 @@ augroup filetype_markdown
   " softwrap at 80 characters
   autocmd FileType markdown setlocal wrap linebreak nolist textwidth=0 wrapmargin=0 columns=80
   " reset the softwrap width after vim (e.g. the window) is resized
-  autocmd Filetype markdown autocmd VimResized * if (&columns > 80) | set columns=80 | endif
+  autocmd Filetype markdown autocmd VimResized * if (&columns > 80) | setlocal columns=80 | endif
   " turn on spell check
   autocmd FileType markdown setlocal spell
 augroup END
