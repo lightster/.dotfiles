@@ -27,6 +27,13 @@ filetype plugin indent on    " required
 
 syntax on  " turn on syntax highlighting
 
+" turn on line numbers in a 6 column gutter
+set number
+set relativenumber
+set numberwidth=6
+highlight LineNr ctermbg=233 ctermfg=253
+highlight CursorLineNr ctermbg=green ctermfg=black
+
 " Markdown settings
 " ------------
 augroup filetype_markdown
