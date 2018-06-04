@@ -34,6 +34,12 @@ set numberwidth=6
 highlight LineNr ctermbg=233 ctermfg=253
 highlight CursorLineNr ctermbg=green ctermfg=black
 
+" Disable the arrow keys
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
 " Markdown settings
 " ------------
 augroup filetype_markdown
