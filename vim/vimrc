@@ -27,6 +27,8 @@ filetype plugin indent on    " required
 
 syntax on  " turn on syntax highlighting
 
+set backspace=indent,eol,start  " Sane backspace behavior
+
 " turn on line numbers in a 6 column gutter
 set number
 set relativenumber
