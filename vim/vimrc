@@ -39,6 +39,14 @@ nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
+vnoremap <Left> :<C-u>echoe "Use h"<CR>
+vnoremap <Right> :<C-u>echoe "Use l"<CR>
+vnoremap <Up> :<C-u>echoe "Use k"<CR>
+vnoremap <Down> :<C-u>echoe "Use j"<CR>
+inoremap <Left> <C-o>:echoe "Use h"<CR>
+inoremap <Right> <C-o>:echoe "Use l"<CR>
+inoremap <Up> <C-o>:echoe "Use k"<CR>
+inoremap <Down> <C-o>:echoe "Use j"<CR>
 
 " Markdown settings
 " ------------
