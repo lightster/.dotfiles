@@ -52,3 +52,13 @@ augroup filetype_markdown
   " turn on spell check
   autocmd FileType markdown setlocal spell
 augroup END
+
+" Silver searcher for CtrlP from
+" from https://robots.thoughtbot.com/faster-grepping-in-vim
+if executable('ag')
+  " use in CtrlP for listing files fast and respecting .gitignore
+  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
