@@ -50,15 +50,22 @@ inoremap <Right> <C-o>:echoe "Use l"<CR>
 inoremap <Up> <C-o>:echoe "Use k"<CR>
 inoremap <Down> <C-o>:echoe "Use j"<CR>
 
+" reset global and local-to-window settings to defaults when file type changes
+augroup filetype_default
+  autocmd FileType * set columns&
+  autocmd FileType * setlocal list& wrap&
+augroup END
+
 " Markdown settings
 " ------------
 augroup filetype_markdown
   autocmd!
   autocmd BufNewFile,BufRead *.md set filetype=markdown
   " softwrap at 80 characters
-  autocmd FileType markdown setlocal wrap linebreak nolist textwidth=0 wrapmargin=0 columns=80
+  autocmd FileType markdown set columns=80
+  autocmd FileType markdown setlocal wrap linebreak nolist textwidth=0 wrapmargin=0
   " reset the softwrap width after vim (e.g. the window) is resized
-  autocmd Filetype markdown autocmd VimResized * if (&columns > 80) | setlocal columns=80 | endif
+  autocmd Filetype markdown autocmd VimResized * if (&columns > 80) | set columns=80 | endif
   " turn on spell check
   autocmd FileType markdown setlocal spell
 augroup END
