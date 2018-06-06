@@ -36,6 +36,10 @@ set numberwidth=6
 highlight LineNr ctermbg=233 ctermfg=253
 highlight CursorLineNr ctermbg=green ctermfg=black
 
+" set line length guide
+set colorcolumn=+1,+2,+3,+4,+5
+highlight ColorColumn ctermbg=235
+
 " Disable the arrow keys
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
