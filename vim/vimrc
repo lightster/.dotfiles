@@ -40,6 +40,10 @@ highlight CursorLineNr ctermbg=green ctermfg=black
 set colorcolumn=+1,+2,+3,+4,+5
 highlight ColorColumn ctermbg=235
 
+" set spell check formatting (for when it is on)
+highlight clear SpellBad
+highlight SpellBad cterm=underline ctermfg=red
+
 " Disable the arrow keys
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
