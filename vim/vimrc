@@ -79,6 +79,11 @@ augroup filetype_php
   autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 augroup END
 
+augroup filetype_gitcommit
+  autocmd!
+  autocmd Filetype gitcommit setlocal spell textwidth=72
+augroup END
+
 " Silver searcher for CtrlP from
 " from https://robots.thoughtbot.com/faster-grepping-in-vim
 if executable('ag')
