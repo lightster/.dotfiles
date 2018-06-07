@@ -28,6 +28,10 @@ filetype plugin indent on    " required
 syntax on  " turn on syntax highlighting
 
 set backspace=indent,eol,start  " Sane backspace behavior
+set expandtab                   " use tabs instead of spaces
+set tabstop=2                   " use a tab width of 2
+set shiftwidth=2                " use a tab width of 2 when auto indenting
+set softtabstop=2               " delete a tab's worth of spaces when backspacing
 
 " turn on line numbers in a 6 column gutter
 set number
@@ -68,6 +72,11 @@ augroup filetype_markdown
   autocmd VimResized * if (&columns > 80 && &filetype == 'markdown') | set columns=80 | endif
   " turn on spell check
   autocmd FileType markdown setlocal spell
+augroup END
+
+augroup filetype_php
+  autocmd!
+  autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 augroup END
 
 " Silver searcher for CtrlP from
