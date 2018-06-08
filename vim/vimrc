@@ -33,6 +33,8 @@ syntax on  " turn on syntax highlighting
 set showcmd                     " show pending command at the bottom right
 set history=1000                " remember last 1000 commands
 
+set scrolloff=6                 " set min num of lines to show above/below cursor
+
 set backspace=indent,eol,start  " Sane backspace behavior
 set expandtab                   " use tabs instead of spaces
 set tabstop=2                   " use a tab width of 2
