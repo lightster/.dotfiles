@@ -136,3 +136,6 @@ nmap <leader>h :nohlsearch<cr>
 " swap surrounding quotes from single to double quotes and vice versa
 nmap <leader>' cs"'
 nmap <leader>" cs'"
+
+" enable built-in macro to find matching brace, tag, etc. using %
+runtime macros/matchit.vim
