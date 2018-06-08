@@ -9,6 +9,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -129,3 +130,9 @@ set ignorecase                  " case insensitive search
 set smartcase                   " case sensitive mode if I put a capital letter
 " clear highlight of search
 nmap <leader>h :nohlsearch<cr>
+
+" vim-surround setting
+" ---
+" swap surrounding quotes from single to double quotes and vice versa
+nmap <leader>' cs"'
+nmap <leader>" cs'"
