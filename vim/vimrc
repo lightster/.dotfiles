@@ -70,6 +70,17 @@ inoremap <Right> <C-o>:echoe "Use l"<CR>
 inoremap <Up> <C-o>:echoe "Use k"<CR>
 inoremap <Down> <C-o>:echoe "Use j"<CR>
 
+" switch between most recent buffer
+nmap <leader>e <c-^>
+" reload vimrc changes
+nmap <leader>so :source $MYVIMRC <cr>
+" insert new line after current line
+nmap <leader>o o<esc>
+" insert new line before current line
+nmap <leader>O O<esc>
+" re-indent code blocks within braces
+nmap <leader>= =i}
+
 augroup filetype_markdown
   autocmd!
   autocmd BufNewFile,BufRead *.md set filetype=markdown
