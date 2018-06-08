@@ -29,6 +29,10 @@ let mapleader = "\<Space>"
 
 syntax on  " turn on syntax highlighting
 
+" command settings
+set showcmd                     " show pending command at the bottom right
+set history=1000                " remember last 1000 commands
+
 set backspace=indent,eol,start  " Sane backspace behavior
 set expandtab                   " use tabs instead of spaces
 set tabstop=2                   " use a tab width of 2
