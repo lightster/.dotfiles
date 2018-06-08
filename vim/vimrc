@@ -120,3 +120,12 @@ if executable('ag')
     nnoremap \ :Ag<SPACE>
   endif
 endif
+
+" search settings
+" ---
+set incsearch                   " highlight match as term is typed
+set hlsearch                    " highlight all matches
+set ignorecase                  " case insensitive search
+set smartcase                   " case sensitive mode if I put a capital letter
+" clear highlight of search
+nmap <leader>h :nohlsearch<cr>
