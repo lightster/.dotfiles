@@ -9,6 +9,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
@@ -139,3 +140,13 @@ nmap <leader>" cs'"
 
 " enable built-in macro to find matching brace, tag, etc. using %
 runtime macros/matchit.vim
+
+" Tabularize
+" http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
+" ---
+" align arrows (=>) in PHP
+nmap <Leader>aa :Tabularize /=><CR>
+vmap <Leader>aa :Tabularize /=><CR>
+" align values after keys in JSON ('key':     'val')
+nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>
