@@ -1,3 +1,7 @@
+" inspired/copied from zacharyrankin/dotfiles
+"   https://github.com/zacharyrankin/dotfiles/blob/master/vimrc
+" and http://vimcasts.org/
+
 set nocompatible              " be iMproved, required for vundle
 filetype off                  " required for vundle
 
