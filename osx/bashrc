@@ -13,6 +13,10 @@ if [ -f /Volumes/*/pier-11/codebase/lightster/pier-cli/bin/bash_functions.sh ]; 
   source /Volumes/*/pier-11/codebase/lightster/pier-cli/bin/bash_functions.sh
 fi
 
+if [ -f ~/.composer/vendor/lightster/dnsmasq-mgmt/bin/dnsmasq-mgmt-completion.bash ]; then
+  source  ~/.composer/vendor/lightster/dnsmasq-mgmt/bin/dnsmasq-mgmt-completion.bash
+fi
+
 source ~/.dotfiles/osx/aliases
 
 # http://unix.stackexchange.com/a/31697/85908
