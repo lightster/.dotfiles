@@ -96,6 +96,11 @@ augroup filetype_markdown
   autocmd FileType markdown setlocal spell
 augroup END
 
+augroup filetype_trim
+  autocmd!
+  autocmd BufWritePre * call TrimTrailingWhitespace()
+augroup END
+
 augroup filetype_php
   autocmd!
   autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
@@ -168,3 +173,16 @@ function! InsertTabWrapper()
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
+
+function! Preserve(command)
+  " Preparation: save window state
+  let l:saved_winview = winsaveview()
+  " Run the command:
+  execute a:command
+  " Clean up: restore previous window position
+  call winrestview(l:saved_winview)
+endfunction
+
+function! TrimTrailingWhitespace()
+  call Preserve("%s/\\s\\+$//e")
+endfunction
