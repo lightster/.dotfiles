@@ -63,6 +63,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+source ~/.dotfiles/shell/common
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

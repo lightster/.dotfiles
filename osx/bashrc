@@ -17,7 +17,7 @@ if [ -f ~/.composer/vendor/lightster/dnsmasq-mgmt/bin/dnsmasq-mgmt-completion.ba
   source  ~/.composer/vendor/lightster/dnsmasq-mgmt/bin/dnsmasq-mgmt-completion.bash
 fi
 
-source ~/.dotfiles/osx/aliases
+source ~/.dotfiles/shell/common
 
 # http://unix.stackexchange.com/a/31697/85908
 RESET="\[$(tput sgr0)\]"
