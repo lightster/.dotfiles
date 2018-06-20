@@ -2,15 +2,6 @@ if [ -f ~/.bashrc ]; then
         . ~/.bashrc
 fi
 
-source ~/.dotfiles/shell/path
-
-export PSQL_EDITOR="vim"
-export GIT_EDITOR="vim"
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export HISTCONTROL=ignorespace
-export HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S "
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages"
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 [[ -r "$HOME/.rvm/scripts/completion" ]] && source "$HOME/.rvm/scripts/completion"

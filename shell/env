@@ -1,0 +1,6 @@
+export PSQL_EDITOR="vim"
+export GIT_EDITOR="vim"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export HISTCONTROL=ignorespace
+export HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S "
+export PYTHONPATH="/usr/local/lib/python2.7/site-packages"
