@@ -101,6 +101,13 @@ augroup filetype_trim
   autocmd BufWritePre * call TrimTrailingWhitespace()
 augroup END
 
+augroup filetype_zsh
+  autocmd!
+  autocmd BufNewFile,BufRead *.zsh-theme,*zshrc set filetype=zsh
+  " softwrap at 80 characters
+  autocmd FileType zsh setlocal commentstring=#\ %s
+augroup END
+
 augroup filetype_php
   autocmd!
   autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
