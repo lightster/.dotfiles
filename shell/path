@@ -4,33 +4,24 @@ if [[ "${DEFAULT_PATH+set}" != "set" ]]; then
 fi
 export DEFAULT_PATH
 
-BIN_HOMEBREW_PHP=""
-HOMEBREW_PHP=$(brew --prefix homebrew/php/php55 >/dev/null 2>&1)
-EXIT_CODE=$?
-if [[ "${EXIT_CODE}" == "0" ]] ; then
-    BIN_HOMEBREW_PHP="${HOMEBREW_PHP}/bin"
-fi
-
-PATHS=(
-    "${HOME}/.composer/vendor/bin"
+paths=(
     "${HOME}/bin"
     "${HOME}/.dotfiles/osx/bin"
     "${HOME}/go/bin"
-    "${BIN_HOMEBREW_PHP}"
+    "${HOME}/.composer/vendor/bin"
+    "${HOME}/.yarn/bin"
     "/usr/local/bin"
     "/usr/local/sbin"
-    "/usr/local/Cellar/mtr/0.82/sbin"
-    "/usr/local/opt/ruby/bin"
-    "${HOME}/.yarn/bin"
 )
 
-FILTERED_PATHS=()
-for FILTERED_PATH in "${PATHS[@]}" ; do
-    if [[ -d "${FILTERED_PATH}" ]] ; then
-        FILTERED_PATHS+=("${FILTERED_PATH}")
+filtered_paths=()
+for filtered_path in "${paths[@]}" ; do
+    if [[ -d "${filtered_path}" ]] ; then
+        filtered_paths+=("${filtered_path}")
     fi
 done
-FILTERED_PATHS+=("${DEFAULT_PATH}")
+filtered_paths+=("${DEFAULT_PATH}")
 
-PATHS_STR=$(printf ":%s" "${FILTERED_PATHS[@]}")
-PATH=${PATHS_STR:1}
+paths_str=$(printf ":%s" "${filtered_paths[@]}")
+
+PATH=${paths_str:1}
