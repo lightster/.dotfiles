@@ -6,8 +6,8 @@ local current_dir="%{$fg[blue]%}$PWD%{$reet_color%}"
 local entry="%{$fg_bold[magenta]%}\$%{$reset_color%} "
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}("
-ZSH_THEME_GIT_PROMPT_SUFFIX="•%{$fg[yellow]%})%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[yellow]%})%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}•"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}•"
 
 PROMPT="${newline}${time} ${host}:${current_dir} $(git_prompt_info)${newline}${ret_status}   ${entry}"
