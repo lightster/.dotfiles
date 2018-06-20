@@ -2,7 +2,7 @@ if [ -f ~/.bashrc ]; then
         . ~/.bashrc
 fi
 
-source shell/path
+source ~/.dotfiles/shell/path
 
 export PSQL_EDITOR="vim"
 export GIT_EDITOR="vim"

@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-source shell/path
+source ~/.dotfiles/shell/path
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/lightster/.oh-my-zsh"
