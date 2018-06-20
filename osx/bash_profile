@@ -1,45 +1,14 @@
-
 if [ -f ~/.bashrc ]; then
         . ~/.bashrc
 fi
 
-BIN_HOMEBREW_PHP=""
-HOMEBREW_PHP=$(brew --prefix homebrew/php/php55 >/dev/null 2>&1)
-EXIT_CODE=$?
-if [ "${EXIT_CODE}" == "0" ] ; then
-    BIN_HOMEBREW_PHP="${HOMEBREW_PHP}/bin"
-fi
-
-PATHS=(
-    "${HOME}/.composer/vendor/bin"
-    "${HOME}/bin"
-    "${HOME}/.dotfiles/osx/bin"
-    "${HOME}/go/bin"
-    "${BIN_HOMEBREW_PHP}"
-    "/usr/local/bin"
-    "/usr/local/sbin"
-    "/usr/local/Cellar/mtr/0.82/sbin"
-    "/usr/local/opt/ruby/bin"
-    "${HOME}/.yarn/bin"
-)
-
-FILTERED_PATHS=()
-for FILTERED_PATH in "${PATHS[@]}" ; do
-    if [ -d "${FILTERED_PATH}" ] ; then
-        FILTERED_PATHS+=("${FILTERED_PATH}")
-    fi
-done
-FILTERED_PATHS+=("${PATH}")
-
-PATHS_STR=$(printf ":%s" "${FILTERED_PATHS[@]}")
-PATH=${PATHS_STR:1}
+source shell/path
 
 export PSQL_EDITOR="vim"
 export GIT_EDITOR="vim"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HISTCONTROL=ignorespace
 export HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S "
-export PATH
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
