@@ -96,7 +96,7 @@ augroup filetype_markdown
   autocmd FileType markdown setlocal spell
 augroup END
 
-augroup filetype_trim
+augroup functionality_trim
   autocmd!
   autocmd BufWritePre * call TrimTrailingWhitespace()
 augroup END
