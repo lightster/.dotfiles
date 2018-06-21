@@ -50,6 +50,7 @@ brew install postgresql
 brew install the_silver_searcher
 brew install tmux
 brew install yarn
+brew install zsh
 
 brew cask install 1password
 brew cask install alfred
@@ -88,6 +89,8 @@ sudo scutil --set ComputerName "${COMPUTER_NAME}"
 sudo scutil --set HostName "${COMPUTER_NAME}.local"
 sudo scutil --set LocalHostName "${COMPUTER_NAME}"
 
+sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+
 if [ ! -d ~/.dotfiles ]; then
     echo ""
     echo "Setting up .dotfiles"
@@ -109,6 +112,7 @@ fi
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 ~/.rvm/bin/rvm alias create default system
 
