@@ -26,8 +26,8 @@ ZSH_THEME="bash"
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+# disable oh-my-zsh `ls` aliases
+DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -61,6 +61,11 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 source ~/.dotfiles/shell/common
+
+# remove oh-my-zsh's LSCOLORS and let Terminal.app's color theme handle ls colors
+unset LSCOLORS
+export CLICOLOR=1
+export CLICOLOR_FORCE=1
 
 # User configuration
 
