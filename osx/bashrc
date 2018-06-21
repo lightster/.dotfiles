@@ -41,8 +41,5 @@ PS1="$PS1\n    $PURPLE\$$RESET "
 export HISTFILESIZE=
 export HISTSIZE=
 
-# added by travis gem
-[ -f /Users/lightster/.travis/travis.sh ] && source /Users/lightster/.travis/travis.sh
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
