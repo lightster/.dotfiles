@@ -13,7 +13,10 @@ plugins=(
 )
 
 # shell options that need to be set before including oh-my-zsh
-HISTFILE="$HOME/Dropbox/Application Support/bash_history/${HOST}.zsh_history"
+DROPBOX_HISTFILE="$HOME/Dropbox/Application Support/bash_history/${HOST}.zsh_history"
+if [ -f "$DROPBOX_HISTFILE" ]; then
+  HISTFILE="$DROPBOX_HISTFILE"
+fi
 
 source $ZSH/oh-my-zsh.sh
 
