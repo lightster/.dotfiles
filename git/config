@@ -5,6 +5,7 @@
         editor = vim
         excludesfile = ~/.dotfiles/git/ignore
         autocrlf = input
+        pager = "less -F -X -R"
 [merge]
         tool = vimdiff
 [alias]
