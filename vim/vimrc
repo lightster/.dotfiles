@@ -18,8 +18,11 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -30,6 +33,9 @@ filetype plugin indent on    " required
 let mapleader = "\<Space>"
 
 syntax on  " turn on syntax highlighting
+
+" set airline (statusline) theme
+let g:airline_theme='deus'
 
 " command settings
 set showcmd                     " show pending command at the bottom right
