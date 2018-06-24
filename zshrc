@@ -21,6 +21,7 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 source ~/.dotfiles/shell/common
+source ~/.composer/vendor/lightster/dnsmasq-mgmt/bin/dnsmasq-mgmt-completion.zsh
 
 # remove oh-my-zsh's LSCOLORS and let Terminal.app's color theme handle ls colors
 unset LSCOLORS
