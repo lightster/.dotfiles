@@ -1,4 +1,4 @@
 [user]
-        email = matt.light@lightdatasys.com
+        email = matt@paren.io
 [commit]
         template = ~/.dotfiles/git/commit-template/blank
