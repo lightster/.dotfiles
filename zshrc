@@ -23,6 +23,16 @@ source $ZSH/oh-my-zsh.sh
 source ~/.dotfiles/shell/common
 source ~/.composer/vendor/lightster/dnsmasq-mgmt/bin/dnsmasq-mgmt-completion.zsh
 
+fpath=(
+  "${ZSH_CUSTOM}/completions"
+  "/Users/lightster/.zsh-completions/src"
+  $fpath
+)
+
+if [ -d /Applications/Docker.app/Contents/Resources/etc/ ]; then
+  fpath+=(/Users/lightster/.dotfiles/zsh/completions/Docker.app)
+fi
+
 # remove oh-my-zsh's LSCOLORS and let Terminal.app's color theme handle ls colors
 unset LSCOLORS
 export CLICOLOR=1
