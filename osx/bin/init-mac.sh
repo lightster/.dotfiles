@@ -69,7 +69,7 @@ brew cask install virtualbox
 curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
 
-sudo gem install travis -v 1.8.2 --no-rdoc --no-ri
+sudo gem install travis --no-rdoc --no-ri
 
 sudo pip2 install -q awscli boto boto3
 
