@@ -119,6 +119,11 @@ augroup filetype_php
   autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 augroup END
 
+augroup filetype_golang
+  autocmd!
+  autocmd FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+augroup END
+
 augroup filetype_gitcommit
   autocmd!
   autocmd Filetype gitcommit setlocal spell textwidth=72
