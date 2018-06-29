@@ -32,6 +32,10 @@ filetype plugin indent on    " required
 
 let mapleader = "\<Space>"
 
+" Backup and swap files in a hidden tmp directory
+set backupdir=~/.tmp
+set directory=~/.tmp
+
 syntax on  " turn on syntax highlighting
 
 " set airline (statusline) theme
