@@ -33,3 +33,5 @@ alias github="cd ~/github"
 alias pi='cd ${SERVER_PATH}/*.local/pier-11'
 alias m='moor'
 alias p='pier'
+
+alias vi='echo "Use vim, silly! 🤪"'
