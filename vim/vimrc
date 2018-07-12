@@ -23,6 +23,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'plasticboy/vim-markdown' " requires godlygeek/tabular
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -208,3 +209,10 @@ endfunction
 function! TrimTrailingWhitespace()
   call Preserve("%s/\\s\\+$//e")
 endfunction
+
+" vim-markdown
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_new_list_item_indent = 2
+let g:vim_markdown_no_extensions_in_markdown = 1
+let g:vim_markdown_autowrite = 1
