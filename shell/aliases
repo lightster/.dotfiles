@@ -30,10 +30,6 @@ alias playbook="cd ~/Dropbox/Writing/playbook"
 alias ideas="cd ~/Dropbox/Writing/zu-li-ideas"
 alias github="cd ~/github"
 
-alias pi='cd ${SERVER_PATH}/*.local/pier-11'
-alias m='moor'
-alias p='pier'
-
 alias vi='echo "Use vim, silly! 🤪"'
 
 function gh() {

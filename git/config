@@ -37,5 +37,3 @@
 
 [include]
         path = ~/.dotfiles/git/config-personal
-[includeIf "gitdir:/**/pier-11/"]
-        path = ~/.dotfiles/git/config-personal

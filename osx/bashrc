@@ -9,10 +9,6 @@ fi
 source ~/.dotfiles/git/bin/git-completion.sh
 source ~/.dotfiles/git/bin/git-prompt.sh
 
-if [ -f /Volumes/*/pier-11/codebase/lightster/pier-cli/bin/bash_functions.sh ]; then
-  source /Volumes/*/pier-11/codebase/lightster/pier-cli/bin/bash_functions.sh
-fi
-
 if [ -f ~/.composer/vendor/lightster/dnsmasq-mgmt/bin/dnsmasq-mgmt-completion.bash ]; then
   source  ~/.composer/vendor/lightster/dnsmasq-mgmt/bin/dnsmasq-mgmt-completion.bash
 fi
