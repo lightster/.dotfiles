@@ -1,11 +1,6 @@
 
 force_color_prompt=yes
 
-source ~/.dotfiles/osx/config.global.sh
-if [ -f ~/.dotfiles/osx/config.local.sh ]; then
-  source ~/.dotfiles/osx/config.local.sh
-fi
-
 source ~/.dotfiles/git/bin/git-completion.sh
 source ~/.dotfiles/git/bin/git-prompt.sh
 
