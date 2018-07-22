@@ -95,6 +95,10 @@ nmap <leader>O O<esc>
 " re-indent code blocks within braces
 nmap <leader>= =i}
 
+" ctags
+nnoremap <leader>. :CtrlPTag<cr>
+set tags+=./.tags,.tags
+
 augroup filetype_markdown
   autocmd!
   autocmd BufNewFile,BufRead *.md set filetype=markdown

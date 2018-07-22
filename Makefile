@@ -12,6 +12,7 @@ configs:
 	ln -sfn $(current_dir)/bash/bashrc ~/.bashrc
 	ln -sfn $(current_dir)/osx/psqlrc ~/.psqlrc
 	ln -sfn $(current_dir)/vim/vimrc ~/.vimrc
+	ln -sfn $(current_dir)/vim/ctags ~/.ctags
 	ln -sfn $(current_dir)/osx/eslintrc ~/.eslintrc
 	ln -sfn $(current_dir)/osx/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 	ln -sfn $(current_dir)/tmux.conf ~/.tmux.conf
