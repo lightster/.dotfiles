@@ -24,10 +24,6 @@ fpath=(
   $fpath
 )
 
-if [ -d /Applications/Docker.app/Contents/Resources/etc/ ]; then
-  fpath+=(/Users/lightster/.dotfiles/zsh/completions/Docker.app)
-fi
-
 source $ZSH/oh-my-zsh.sh
 
 source ~/.dotfiles/shell/common
