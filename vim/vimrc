@@ -42,6 +42,9 @@ syntax on  " turn on syntax highlighting
 " set airline (statusline) theme
 let g:airline_theme='deus'
 
+" allow switching to other buffers without saving / closing existing buffer
+set hidden
+
 " command settings
 set showcmd                     " show pending command at the bottom right
 set history=1000                " remember last 1000 commands
