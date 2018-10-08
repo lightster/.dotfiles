@@ -44,6 +44,9 @@ syntax on  " turn on syntax highlighting
 " set airline (statusline) theme
 let g:airline_theme='deus'
 
+" increase scrolling performance?
+set lazyredraw
+
 " allow switching to other buffers without saving / closing existing buffer
 set hidden
 
