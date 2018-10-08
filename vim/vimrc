@@ -59,6 +59,7 @@ set expandtab                   " use tabs instead of spaces
 set tabstop=2                   " use a tab width of 2
 set shiftwidth=2                " use a tab width of 2 when auto indenting
 set softtabstop=2               " delete a tab's worth of spaces when backspacing
+set list listchars=tab:\→\ ,trail:•,extends:⟩,precedes:⟨
 
 " turn on line numbers in a 6 column gutter
 set number
