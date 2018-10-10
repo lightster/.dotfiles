@@ -44,9 +44,10 @@ make done
 Spotlight:
  - Disable "Show Spotlight search" keyboard shortcut
 
+Background:
+ - Set wallpaper to dynamic
+
 Screensaver:
- - Set to Aerial
- - Setup screen saver to download the videos
  - Start after: 5 minutes
 
 Night Shift:
@@ -64,42 +65,22 @@ Night Shift:
 ## Amphetamine
 
  - Default Session Duration: 2 hours
- - Menu Bar Action: "Left: Start Session"
+ - Menu Bar Action: "Primary: Start/end session"
  - Launch Amphetamine at Login
- - Do Not Show Amphetamine in Dock
+ - Hide Amphetamine in the Dock
  - Disable all notifications except for automatic session end
- - Icon: Coffee Mug
-
-## iA Writer
-
- - General
-   - Colors: Night mode
- - Files
-   - Default extension: md
- - Library
-   - Locations:
-     - iCloud
-     - playbook
-     - Year 31
-     - acloud.guru notes
- - Editor:
-   - Check grammar with spelling: Uncheck
-   - Indent text using: Spaces
+    - Session end sound: Spoon and cup
+ - Icon: Caffeine
 
 ## Window Tidy
 
  - Setup Security/Privacy System Preference
  - Setup Layouts:
-    - Left Half (Cmd + Opt + Left)
-    - Right Half (Cmd + Opt + Right)
+    - Left 7/12 (Cmd + Opt + Left)
+    - Right 5/12 (Cmd + Opt + Right)
     - Center (Cmd + Opt + Down)
     - Full Screen (Cmd + Opt + Up)
   - Launch at Login
-
-## PHP Storm
-
- - Import settings from:
-   `/Users/lightster/Dropbox/Application\ Support/phpstorm-lightster.jar`
 
 ## Sublime Text
 
@@ -115,7 +96,7 @@ Open Finder Preferences (Cmd+,).
 
 General settings:
 
-- Uncheck "External disks" under "Show these items on the desktop"
+- Under "Show these items on the desktop," uncheck everything
 - New Finder windows show: lightster
 
 Sidebar settings:
@@ -132,7 +113,7 @@ Sidebar settings:
 - iCloud
     - x iCloud Drive
     - √ Desktop
-    - x Documents
+    - √ Documents
 - Shared
     - √ Back to My Mac
     - √ Connected servers
@@ -142,7 +123,9 @@ Sidebar settings:
     - x Hard Disks
     - √ External disks
     - √ CDs, DVDs and iPods
-    - (Drag off Remote Disc)
+        - (Drag off Remote Disc)
+    - x Bonjour computers
+    - √ Connect servers
 - Tags
     - x Recent Tags
 
@@ -150,7 +133,7 @@ Navigate to Dropbox folder and open "Show View Options" (Cmd+J)
 
 - √ Always Open in List View
 - √ Browse in List View
-- Arrange by Name
+- Group by Name
 - Sort by Name
 - Icon Size: Larger
 
