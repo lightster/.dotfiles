@@ -1,7 +1,7 @@
 #compdef gh
 
 function _gh {
-  _files -/ -W "${HOME}/github"
+  _files -/ -W "${HOME}/github/"*"/"
 }
 
 compdef _gh gh
