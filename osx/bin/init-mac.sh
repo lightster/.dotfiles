@@ -50,6 +50,7 @@ brew install npm
 brew install postgresql
 brew install the_silver_searcher
 brew install tmux
+brew install vim
 brew install yarn
 brew install zsh
 
