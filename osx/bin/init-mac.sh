@@ -128,6 +128,9 @@ git_clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git_clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 git_clone https://github.com/zsh-users/zsh-completions.git ~/.zsh-completions
 
+vim +PluginInstall +qall
+~/.tmux/plugins/tpm/bin/install_plugins
+
 ~/.rvm/bin/rvm alias create default system
 
 echo "👨🏼‍💻 😌 "
