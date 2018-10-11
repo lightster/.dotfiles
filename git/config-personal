@@ -1,4 +1,4 @@
 [user]
-        email = matt@paren.io
+        email = matt@kelvin.education
 [commit]
         template = ~/.dotfiles/git/commit-template/blank

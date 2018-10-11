@@ -38,3 +38,5 @@
 
 [include]
         path = ~/.dotfiles/git/config-personal
+[includeIf "gitdir:/**/github/kelvineducation/"]
+        path = ~/.dotfiles/git/config-kelvin
