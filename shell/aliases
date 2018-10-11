@@ -34,5 +34,5 @@ alias vi='echo "Use vim, silly! 🤪"'
 
 function gh() {
     local project="$1"
-    cd "${HOME}/github/${project}"
+    cd "${HOME}/github/*/${project}"
 }

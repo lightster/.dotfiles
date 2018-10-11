@@ -16,6 +16,7 @@
         sh = stash
         discard = checkout --
         log-v = show --name-status
+        cl = "!f() { local DEST="${HOME}/github/${1}" ; test -d "${DEST}" || hub clone \"${1}\" \"${DEST}\"; }; f"
         cpm = cherry-pick -m 1 --no-commit
         co = checkout
         # switch to a branch, creating it if necessary
