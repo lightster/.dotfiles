@@ -110,10 +110,22 @@ else
     echo ".ssh already setup"
 fi
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-git clone --depth=1 https://github.com/zsh-users/zsh-completions.git ~/.zsh-completions
+git_clone()
+{
+  local repo=$1
+  local destination=$2
+
+  if [ -d $destination ]; then
+    return
+  fi
+
+  git clone --depth=1 $repo $destination
+}
+
+git_clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git_clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git_clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+git_clone https://github.com/zsh-users/zsh-completions.git ~/.zsh-completions
 
 ~/.rvm/bin/rvm alias create default system
 
