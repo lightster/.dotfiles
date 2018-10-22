@@ -33,6 +33,16 @@ alias github="cd ~/github"
 alias vi='echo "Use vim, silly! 🤪"'
 
 function gh() {
-    local project="$1"
-    cd "${HOME}/github/"*"/${project}"
+  local project="$1"
+  local github="${HOME}/github"
+
+  if [ ! -d "${github}" ]; then
+    mkdir "${github}"
+  fi
+
+  if [ "${project}" = "" ]; then
+    cd "${github}"
+  else
+    cd "${github}/"*"/${project}"
+  fi
 }
