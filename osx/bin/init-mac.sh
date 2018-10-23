@@ -57,6 +57,7 @@ brew install zsh
 brew cask install 1password
 brew cask install alfred
 brew cask install atom-beta
+brew cask install dash
 brew cask install dropbox
 brew cask install gpg-suite
 brew cask install google-chrome
