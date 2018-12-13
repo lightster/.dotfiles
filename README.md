@@ -13,11 +13,7 @@ bash /tmp/init.mac.sh computer-name
 ## Dropbox
 
 1. Sign into Dropbox
-2. Setup Selective Sync, deselecting:
-    - Camera Uploads
-    - Carousel
-    - Pictures
-    - Unprocessed Photos
+2. Setup Selective Sync, selecting on Application Support for now
 
 ## Google Chrome
 
@@ -37,6 +33,7 @@ make pretty
 make app-store
 make ssh-key
 make done
+make atom
 ```
 
 ## System Preferences
