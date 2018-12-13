@@ -7,7 +7,7 @@ cd ~/Dropbox/Pictures
 # organize Unprocessed photos by date into Organized
 find -E Unprocessed \
   -type f \
-  -iregex '.*\.(jpg|mov|heic)' \
+  -iregex '.*\.(jpg|mov|heic|mp4)' \
   -print0 | xargs -0 -I {} \
     exiftool \
       -P -d '%Y/%m/%Y%m%d_%H%M%S' \
