@@ -52,4 +52,4 @@ find -E Unprocessed \
   -delete
 
 # remove empty directories
-find Unprocessed -type d -empty -mindepth 1 -print
+find Unprocessed -type d -empty -mindepth 1 -delete
