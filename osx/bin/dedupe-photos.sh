@@ -44,3 +44,12 @@ find -E Unprocessed \
 
 # remove Organized files that have duplicate content
 fdupes --recurse --reverse --sameline --omitfirst --delete --noprompt Organized
+
+# remove photos app edit metadata
+find -E Unprocessed \
+  -type f \
+  -regex '.*\.(aae|DS_Store)' \
+  -delete
+
+# remove empty directories
+find Unprocessed -type d -empty -mindepth 1 -print
