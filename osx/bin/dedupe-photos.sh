@@ -48,7 +48,7 @@ fdupes --recurse --reverse --sameline --omitfirst --delete --noprompt Organized
 # remove photos app edit metadata
 find -E Unprocessed \
   -type f \
-  -regex '.*\.(aae|DS_Store)' \
+  -iregex '.*\.(aae|DS_Store)' \
   -delete
 
 # remove empty directories
