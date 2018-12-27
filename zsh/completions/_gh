@@ -1,7 +1,16 @@
 #compdef gh
 
-function _gh {
-  _files -/ -W "${HOME}/github/"*"/"
+_gh_project () {
+  # for debugging:
+  # setopt local_options xtrace
+
+  compadd $(find "${HOME}/github" -type d -mindepth 2 -maxdepth 2 -exec basename {} \; | sort | uniq -u)
+  # compadd $(cd "${HOME}/github" && find . -type d -mindepth 2 -maxdepth 2 | cut -c 3-)
 }
 
-compdef _gh gh
+_gh () {
+  _arguments -s \
+    "1:project:_gh_project"
+}
+
+_gh "$@"
