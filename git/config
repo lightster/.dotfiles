@@ -20,10 +20,11 @@
         cpm = cherry-pick -m 1 --no-commit
         co = checkout
         # switch to a branch, creating it if necessary
-        go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+        go = "!f() { local branch="$(git prefix-branch)$1" ; echo "$branch" ; git checkout -b \"$branch\" 2> /dev/null || git checkout \"$branch\"; }; f"
         dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d && git remote prune origin"
         p = push
         po = "!git push -u origin $(git symbolic-ref HEAD | sed -e 's#^refs/heads/##')"
+        prefix-branch = "!echo \"\""
         changelog = "log --no-merges --date=short --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%Creset'"
 [push]
         default = simple

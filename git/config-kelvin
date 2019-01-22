@@ -1,4 +1,6 @@
 [user]
         email = matt@kelvin.education
+[alias]
+        prefix-branch = "!echo \"ml-\""
 [commit]
         template = ~/.dotfiles/git/commit-template/blank
