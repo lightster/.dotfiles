@@ -39,13 +39,18 @@ brew install ack
 brew install ansible
 brew install ctags
 brew install dockutil
+brew install exiftool
+brew install fdupes
 brew install jq
 brew install git
 brew install --with-default-names gnu-sed
 brew install gpg
 brew install --with-default-names grep
 brew install hub
+brew install htop
+brew install httpie
 brew install mas
+brew install ncdu
 brew install npm
 brew install postgresql
 brew install the_silver_searcher
@@ -58,15 +63,22 @@ brew cask install 1password
 brew cask install alfred
 brew cask install atom-beta
 brew cask install dash
+brew cask install discord
 brew cask install dropbox
 brew cask install gpg-suite
 brew cask install google-chrome
+brew cask install handbrake
+brew cask install makemkv
 brew cask install phpstorm
+brew cask install quicklook-json
 brew cask install sequel-pro
+brew cask install sketch
 brew cask install spotify
+brew cask install subler
 brew cask install sublime-text
 brew cask install vagrant
 brew cask install virtualbox
+brew cask install vlc
 
 curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
