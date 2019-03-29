@@ -11,16 +11,26 @@ find -E Unprocessed \
   -print0 | xargs -0 -I {} \
     exiftool \
       -P -d '%Y/%m/%Y%m%d_%H%M%S' \
-        '-filename<Organized/${FileModifyDate}_${SubSecTimeOriginal;}%-c.%le' \
-        '-filename<Organized/${GPSDateTime}_${SubSecTimeOriginal;}%-c.%le' \
-        '-filename<Organized/${MediaCreateDate}_${SubSecTimeOriginal;}%-c.%le' \
-        '-filename<Organized/${ModifyDate}_${SubSecTimeOriginal;}%-c.%le' \
-        '-filename<Organized/${DateTimeOriginal}_${SubSecTimeOriginal;}%-c.%le' \
-        '-filename<Organized/${FileModifyDate}_000%-c.%le' \
-        '-filename<Organized/${GPSDateTime}_000%-c.%le' \
-        '-filename<Organized/${MediaCreateDate}_000%-c.%le' \
-        '-filename<Organized/${ModifyDate}_000%-c.%le' \
-        '-filename<Organized/${DateTimeOriginal}_000%-c.%le' \
+        '-filename<Organized/Unknown/${FileModifyDate}_000%-c.%le' \
+        '-filename<Organized/Unknown/${GPSDateTime}_000%-c.%le' \
+        '-filename<Organized/Unknown/${MediaCreateDate}_000%-c.%le' \
+        '-filename<Organized/Unknown/${ModifyDate}_000%-c.%le' \
+        '-filename<Organized/Unknown/${DateTimeOriginal}_000%-c.%le' \
+        '-filename<Organized/Unknown/${FileModifyDate}_${SubSecTimeOriginal;}%-c.%le' \
+        '-filename<Organized/Unknown/${GPSDateTime}_${SubSecTimeOriginal;}%-c.%le' \
+        '-filename<Organized/Unknown/${MediaCreateDate}_${SubSecTimeOriginal;}%-c.%le' \
+        '-filename<Organized/Unknown/${ModifyDate}_${SubSecTimeOriginal;}%-c.%le' \
+        '-filename<Organized/Unknown/${DateTimeOriginal}_${SubSecTimeOriginal;}%-c.%le' \
+        '-filename<Organized/${Model;}/${FileModifyDate}_000%-c.%le' \
+        '-filename<Organized/${Model;}/${GPSDateTime}_000%-c.%le' \
+        '-filename<Organized/${Model;}/${MediaCreateDate}_000%-c.%le' \
+        '-filename<Organized/${Model;}/${ModifyDate}_000%-c.%le' \
+        '-filename<Organized/${Model;}/${DateTimeOriginal}_000%-c.%le' \
+        '-filename<Organized/${Model;}/${FileModifyDate}_${SubSecTimeOriginal;}%-c.%le' \
+        '-filename<Organized/${Model;}/${GPSDateTime}_${SubSecTimeOriginal;}%-c.%le' \
+        '-filename<Organized/${Model;}/${MediaCreateDate}_${SubSecTimeOriginal;}%-c.%le' \
+        '-filename<Organized/${Model;}/${ModifyDate}_${SubSecTimeOriginal;}%-c.%le' \
+        '-filename<Organized/${Model;}/${DateTimeOriginal}_${SubSecTimeOriginal;}%-c.%le' \
         {}
 
 # organize Unprocessed gifs/pngs by date into Organized/${lowercase-extension}
