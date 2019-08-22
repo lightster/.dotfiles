@@ -137,6 +137,12 @@ augroup filetype_php
   autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 augroup END
 
+augroup filetype_phtml
+  autocmd!
+  autocmd BufNewFile,BufRead *.phtml set filetype=html
+  autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab smartindent
+augroup END
+
 augroup filetype_golang
   autocmd!
   autocmd FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
