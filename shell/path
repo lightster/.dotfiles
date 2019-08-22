@@ -24,4 +24,4 @@ filtered_paths+=("${DEFAULT_PATH}")
 
 paths_str=$(printf ":%s" "${filtered_paths[@]}")
 
-PATH=${paths_str:1}
+PATH=".git/safe-bin/../../bin:${paths_str:1}"
