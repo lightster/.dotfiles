@@ -109,6 +109,12 @@ nmap <leader>= =i}
 nnoremap <leader>. :CtrlPTag<cr>
 set tags+=./.tags,.tags
 
+" ctrlp
+" let g:ctrlp_types = ['fil', 'buf', 'mru']
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_mruf_relative = 1
+nnoremap <leader>p :CtrlPMRUFiles<cr>
+
 augroup filetype_markdown
   autocmd!
   autocmd BufNewFile,BufRead *.md set filetype=markdown
