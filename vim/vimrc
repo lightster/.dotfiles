@@ -43,6 +43,7 @@ syntax on  " turn on syntax highlighting
 
 " set airline (statusline) theme
 let g:airline_theme='deus'
+" let g:airline_extensions = ["ctrlp", "branch"]
 
 " increase scrolling performance?
 set lazyredraw
