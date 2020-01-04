@@ -30,10 +30,16 @@ if [ "$HAS_NOT_BREW" == "1" ]; then
 else
     brew update
 fi
+
+# prevent `brew doctor` from complaining about missing path in PATH
+export PATH="/usr/local/sbin:$PATH"
+
 brew doctor
 
-brew tap caskroom/drivers
-brew tap caskroom/versions
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+brew tap homebrew/cask-drivers
+brew tap homebrew/cask-versions
 
 brew install ack
 brew install ansible
@@ -43,9 +49,9 @@ brew install exiftool
 brew install fdupes
 brew install jq
 brew install git
-brew install --with-default-names gnu-sed
+brew install gnu-sed
 brew install gpg
-brew install --with-default-names grep
+brew install grep
 brew install hub
 brew install htop
 brew install httpie
@@ -77,15 +83,14 @@ brew cask install spotify
 brew cask install subler
 brew cask install sublime-text
 brew cask install vagrant
-brew cask install virtualbox
 brew cask install vlc
 
 curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
 
-sudo gem install travis --no-rdoc --no-ri
+sudo gem install travis --no-document
 
-sudo pip2 install -q awscli boto boto3
+sudo pip3 install -q awscli boto boto3
 
 npm install -g eslint eslint-config-google http-server xo
 
