@@ -2,10 +2,19 @@
 
 \set VERBOSITY verbose
 \set COMP_KEYWORD_CASE upper
+\set HISTSIZE 100000
+\set HISTFILE ~/.psql_history_ :DBNAME
+\set HISTCONTROL ignoredups
+\set ON_ERROR_ROLLBACK interactive
+
+\setenv PAGER 'less -S'
 
 \x auto
 
+\pset linestyle unicode
+\pset border 2
 \pset null '¤'
+\pset format wrapped
 
 \timing
 
