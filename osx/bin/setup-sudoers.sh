@@ -18,7 +18,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo cp -a /etc/sudoers /etc/sudoers.vagrant
 
 # reomve the existing auto-generated lines
-sudo sed -i '/#BEGIN-VAGRANT/,/#END-VAGRANT/d' /etc/sudoers.vagrant
+sudo gsed -i '/#BEGIN-VAGRANT/,/#END-VAGRANT/d' /etc/sudoers.vagrant
 
 # append the auto-generated lines
 sudo tee -a /etc/sudoers.vagrant >/dev/null <<'EOF'
