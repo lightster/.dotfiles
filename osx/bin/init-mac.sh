@@ -40,6 +40,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 brew tap homebrew/cask-drivers
 brew tap homebrew/cask-versions
+brew tap heroku/brew
 
 brew install ack
 brew install ansible
@@ -52,6 +53,7 @@ brew install git
 brew install gnu-sed
 brew install gpg
 brew install grep
+brew install heroku
 brew install hub
 brew install htop
 brew install httpie
