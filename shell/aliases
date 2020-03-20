@@ -18,6 +18,7 @@ alias atom=atom-beta
 alias a=atom
 alias c=docker-compose
 alias d=docker
+alias m=make
 
 alias ~='cd ~'
 alias -- -='cd -'
