@@ -33,7 +33,7 @@ alias github="cd ~/github"
 
 alias vi='echo "Use vim, silly! 🤪"'
 
-function gh() {
+function to() {
   local project="$1"
   local github="${HOME}/github"
 

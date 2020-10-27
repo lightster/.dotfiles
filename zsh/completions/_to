@@ -1,6 +1,6 @@
-#compdef gh
+#compdef to
 
-_gh_project () {
+_to_project () {
   # for debugging:
   # setopt local_options xtrace
 
@@ -8,9 +8,9 @@ _gh_project () {
   # compadd $(cd "${HOME}/github" && find . -type d -mindepth 2 -maxdepth 2 | cut -c 3-)
 }
 
-_gh () {
+_to () {
   _arguments -s \
-    "1:project:_gh_project"
+    "1:project:_to_project"
 }
 
-_gh "$@"
+_to "$@"
