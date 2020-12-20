@@ -67,24 +67,24 @@ brew install vim
 brew install yarn
 brew install zsh
 
-brew cask install 1password
-brew cask install alfred
-brew cask install atom-beta
-brew cask install dash
-brew cask install discord
-brew cask install dropbox
-brew cask install gpg-suite
-brew cask install google-chrome
-brew cask install handbrake
-brew cask install intellij-idea
-brew cask install makemkv
-brew cask install quicklook-json
-brew cask install sequel-pro
-brew cask install sketch
-brew cask install spotify
-brew cask install subler
-brew cask install sublime-text
-brew cask install vlc
+brew install --cask 1password
+brew install --cask alfred
+brew install --cask atom-beta
+brew install --cask dash
+brew install --cask discord
+brew install --cask dropbox
+brew install --cask gpg-suite
+brew install --cask google-chrome
+brew install --cask handbrake
+brew install --cask intellij-idea
+brew install --cask makemkv
+brew install --cask quicklook-json
+brew install --cask sequel-pro
+brew install --cask sketch
+brew install --cask spotify
+brew install --cask subler
+brew install --cask sublime-text
+brew install --cask vlc
 
 curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
