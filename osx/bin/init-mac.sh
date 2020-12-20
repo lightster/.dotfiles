@@ -76,8 +76,8 @@ brew cask install dropbox
 brew cask install gpg-suite
 brew cask install google-chrome
 brew cask install handbrake
+brew cask install intellij-idea
 brew cask install makemkv
-brew cask install phpstorm
 brew cask install quicklook-json
 brew cask install sequel-pro
 brew cask install sketch
