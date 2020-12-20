@@ -84,13 +84,10 @@ brew cask install sketch
 brew cask install spotify
 brew cask install subler
 brew cask install sublime-text
-brew cask install vagrant
 brew cask install vlc
 
 curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
-
-sudo gem install travis --no-document
 
 sudo pip3 install -q awscli boto boto3
 
