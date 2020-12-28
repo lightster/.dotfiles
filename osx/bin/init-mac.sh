@@ -35,54 +35,7 @@ fi
 export PATH="/usr/local/sbin:$PATH"
 
 brew doctor
-
-export HOMEBREW_NO_AUTO_UPDATE=1
-
-brew tap homebrew/cask-drivers
-brew tap homebrew/cask-versions
-brew tap heroku/brew
-
-brew install ack
-brew install ansible
-brew install ctags
-brew install dockutil
-brew install exiftool
-brew install fdupes
-brew install jq
-brew install git
-brew install gnu-sed
-brew install gpg
-brew install grep
-brew install heroku
-brew install hub
-brew install htop
-brew install httpie
-brew install mas
-brew install ncdu
-brew install postgresql
-brew install the_silver_searcher
-brew install tmux
-brew install vim
-brew install zsh
-
-brew install --cask 1password
-brew install --cask alfred
-brew install --cask atom-beta
-brew install --cask dash
-brew install --cask discord
-brew install --cask dropbox
-brew install --cask gpg-suite
-brew install --cask google-chrome
-brew install --cask handbrake
-brew install --cask intellij-idea
-brew install --cask makemkv
-brew install --cask quicklook-json
-brew install --cask sequel-pro
-brew install --cask sketch
-brew install --cask spotify
-brew install --cask subler
-brew install --cask sublime-text
-brew install --cask vlc
+brew bundle --file ~/.dotfiles/osx/brew/core.brewfile
 
 curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
