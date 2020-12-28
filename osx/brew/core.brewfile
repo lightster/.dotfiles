@@ -27,7 +27,7 @@ brew "zsh"
 
 cask "1password"
 cask "alfred"
-cask "atom-beta"
+cask "atom"
 cask "dash"
 cask "discord"
 cask "dropbox"

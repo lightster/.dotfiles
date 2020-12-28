@@ -14,7 +14,6 @@ alias sudo='sudo '
 alias git=hub
 alias g=git
 alias v=vagrant
-alias atom=atom-beta
 alias a=atom
 alias c=docker-compose
 alias d=docker

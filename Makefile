@@ -33,7 +33,7 @@ done:
 	bash $(current_dir)/osx/bin/make-done.sh
 
 atom:
-	/Applications/Atom\ Beta.app/Contents/Resources/app/apm/bin/apm install --packages-file ~/.dotfiles/apm.txt
+	/Applications/Atom.app/Contents/Resources/app/apm/bin/apm install --packages-file ~/.dotfiles/apm.txt
 
 atom-freeze:
-	/Applications/Atom\ Beta.app/Contents/Resources/app/apm/bin/apm list --installed --bare >~/.dotfiles/apm.txt
+	/Applications/Atom.app/Contents/Resources/app/apm/bin/apm list --installed --bare >~/.dotfiles/apm.txt
