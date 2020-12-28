@@ -40,10 +40,10 @@ brew bundle --file ~/.dotfiles/osx/brew/core.brewfile
 curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
 
-sudo pip3 install -q awscli boto boto3
+pip3 install -q awscli boto boto3
 
 curl -sS https://getcomposer.org/installer | php
-sudo mv composer.phar /usr/local/bin/composer
+mv composer.phar /usr/local/bin/composer
 composer global require \
     "lightster/dnsmasq-mgmt=~0.0.4" \
     "squizlabs/php_codesniffer=*" \
