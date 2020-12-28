@@ -1,13 +1,18 @@
-.dotfiles
-=========
+# .dotfiles
 
-The dot files I use on my machines
+The dotfiles I use on my machines
 
-## Initial Setup
+## Setup
 
+### Install .dotfiles
 ```bash
-curl -sS https://raw.githubusercontent.com/lightster/.dotfiles/master/osx/bin/init-mac.sh >/tmp/init.mac.sh
-bash /tmp/init.mac.sh computer-name
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/lightster/.dotfiles/HEAD/osx/bin/install.sh)"
+```
+
+### Bootstrap the Mac
+```bash
+# bootstrap the mac
+./osx/bin/init-mac.sh <COMPUTER_NAME>
 ```
 
 ## Dropbox

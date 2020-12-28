@@ -58,25 +58,6 @@ sudo scutil --set LocalHostName "${COMPUTER_NAME}"
 
 sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 
-if [ ! -d ~/.dotfiles ]; then
-    echo ""
-    echo "Setting up .dotfiles"
-    git clone https://github.com/lightster/.dotfiles.git ~/.dotfiles
-    cd ~/.dotfiles
-    make configs
-    cd - >/dev/null
-else
-    echo ".dotfiles already setup"
-fi
-
-if [ ! -d ~/.ssh ]; then
-    echo ""
-    echo "Setting up .ssh"
-    git clone https://github.com/lightster/.ssh.git ~/.ssh
-else
-    echo ".ssh already setup"
-fi
-
 git_clone()
 {
   local repo=$1
@@ -111,4 +92,5 @@ source ~/.dotfiles/shell/nvm
 nvm install 'lts/*' --latest-npm
 npm install -g npm http-server yarn
 
-echo "👨🏼‍💻 😌 "
+echo ""
+echo "FIN"
