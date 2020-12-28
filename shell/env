@@ -5,3 +5,4 @@ export HISTCONTROL=ignorespace
 export HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S "
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages"
 export GOPATH="$HOME/go"
+export NVM_DIR="$HOME/.nvm"

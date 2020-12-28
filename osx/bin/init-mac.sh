@@ -59,12 +59,10 @@ brew install htop
 brew install httpie
 brew install mas
 brew install ncdu
-brew install npm
 brew install postgresql
 brew install the_silver_searcher
 brew install tmux
 brew install vim
-brew install yarn
 brew install zsh
 
 brew install --cask 1password
@@ -90,8 +88,6 @@ curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
 
 sudo pip3 install -q awscli boto boto3
-
-npm install -g eslint eslint-config-google http-server xo
 
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
@@ -144,10 +140,20 @@ git_clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git_clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git_clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 git_clone https://github.com/zsh-users/zsh-completions.git ~/.zsh-completions
+git_clone https://github.com/nvm-sh/nvm.git ~/.nvm
 
 vim +PluginInstall +qall
 ~/.tmux/plugins/tpm/bin/install_plugins
 
 ~/.rvm/bin/rvm alias create default system
+
+cd ~/.nvm
+git checkout v0.37.2
+cd - >/dev/null
+
+export NVM_DIR="$HOME/.nvm"
+source ~/.dotfiles/shell/nvm
+nvm install 'lts/*' --latest-npm
+npm install -g npm http-server yarn
 
 echo "👨🏼‍💻 😌 "
