@@ -82,11 +82,13 @@ git_clone()
   local repo=$1
   local destination=$2
 
-  if [ -d $destination ]; then
-    return
+  if [ ! -d $destination ]; then
+    git clone "$repo" "$destination"
   fi
 
-  git clone --depth=1 $repo $destination
+  cd $destination
+  git pull
+  cd - >/dev/null
 }
 
 git_clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
