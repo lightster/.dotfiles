@@ -12,88 +12,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 HOSTNAME=$(hostname -s)
 
 ###############################################################################
-# General UI/UX                                                               #
-###############################################################################
-
-# Set text highlight color to beautiful light/apple green
-defaults write NSGlobalDomain AppleHighlightColor -string "0.752941 0.964706 0.678431"
-
-# Ask for a password after 5 seconds of screensaver
-defaults write com.apple.screensaver askForPasswordDelay -int 5
-
-###############################################################################
-# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
-###############################################################################
-
-# Trackpad: enable tap to click for this user and for the login screen
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
-# Enable full keyboard access for all controls
-# (e.g. enable Tab in modal dialogs)
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
-
-# Set mouse speed
-defaults write -g com.apple.mouse.scaling 2.0
-
-# Set mouse cursor size
-defaults write com.apple.universalaccess mouseDriverCursorSize 1.85
-
-# Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 25
-
-# Turn off accent and allow repeating
-defaults write -g ApplePressAndHoldEnabled -bool false
-
-###############################################################################
-# Dock, Dashboard, and hot corners                                            #
-###############################################################################
-
-# Enable highlight hover effect for the grid view of a stack (Dock)
-defaults write com.apple.dock mouse-over-hilite-stack -bool true
-
-# Enable spring loading for all Dock items
-defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
-
-# Show indicator lights for open applications in the Dock
-defaults write com.apple.dock show-process-indicators -bool true
-
-# Don’t group windows by application in Mission Control
-# (i.e. use the old Exposé behavior instead)
-defaults write com.apple.dock expose-group-by-app -bool false
-
-# Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
-
-# Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
-
-# Don’t automatically rearrange Spaces based on most recent use
-defaults write com.apple.dock mru-spaces -bool false
-
-# Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool true
-
-# Make Dock icons of hidden applications translucent
-defaults write com.apple.dock showhidden -bool true
-
-# Use the dark menu bar
-defaults write NSGlobalDomain AppleInterfaceStyle Dark
-
-# Show the battery percentage
-defaults write com.apple.menuextra.battery ShowPercent -string "YES"
-
-# Hide the siri icon in the menu bar
-defaults write com.apple.Siri StatusMenuVisible -bool false
-
-###############################################################################
 # Terminal
 ###############################################################################
-
-# Only use UTF-8 in Terminal.app
-defaults write com.apple.terminal StringEncodings -array 4
 
 # Use a modified version of the Solarized Dark theme by default in Terminal.app
 TERM_PROFILE='TomorrowNightBright';
@@ -138,13 +58,6 @@ ln -sfn "${ATOM_DROPBOX_DIR}/keymap.cson" "${ATOM_USER_DIR}/keymap.cson"
 ln -sfn "${ATOM_DROPBOX_DIR}/projects.cson" "${ATOM_USER_DIR}/projects.cson"
 ln -sfn "${ATOM_DROPBOX_DIR}/snippets.cson" "${ATOM_USER_DIR}/snippets.cson"
 ln -sfn "${ATOM_DROPBOX_DIR}/styles.less" "${ATOM_USER_DIR}/styles.less"
-
-
-###############################################################################
-# source bash_profile
-###############################################################################
-
-source ~/.bash_profile
 
 ###############################################################################
 #
