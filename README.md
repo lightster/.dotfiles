@@ -14,11 +14,9 @@ The dotfiles I use on my machines
 ./osx/bin/init-minimal.sh <COMPUTER_NAME>
 ```
 
-### Setup 1password
-[onepassword://](onepassword://)
+### <a href="onepassword://">Setup 1password</a>
 
-### Login to the Mac App Store
-[https://appstore.com](https://appstore.com)
+### <a href="https://appstore.com]">Login to the Mac App Store</a>
 
 ### Bootstrap the Mac
 ```bash
