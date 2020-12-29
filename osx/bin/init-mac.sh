@@ -2,6 +2,13 @@
 
 set -e
 
+if [ "$#" != "1" ]; then
+    echo "Usage: $0 <BUNDLE_NAME>"
+    exit 1
+fi
+
+BUNDLE_NAME="$1"
+
 echo "Validating for sudo... "
 sudo -v
 
@@ -10,6 +17,9 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 brew bundle --file ~/.dotfiles/osx/brew/core.brewfile
+if [ "$BUNDLE_NAME" != "" ]; then
+  brew bundle --file ~/.dotfiles/osx/brew/"$BUNDLE_NAME".brewfile
+fi
 
 curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable

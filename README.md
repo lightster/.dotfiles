@@ -20,7 +20,7 @@ The dotfiles I use on my machines
 
 ### Bootstrap the Mac
 ```bash
-./osx/bin/init-mac.sh
+./osx/bin/init-mac.sh <BUNDLE_NAME>
 ```
 
 ## Dropbox

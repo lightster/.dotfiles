@@ -1,0 +1,13 @@
+tap "heroku/brew"
+
+brew "ansible"
+brew "exiftool"
+brew "fdupes"
+brew "heroku"
+brew "postgresql"
+
+cask "discord"
+cask "handbrake"
+cask "makemkv"
+cask "subler"
+cask "vlc"
