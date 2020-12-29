@@ -4,24 +4,25 @@ set -e
 
 if [ ! -d ~/.dotfiles ]; then
     echo ""
-    echo "setting up .dotfiles"
+    echo "cloning .dotfiles"
     git clone https://github.com/lightster/.dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     make configs
     cd - >/dev/null
-    echo "done setting up .dotfiles"
+    echo "done cloning .dotfiles"
 else
-    echo ".dotfiles already setup"
+    echo ".dotfiles already cloned"
 fi
 
 if [ ! -d ~/.ssh ]; then
     echo ""
-    echo "setting up .ssh"
+    echo "cloning .ssh"
     git clone https://github.com/lightster/.ssh.git ~/.ssh
-    echo "done setting up .ssh"
+    echo "done cloning .ssh"
 else
-    echo ".ssh already setup"
+    echo ".ssh already cloned"
 fi
 
 echo ""
-echo "FIN"
+# green checkmarks
+echo "\033[0;32m\xE2\x9C\x94\xE2\x9C\x94\xE2\x9C\x94\033[0m"

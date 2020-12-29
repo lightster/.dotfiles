@@ -93,4 +93,4 @@ nvm install 'lts/*' --latest-npm
 npm install -g npm http-server yarn
 
 echo ""
-echo "FIN"
+echo "\033[0;32mFIN\033[0m"
