@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
@@ -25,4 +25,4 @@ fi
 
 echo ""
 # green checkmarks
-echo "\033[0;32m\xE2\x9C\x94\xE2\x9C\x94\xE2\x9C\x94\033[0m"
+echo -e "\033[0;32m\xE2\x9C\x94\xE2\x9C\x94\xE2\x9C\x94\033[0m"

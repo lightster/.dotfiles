@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
@@ -93,4 +93,4 @@ nvm install 'lts/*' --latest-npm
 npm install -g npm http-server yarn
 
 echo ""
-echo "\033[0;32mFIN\033[0m"
+echo -e "\033[0;32mFIN\033[0m"
