@@ -9,10 +9,18 @@ The dotfiles I use on my machines
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/lightster/.dotfiles/HEAD/osx/bin/install.sh)"
 ```
 
+### Install minimal dependencies
+```bash
+./osx/bin/init-minimal.sh <COMPUTER_NAME>
+```
+
+### [Setup 1Password](onepassword://)
+
+### [Login to the Mac App Store](https://appstore.com)
+
 ### Bootstrap the Mac
 ```bash
-# bootstrap the mac
-./osx/bin/init-mac.sh <COMPUTER_NAME>
+./osx/bin/init-mac.sh
 ```
 
 ## Dropbox

@@ -2,17 +2,6 @@
 
 set -e
 
-if [ "$#" != "1" ]; then
-    echo "Usage: $0 computer-name"
-    exit 1
-fi
-
-COMPUTER_NAME="$1"
-
-GIT_NAME="Matt Light"
-SSH_REPO=".ssh"
-DOTFILES_REPO=".dotfiles"
-
 echo "Validating for sudo... "
 sudo -v
 
@@ -20,21 +9,6 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until this script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-set +e
-WHICH_BREW=`which brew >/dev/null 2>&1`
-HAS_NOT_BREW=$?
-set -e
-
-if [ "$HAS_NOT_BREW" == "1" ]; then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-else
-    brew update
-fi
-
-# prevent `brew doctor` from complaining about missing path in PATH
-export PATH="/usr/local/sbin:$PATH"
-
-brew doctor
 brew bundle --file ~/.dotfiles/osx/brew/core.brewfile
 
 curl -sSL https://rvm.io/mpapis.asc | gpg --import -
@@ -49,14 +23,6 @@ composer global require \
     "squizlabs/php_codesniffer=*" \
     "friendsofphp/php-cs-fixer=@stable" \
     "phpmd/phpmd=@stable"
-
-echo ""
-echo "Setting the name of the computer..."
-sudo scutil --set ComputerName "${COMPUTER_NAME}"
-sudo scutil --set HostName "${COMPUTER_NAME}.local"
-sudo scutil --set LocalHostName "${COMPUTER_NAME}"
-
-sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 
 git_clone()
 {
