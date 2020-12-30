@@ -1,0 +1,7 @@
+[user]
+        email = matt.light@workboard.com
+        signingkey = C7CA28E004330D8CB208FB3195463E6D1F487350
+[alias]
+        prefix-branch = "!echo \"$(git branch --show-current)-\""
+[commit]
+        template = ~/.dotfiles/git/commit-template/workboard
