@@ -19,8 +19,6 @@ configs:
 	ln -sfn $(current_dir)/zshrc ~/.zshrc
 	mkdir -p ~/.tmp
 
-app-store:
-	bash $(current_dir)/osx/bin/make-app-store.sh
 
 pretty:
 	bash $(current_dir)/osx/bin/init-mac-more.sh
