@@ -44,7 +44,6 @@ git_clone()
   fi
 
   cd $destination
-  git pull
   cd - >/dev/null
 }
 
