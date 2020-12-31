@@ -1,3 +1,4 @@
 source ~/.dotfiles/shell/path
 source ~/.dotfiles/shell/env
 source ~/.dotfiles/shell/aliases
+source ~/.dotfiles/shell/nvm
