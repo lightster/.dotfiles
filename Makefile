@@ -7,6 +7,7 @@ git-pull:
 	git pull
 
 configs:
+	mkdir -p ~/.tmp ~/.gnupg
 	ln -sfn $(current_dir)/git/config ~/.gitconfig
 	ln -sfn $(current_dir)/bash/bash_profile ~/.bash_profile
 	ln -sfn $(current_dir)/bash/bashrc ~/.bashrc
@@ -17,8 +18,6 @@ configs:
 	ln -sfn $(current_dir)/osx/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 	ln -sfn $(current_dir)/tmux.conf ~/.tmux.conf
 	ln -sfn $(current_dir)/zshrc ~/.zshrc
-	mkdir -p ~/.tmp
-
 
 pretty:
 	bash $(current_dir)/osx/bin/init-mac-more.sh
