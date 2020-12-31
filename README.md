@@ -11,6 +11,7 @@ The dotfiles I use on my machines
 
 ### Install minimal dependencies
 ```bash
+cd ~/.dotfiles
 ./osx/bin/init-minimal.sh <COMPUTER_NAME>
 ```
 
@@ -23,150 +24,169 @@ The dotfiles I use on my machines
 ./osx/bin/init-mac.sh <BUNDLE_NAME>
 ```
 
-## Dropbox
+### Sign in to apps
 
-1. Sign into Dropbox
-2. Setup Selective Sync, selecting on Application Support for now
+- Dropbox
+- Google Chrome
 
-## Google Chrome
+### Setup Terminal
 
-Sign into Google accounts
+- GPG
+  ```bash
+  gpg --import --allow-secret-key-import /path/to/private-key.asc
+  ```
 
-## Setup GPG
+- Setup SSH key
 
-- `gpg --import --allow-secret-key-import /path/to/private-key.asc`
-- Import private key into GPG keychain
+- Finish CLI setup
+  ```bash
+  make pretty
+  make done
+  make atom
+  ```
 
-## Finish Terminal Setup
+### System Preferences
 
-```bash
-cd ~/.dotfiles
+#### Desktop
+- Choose a dark background so the menu bar is dark
 
-make pretty
-make app-store
-make ssh-key
-make done
-make atom
-```
+#### Screensaver
+- Start after: 5 minutes
 
-## System Preferences
+#### Dock & Menu Bar
+- Check *Automatically hide and show the dock*
+- Uncheck *Show recent applications in Dock*
 
-Spotlight:
- - Disable "Show Spotlight search" keyboard shortcut
+Battery:
+- Check *Show Percentage*
 
-Background:
- - Set wallpaper to dynamic
+#### Security & Privacy
+General:
+- Require password *5 seconds* after sleep or screen saver begins
+- Check *Use your Apple Watch to unlock apps and your Mac*
 
-Screensaver:
- - Start after: 5 minutes
+FileVault:
+- Turn On
+
+#### Keyboard
+- Key Repeat: fastest
+- Delay Until Repeat: second shortest
+- Modifier Keys:
+  - USB Keyboard:
+    - Caps Lock: Escape
+    - Option: Command
+    - Command: Option
+- Internal Keyboard:
+  - Caps Lock: Escape
+
+Shortcuts:
+- Services:
+  - Uncheck *Open man Page in Terminal*
+  - Uncheck *Search man Page Index in Terminal*
+- Spotlight:
+  - Uncheck: *Show Spotlight search*
+
+#### Mouse
+
+- Tracking speed: third fastest
+- Scrolling speed: third fastest
+
+#### Displays
+Arrangement:
+- Arrange displays as appropriate
+- Move menubar to main screen
 
 Night Shift:
+- Schedule: Sunset to Sunrise
+- Color Temperature: 75% (closer to more warm)
 
- - Schedule: Sunset to Sunrise
- - Color Temperature: 75% (closer to more warm)
+### Alfred
+- Setup Powerpack License
 
-## Alfred
+Advanced:
+- Setup Sync folder to "~/Dropbox/Application Support/Alfred"
 
-1. Setup Powerpack License
-2. Setup Sync folder to "~/Dropbox/Application Support/Alfred"
-3. Set theme to Alfred Dark
-4. Set hotkey to Cmd+Space
+Appearance:
+- Set theme to *Alfred Modern Dark*
 
-## Amphetamine
+General:
+- Set hotkey to Cmd+Space
 
- - Default Session Duration: 2 hours
- - Menu Bar Action: "Primary: Start/end session"
- - Launch Amphetamine at Login
- - Hide Amphetamine in the Dock
- - Disable all notifications except for automatic session end
-    - Session end sound: Spoon and cup
- - Icon: Caffeine
+### Amphetamine
+General:
+- Quick-Start a Session: Left click
+- Check *Launch Amphetamine at Login*
 
-## Window Tidy
+Sessions:
+- Default Duration: 2 hours
 
- - Setup Security/Privacy System Preference
- - Setup Layouts:
-    - Left 7/12 (Cmd + Opt + Left)
-    - Right 5/12 (Cmd + Opt + Right)
-    - Center (Cmd + Opt + Down)
-    - Full Screen (Cmd + Opt + Up)
-  - Launch at Login
+Notifications:
+- Session end sound: Spoon and cup
 
-## Sublime Text
+Appearance:
+- Menu Bar Image: Tea Kettle
+- Menu Bar Text:
+  - Check *Show session time remaining in menu bar
+  - Small font size
 
- - Setup License
+### Window Tidy
+- Setup Layout Keyboard Shortcuts:
+  - Left: Cmd + Opt + Left
+  - Right: Cmd + Opt + Right
+  - Center: Cmd + Opt + Down
+  - Full Screen: Cmd + Opt + Up
+- Launch at Login
 
-## Battery Icon
+### Sublime Text
+- Setup License
 
- - Show Percentage
-
-## Finder
-
-Open Finder Preferences (Cmd+,).
-
-General settings:
-
-- Under "Show these items on the desktop," uncheck everything
+### Finder
+General:
+- Uncheck all under *Show these items on the desktop*
 - New Finder windows show: lightster
 
 Sidebar settings:
-
 - Favorites
-    - x Recents
-    - x AirDrop
-    - √ Applications:
-    - √ Downloads
-    - x Movies
-    - x Music
-    - x Pictures
-    - √ lightster
+  - [ ] Recents
+  - [ ] AirDrop
+  - [x] Applications
+  - [x] Desktop
+  - [x] Documents
+  - [x] Downloads
+  - [ ] Movies
+  - [ ] Music
+  - [ ] Pictures
+  - [x] lightster
 - iCloud
-    - x iCloud Drive
-    - √ Desktop
-    - √ Documents
-- Shared
-    - √ Back to My Mac
-    - √ Connected servers
-    - √ Bonjour computers
-- Devices
-    - √ [Computer]
-    - x Hard Disks
-    - √ External disks
-    - √ CDs, DVDs and iPods
-        - (Drag off Remote Disc)
-    - x Bonjour computers
-    - √ Connect servers
+  - [ ] iCloud Drive
+- Locations
+  - [ ] [Computer]
+  - [ ] Hard Disks
+  - [x] External disks
+  - [x] CDs, DVDs, and iOS Devices
+  - [x] Cloud Storage
+  - [x] Bonjour computers
+  - [x] Connected servers
 - Tags
-    - x Recent Tags
+  - [ ] Recent Tags
 
-Navigate to Dropbox folder and open "Show View Options" (Cmd+J)
+## Preparing a clean Mac
 
-- √ Always Open in List View
-- √ Browse in List View
-- Group by Name
-- Sort by Name
-- Icon Size: Larger
+Generally I recommend disabling internet connectivity so the Messages database is not updated during the snapshot or restore.
 
-Click "Use as Defaults"
-
-# Preparing a clean Mac
-
-Generally I recommend disabling internet connectivity so the Messages database
-is not updated during the snapshot or restore.
-
-## On the old Mac / before wipe
+### On the old Mac / before wipe
 
 ```bash
 bash osx/bin/snapshot.sh
 ```
 
-## On the new Mac / after wipe
+### On the new Mac / after wipe
 
 ```bash
 bash os/bin/restore.sh YYYY-MM-DD
 ```
 
-# Acknowledgements
+## Acknowledgements
 
 Parts of my .dotfiles repo is inspired, borrowed, or completely ripped from:
 
