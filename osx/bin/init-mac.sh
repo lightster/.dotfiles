@@ -67,5 +67,7 @@ source ~/.dotfiles/shell/nvm
 nvm install 'lts/*' --latest-npm
 npm install -g npm http-server yarn
 
+sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+
 echo ""
 echo -e "\033[0;32mFIN\033[0m"
