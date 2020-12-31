@@ -29,6 +29,11 @@ source $ZSH/oh-my-zsh.sh
 source ~/.dotfiles/shell/common
 source ~/.composer/vendor/lightster/dnsmasq-mgmt/bin/dnsmasq-mgmt-completion.zsh
 
+WB_AC_ZSH_SETUP_PATH=~/Library/Caches/@workboard/wb-cli/autocomplete/zsh_setup
+if [ -f "$WB_AC_ZSH_SETUP_PATH" ]; then
+  source "$WB_AC_ZSH_SETUP_PATH"
+fi
+
 # remove oh-my-zsh's LSCOLORS and let Terminal.app's color theme handle ls colors
 unset LSCOLORS
 export CLICOLOR=1
