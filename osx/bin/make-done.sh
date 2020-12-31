@@ -7,9 +7,11 @@ if [ ! -f "${HOME}/.ssh/id_rsa.${HOSTNAME}" ]; then
     exit 1
 fi
 
-echo ""
-echo "Killing ssh-agent"
+echo "adding 'id_rsa.${HOSTNAME}' to ssh-agent..."
+ssh-add -K "${HOME}/.ssh/id_rsa.${HOSTNAME}"
+echo "killing ssh-agent... "
 sudo killall ssh-agent
+echo "done"
 
 echo ""
 if [ ! -d ~/.ssh/private ]; then
