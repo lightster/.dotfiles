@@ -76,8 +76,8 @@ FileVault:
     - Caps Lock: Escape
     - Option: Command
     - Command: Option
-- Internal Keyboard:
-  - Caps Lock: Escape
+  - Internal Keyboard:
+    - Caps Lock: Escape
 
 Shortcuts:
 - Services:
@@ -126,7 +126,7 @@ Notifications:
 Appearance:
 - Menu Bar Image: Tea Kettle
 - Menu Bar Text:
-  - Check *Show session time remaining in menu bar
+  - Check *Show session time remaining in menu bar*
   - Small font size
 
 ### Window Tidy
