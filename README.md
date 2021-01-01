@@ -160,7 +160,7 @@ Sidebar settings:
 - iCloud
   - [ ] iCloud Drive
 - Locations
-  - [ ] [Computer]
+  - [x] [Computer]
   - [ ] Hard Disks
   - [x] External disks
   - [x] CDs, DVDs, and iOS Devices
