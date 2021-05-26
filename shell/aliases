@@ -1,5 +1,4 @@
 alias cd='echo "💜 💙 💚 " ; cd'
-alias meow='echo "🐱 "'
 alias ssh='echo "🚒  🚒   🚒     🚒          🚒            🚒   " ; ssh'
 
 ls --color=auto &>/dev/null
