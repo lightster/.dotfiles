@@ -24,8 +24,6 @@ fi
 curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
 
-pip3 install -q awscli boto boto3
-
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 composer global require "lightster/dnsmasq-mgmt=~0.0.4"
