@@ -28,11 +28,7 @@ pip3 install -q awscli boto boto3
 
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
-composer global require \
-    "lightster/dnsmasq-mgmt=~0.0.4" \
-    "squizlabs/php_codesniffer=*" \
-    "friendsofphp/php-cs-fixer=@stable" \
-    "phpmd/phpmd=@stable"
+composer global require "lightster/dnsmasq-mgmt=~0.0.4"
 
 git_clone()
 {
