@@ -34,7 +34,6 @@ cask "sublime-text"
 cask "vlc"
 
 mas "Amphetamine", id: 937984704
-mas "Be Focused Pro", id: 961632517
 mas "Kindle", id: 405399194
 mas "Slack", id: 803453959
 mas "Magnet", id: 441258766
