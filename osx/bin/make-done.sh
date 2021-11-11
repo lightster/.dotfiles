@@ -8,7 +8,7 @@ if [ ! -f "${HOME}/.ssh/id_rsa.${HOSTNAME}" ]; then
 fi
 
 echo "adding 'id_rsa.${HOSTNAME}' to ssh-agent..."
-ssh-add -K "${HOME}/.ssh/id_rsa.${HOSTNAME}"
+ssh-add  --apple-use-keychain --apple-load-keychain "${HOME}/.ssh/id_rsa.${HOSTNAME}"
 echo "killing ssh-agent... "
 sudo killall ssh-agent
 echo "done"
