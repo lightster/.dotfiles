@@ -17,21 +17,21 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 set +e
-WHICH_BREW=`which brew >/dev/null 2>&1`
+BREW=`which brew`
 HAS_NOT_BREW=$?
 set -e
 
 if [ "$HAS_NOT_BREW" == "1" ]; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-    brew update
+    $BREW update
 fi
 
 # prevent `brew doctor` from complaining about missing path in PATH
 export PATH="/opt/homebrew/sbin:$PATH"
 
-brew doctor
-brew bundle --file ~/.dotfiles/osx/brew/minimal.brewfile
+$BREW doctor
+$BREW bundle --file ~/.dotfiles/osx/brew/minimal.brewfile
 
 echo ""
 echo -n "setting name of computer... "
