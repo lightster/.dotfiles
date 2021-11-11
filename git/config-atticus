@@ -1,0 +1,7 @@
+[user]
+        email = matt.light@atticus.com
+        signingkey = 21A3834EE2BF355DD87851D0F87034923AFAA077
+[alias]
+        prefix-branch = "!echo \"ml-\""
+[commit]
+        template = ~/.dotfiles/git/commit-template/blank

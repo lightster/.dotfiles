@@ -44,3 +44,5 @@
         path = ~/.dotfiles/git/config-kelvin
 [includeIf "gitdir:/**/github/workboard/"]
         path = ~/.dotfiles/git/config-workboard
+[includeIf "gitdir:/**/github/atticuslabs/"]
+        path = ~/.dotfiles/git/config-atticus
