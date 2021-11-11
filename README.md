@@ -17,7 +17,7 @@ cd ~/.dotfiles
 
 ### <a href="onepassword://">Setup 1password</a>
 
-### <a href="https://appstore.com]">Login to the Mac App Store</a>
+### <a href="https://appstore.com">Login to the Mac App Store</a>
 
 ### Bootstrap the Mac
 ```bash
