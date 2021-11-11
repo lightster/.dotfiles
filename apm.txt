@@ -19,7 +19,7 @@ language-liquid@0.7.0
 language-nginx@0.8.0
 linter@2.2.0
 linter-eslint@8.4.1
-linter-ui-default@1.7.1
+linter-ui-default
 markdown-writer@2.11.3
 sort-lines@0.18.0
 toggle-gutter@0.3.4
