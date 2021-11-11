@@ -28,7 +28,7 @@ else
 fi
 
 # prevent `brew doctor` from complaining about missing path in PATH
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
 
 brew doctor
 brew bundle --file ~/.dotfiles/osx/brew/minimal.brewfile
