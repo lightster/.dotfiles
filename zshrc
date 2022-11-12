@@ -41,3 +41,8 @@ export CLICOLOR_FORCE=1
 
 unsetopt correct_all
 setopt correct
+
+# pnpm
+export PNPM_HOME="/Users/lightster/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
