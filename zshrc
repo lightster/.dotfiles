@@ -38,3 +38,6 @@ fi
 unset LSCOLORS
 export CLICOLOR=1
 export CLICOLOR_FORCE=1
+
+unsetopt correct_all
+setopt correct
