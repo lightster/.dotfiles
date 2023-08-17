@@ -17,12 +17,15 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 set +e
+eval "$(/opt/homebrew/bin/brew shellenv)"
 BREW=`which brew`
 HAS_NOT_BREW=$?
 set -e
 
 if [ "$HAS_NOT_BREW" == "1" ]; then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    BREW=`which brew`
 else
     $BREW update
 fi

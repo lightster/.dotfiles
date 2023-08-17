@@ -1,3 +1,5 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # start from the same default $PATH every time
 if [[ "${DEFAULT_PATH+set}" != "set" ]]; then
     DEFAULT_PATH="${PATH}"
@@ -10,8 +12,6 @@ paths=(
     "${HOME}/go/bin"
     "${HOME}/.composer/vendor/bin"
     "${HOME}/.yarn/bin"
-    "/opt/homebrew/bin"
-    "/opt/homebrew/sbin"
     "/usr/local/bin"
     "/usr/local/sbin"
 )
