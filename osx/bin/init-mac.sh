@@ -16,8 +16,6 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until this script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-sudo chown $UID:$GID /usr/local/bin
-
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 
 brew bundle --file ~/.dotfiles/osx/brew/core.brewfile
@@ -51,6 +49,8 @@ vim +PluginInstall +qall
 npm install -g npm http-server yarn
 
 sudo dscl . -create /Users/$USER UserShell /opt/homebrew/bin/zsh
+
+sudo chown $UID:$GID /usr/local/bin
 
 echo ""
 echo -e "\033[0;32mFIN\033[0m"
