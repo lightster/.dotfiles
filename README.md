@@ -47,51 +47,12 @@ cd ~/.dotfiles
 
 ### System Preferences
 
-#### Desktop
-- Choose a dark background so the menu bar is dark
-
-#### Screensaver
-- Start after: 5 minutes
-
-#### Dock & Menu Bar
+#### Desktop & Dock
 - Check *Automatically hide and show the dock*
 - Uncheck *Show recent applications in Dock*
 
-Battery:
-- Check *Show Percentage*
-
-#### Security & Privacy
-General:
-- Require password *5 seconds* after sleep or screen saver begins
-- Check *Use your Apple Watch to unlock apps and your Mac*
-
-FileVault:
-- Turn On
-
-#### Keyboard
-- Key Repeat: fastest
-- Delay Until Repeat: second shortest
-- Modifier Keys:
-  - USB Keyboard:
-    - Caps Lock: Escape
-    - Option: Command
-    - Command: Option
-  - Internal Keyboard:
-    - Caps Lock: Escape
-
-Shortcuts:
-- Services:
-  - Uncheck *Open man Page in Terminal*
-  - Uncheck *Search man Page Index in Terminal*
-- Spotlight:
-  - Uncheck: *Show Spotlight search*
-
-#### Mouse
-
-- Tracking speed: third fastest
-- Scrolling speed: third fastest
-
 #### Displays
+
 Arrangement:
 - Arrange displays as appropriate
 - Move menubar to main screen
@@ -99,6 +60,48 @@ Arrangement:
 Night Shift:
 - Schedule: Sunset to Sunrise
 - Color Temperature: 75% (closer to more warm)
+
+#### Wallpaper
+- Choose a dark background so the menu bar is dark
+
+#### Screensaver
+- Monterey
+
+#### Lock Screen
+- Start Screen Saver when inactive for: 5 minutes
+- Require password *1 minute* after sleep or screen saver begins
+
+#### Touch ID & Password
+- Check *Use your Apple Watch to unlock apps and your Mac*
+
+Battery:
+- Check *Show Percentage*
+
+#### Privacy & Security
+- Turn On FileVault
+
+#### Keyboard
+- Key Repeat: fastest
+- Delay Until Repeat: second shortest
+- Keyboard Shortcuts:
+  - Services:
+    - Text
+      - Uncheck *Open man Page in Terminal*
+      - Uncheck *Search man Page Index in Terminal*
+    - Spotlight:
+      - Uncheck: *Show Spotlight search*
+  - Modifier Keys:
+    - Internal Keyboard:
+      - Caps Lock: Escape
+    - USB Keyboard:
+      - Caps Lock: Escape
+      - Option: Command
+      - Command: Option
+
+#### Mouse
+
+- Tracking speed: third fastest
+- Scrolling speed: third fastest
 
 ### Alfred
 - Setup Powerpack License
@@ -129,7 +132,8 @@ Appearance:
   - Check *Show session time remaining in menu bar*
   - Small font size
 
-### Window Tidy
+### Magnet
+
 - Setup Layout Keyboard Shortcuts:
   - Left: Cmd + Opt + Left
   - Right: Cmd + Opt + Right
@@ -138,9 +142,11 @@ Appearance:
 - Launch at Login
 
 ### Sublime Text
+
 - Setup License
 
 ### Finder
+
 General:
 - Uncheck all under *Show these items on the desktop*
 - New Finder windows show: lightster
