@@ -33,6 +33,9 @@ fi;
 #
 ###############################################################################
 
+curl -L -o ~/Downloads/dockutil-3.0.2.pkg \
+  https://github.com/kcrawford/dockutil/releases/download/3.0.2/dockutil-3.0.2.pkg
+sudo installer -pkg ~/Downloads/dockutil-3.0.2.pkg -target /
 dockutil --remove all
 
 echo "Done. Some changes require a logout/restart to take effect."

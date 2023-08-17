@@ -1,5 +1,4 @@
 brew "ctags"
-brew "dockutil"
 brew "jq"
 brew "git"
 brew "gnu-sed"
