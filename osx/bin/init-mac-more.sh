@@ -30,46 +30,8 @@ if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
 fi;
 
 ###############################################################################
-# Sublime Text                                                                #
-###############################################################################
-
-# Install Sublime Text settings
-mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/
-curl -o ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package \
-    https://sublime.wbond.net/Package%20Control.sublime-package
-SUBLIME_USER_DIR="${HOME}/Library/Application Support/Sublime Text 3/Packages/User"
-mkdir -p "$SUBLIME_USER_DIR"
-if [[ -d "$SUBLIME_USER_DIR" && ! -L "$SUBLIME_USER_DIR" ]]; then
-    rmdir "$SUBLIME_USER_DIR"
-fi
-ln -sfn ~/Dropbox/Application\ Support/Sublime\ Text\ 3/Packages/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-
-###############################################################################
-# Atom                                                                        #
-###############################################################################
-
-ATOM_USER_DIR="${HOME}/.atom"
-ATOM_DROPBOX_DIR="${HOME}/Dropbox/Application Support/atom"
-if [ -L "$ATOM_USER_DIR" ]; then
-    rm "$ATOM_USER_DIR"
-fi
-mkdir -p "$ATOM_USER_DIR"
-
-ln -sfn "${ATOM_DROPBOX_DIR}/config.cson" "${ATOM_USER_DIR}/config.cson"
-ln -sfn "${ATOM_DROPBOX_DIR}/github.cson" "${ATOM_USER_DIR}/github.cson"
-ln -sfn "${ATOM_DROPBOX_DIR}/init.coffee" "${ATOM_USER_DIR}/init.coffee"
-ln -sfn "${ATOM_DROPBOX_DIR}/keymap.cson" "${ATOM_USER_DIR}/keymap.cson"
-ln -sfn "${ATOM_DROPBOX_DIR}/projects.cson" "${ATOM_USER_DIR}/projects.cson"
-ln -sfn "${ATOM_DROPBOX_DIR}/snippets.cson" "${ATOM_USER_DIR}/snippets.cson"
-ln -sfn "${ATOM_DROPBOX_DIR}/styles.less" "${ATOM_USER_DIR}/styles.less"
-
-###############################################################################
 #
 ###############################################################################
-
-ln -sfn ~/Dropbox/Application\ Support/dnsmasq-mgmt ~/.dnsmasq-mgmt
-touch ~/Dropbox/Application\ Support/bash_history/$HOSTNAME
-ln -sfn ~/Dropbox/Application\ Support/bash_history/$HOSTNAME ~/.bash_history
 
 dockutil --remove all
 

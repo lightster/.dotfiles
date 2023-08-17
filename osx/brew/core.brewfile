@@ -1,5 +1,3 @@
-tap "homebrew/cask-drivers"
-
 brew "ctags"
 brew "dockutil"
 brew "jq"

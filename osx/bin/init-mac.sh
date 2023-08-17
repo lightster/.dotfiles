@@ -25,13 +25,6 @@ if [ "$BUNDLE_NAME" != "" ]; then
   brew bundle --file ~/.dotfiles/osx/brew/"$BUNDLE_NAME".brewfile
 fi
 
-curl -sSL https://rvm.io/mpapis.asc | gpg --import -
-curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles stable
-
-curl -sS https://getcomposer.org/installer | php
-mv composer.phar /usr/local/bin/composer
-composer global require "lightster/dnsmasq-mgmt=~0.0.4"
-
 git_clone()
 {
   local repo=$1
