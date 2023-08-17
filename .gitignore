@@ -1,3 +1,4 @@
 osx/*.local.sh
 osx/bin/source/pier.sh
 /osx/brew/*.lock.json
+/git/config-gpg

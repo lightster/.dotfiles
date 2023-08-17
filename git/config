@@ -1,6 +1,5 @@
 [user]
         name = Matt Light
-        signingkey = 009B0CBFEF3FF656
 [core]
         editor = vim
         excludesfile = ~/.dotfiles/git/ignore
@@ -40,6 +39,8 @@
 
 [include]
         path = ~/.dotfiles/git/config-personal
+[include]
+        path = ~/.dotfiles/git/config-gpg
 [includeIf "gitdir:/**/github/kelvineducation/"]
         path = ~/.dotfiles/git/config-kelvin
 [includeIf "gitdir:/**/github/workboard/"]
