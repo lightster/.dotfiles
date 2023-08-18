@@ -7,7 +7,7 @@ fi
 export DEFAULT_PATH
 
 paths=(
-    "${HOME}/bin"
+    "${HOME}/.bin"
     "${HOME}/.dotfiles/osx/bin"
     "${HOME}/go/bin"
     "${HOME}/.composer/vendor/bin"

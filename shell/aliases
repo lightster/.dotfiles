@@ -10,6 +10,7 @@ fi
 alias ll='ls -l'
 alias sudo='sudo '
 
+alias b='buoy $(< ~/.dotfiles/buoy)'
 alias git=hub
 alias g=git
 alias v=vagrant
