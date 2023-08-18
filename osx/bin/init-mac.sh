@@ -44,8 +44,6 @@ git_clone https://github.com/zsh-users/zsh-completions.git ~/.zsh-completions
 vim +PluginInstall +qall
 ~/.tmux/plugins/tpm/bin/install_plugins
 
-~/.rvm/bin/rvm alias create default system
-
 npm install -g npm http-server yarn
 
 sudo dscl . -create /Users/$USER UserShell /opt/homebrew/bin/zsh
