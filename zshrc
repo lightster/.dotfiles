@@ -40,3 +40,5 @@ setopt correct
 export PNPM_HOME="/Users/lightster/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+eval "$(nodenv init -)"
