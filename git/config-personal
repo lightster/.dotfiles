@@ -1,4 +1,4 @@
 [user]
-        email = matt@paren.io
+        email = lightster@gmail.com
 [commit]
         template = ~/.dotfiles/git/commit-template/blank
