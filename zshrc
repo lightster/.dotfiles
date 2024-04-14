@@ -28,6 +28,9 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.dotfiles/shell/common
 
+export HISTSIZE=999999999
+export SAVEHIST=$HISTSIZE
+
 # remove oh-my-zsh's LSCOLORS and let Terminal.app's color theme handle ls colors
 unset LSCOLORS
 export CLICOLOR=1
