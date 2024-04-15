@@ -8,6 +8,8 @@
         pager = "less -F -X -R"
 [merge]
         tool = vimdiff
+[init]
+        defaultBranch = main
 [alias]
         unstage = reset HEAD --
         last = log -1 HEAD
