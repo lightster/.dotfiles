@@ -1,0 +1,6 @@
+cask "backblaze-downloader"
+brew "bazelisk"
+cask "figma"
+cask "google-cloud-sdk"
+brew "kubectl"
+cask "notion"
