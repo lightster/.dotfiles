@@ -46,6 +46,8 @@
         path = ~/.dotfiles/git/config-gpg
 [includeIf "gitdir:/**/github/kelvineducation/"]
         path = ~/.dotfiles/git/config-kelvin
+[includeIf "gitdir:/**/github/tinyprint/"]
+        path = ~/.dotfiles/git/config-tinyprint
 [includeIf "gitdir:/**/github/atticuslabs/"]
         path = ~/.dotfiles/git/config-atticus
 [includeIf "gitdir:/**/github/atticus/"]
