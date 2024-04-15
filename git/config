@@ -11,6 +11,7 @@
 [alias]
         unstage = reset HEAD --
         last = log -1 HEAD
+        br = branch --sort=-committerdate
         st = status
         sd = diff --staged
         sh = stash
