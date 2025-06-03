@@ -15,7 +15,7 @@ alias git=hub
 alias g=git
 alias v=vagrant
 alias a=atom
-alias c=docker-compose
+alias c='docker compose'
 alias d=docker
 alias m=make
 
