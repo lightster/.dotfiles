@@ -39,6 +39,8 @@
         branch = auto
         diff = auto
         status = auto
+[url "ssh://git@github.com/"]
+        insteadOf = https://github.com/
 
 [include]
         path = ~/.dotfiles/git/config-personal
