@@ -1,5 +1,3 @@
-tap "heroku/brew"
-
 brew "ansible"
 cask "dropbox"
 brew "exiftool"
