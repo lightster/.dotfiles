@@ -45,3 +45,8 @@ export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
 eval "$(nodenv init -)"
+
+autoload -U +X bashcompinit && bashcompinit
+if [ -f "/opt/homebrew/bin/terraform" ]; then
+  complete -o nospace -C /opt/homebrew/bin/terraform terraform
+fi
