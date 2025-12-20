@@ -8,6 +8,7 @@ export DEFAULT_PATH
 
 paths=(
     "/opt/homebrew/opt/openjdk/bin"
+    "${HOME}/.local/bin"
     "${HOME}/.bin"
     "${HOME}/.dotfiles/osx/bin"
     "${HOME}/go/bin"
