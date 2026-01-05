@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run check:*)",
+      "Bash(npm run codegen:*)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(tail:*)"
+    ],
+    "defaultMode": "default"
+  },
+  "model": "opusplan",
+  "enabledPlugins": {
+    "feature-dev@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "github@claude-plugins-official": true
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "source ~/.dotfiles/git/bin/git-prompt.sh 2>/dev/null; basename=$(basename \"$(pwd)\"); GIT_OPTIONAL_LOCKS=0; git_info=$(__git_ps1 \" (%s)\" 2>/dev/null || true); BLUE=$(printf '\\033[34m'); YELLOW=$(printf '\\033[33m'); RESET=$(printf '\\033[0m'); printf \"%s%s%s%s%s\\n\" \"$BLUE\" \"$basename\" \"$YELLOW\" \"$git_info\" \"$RESET\""
+  }
+}
