@@ -19,6 +19,7 @@ configs:
 	ln -sfn $(current_dir)/tmux.conf ~/.tmux.conf
 	ln -sfn $(current_dir)/zshrc ~/.zshrc
 	ln -sfn $(current_dir)/claude/settings.json ~/.claude/settings.json
+	ln -sfn $(current_dir)/claude/CLAUDE.md ~/.claude/CLAUDE.md
 
 pretty:
 	bash $(current_dir)/osx/bin/init-mac-more.sh
