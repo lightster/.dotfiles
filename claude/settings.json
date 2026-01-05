@@ -5,7 +5,10 @@
       "Bash(npm run codegen:*)",
       "Bash(grep:*)",
       "Bash(ls:*)",
-      "Bash(tail:*)"
+      "Bash(tail:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(git checkout:*)",
+      "Bash(git pull)"
     ],
     "defaultMode": "default"
   },
