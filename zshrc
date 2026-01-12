@@ -50,3 +50,8 @@ autoload -U +X bashcompinit && bashcompinit
 if [ -f "/opt/homebrew/bin/terraform" ]; then
   complete -o nospace -C /opt/homebrew/bin/terraform terraform
 fi
+
+BUOY_CERT="${HOME}/.buoy/b-com-cert.pem"
+if [ -f "${BUOY_CERT}" ]; then
+  export NODE_EXTRA_CA_CERTS="/Users/lightster/.buoy/b-com-cert.pem"
+fi
