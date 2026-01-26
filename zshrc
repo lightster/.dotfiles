@@ -59,6 +59,10 @@ if [ -d "${HOME}/.docker/completions" ]; then
   # End of Docker CLI completions
 fi
 
+if command -v mise &> /dev/null; then
+  eval "$(mise activate zsh)"
+fi
+
 BUOY_CERT="${HOME}/.buoy/b-com-cert.pem"
 if [ -f "${BUOY_CERT}" ]; then
   export NODE_EXTRA_CA_CERTS="/Users/lightster/.buoy/b-com-cert.pem"
