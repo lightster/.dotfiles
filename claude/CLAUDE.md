@@ -33,8 +33,22 @@ This file provides user-level guidance to Claude Code across all repositories.
 - Provide user-friendly error messages, not just wrapped technical errors
 
 ### Variables & Naming
-- Variables prefixed with `_` (e.g., `_unused`) are allowed to be unused (ESLint convention)
+- `_` prefix is appropriate for ignored return values (Go) or unused interface parameters
+- Rather than comment out or circumvent linters when unused code is detected, delete the unused code
 - Use clear, descriptive names that make the code self-documenting
+
+### Working Directory
+- Prefer running commands from the project root directory
+- Avoid changing directories (`cd`) as it can cause loss of context
+- Most commands can be run with paths from the root directory
+
+### Generated Code
+- Never manually edit auto-generated code (sqlc, gqlgen, GraphQL codegen, etc.)
+- If generated code needs changes, modify the source files and regenerate
+
+### Linter Suppressions
+- Use inline disable comments sparingly and always explain **why** the rule is being disabled
+- Valid reasons: interface requirements, dynamic values TypeScript can't validate, dev-only code
 
 ## Plan Documentation
 
