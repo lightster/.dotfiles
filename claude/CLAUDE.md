@@ -21,6 +21,15 @@ This file provides user-level guidance to Claude Code across all repositories.
 - Use bullet points (`-`) for listing multiple related changes
 - **Focus on what's being committed, not the development process**: Describe the actual changes in the repository, not feedback received or iterations during development (e.g., don't mention "remove redundant comments" if those comments were never committed)
 
+### Pull Requests
+- Title follows commit message conventions (imperative mood, capitalized, no period)
+- When project uses JIRA/ticket tracking, prefix title with ticket number: `[PROJ-123] Add feature`
+- Description should explain **why** the change is being made, not just what
+- Use bullet points (`-`) for listing multiple related changes
+- Link related issues in description when applicable (e.g., "Closes #123")
+- Use sections (## Summary, ## Test Plan) for complex PRs; keep simple PRs minimal
+- Focus on what's in the PR, not the development process or iterations
+
 ## Code Style & General Principles
 
 ### Development Philosophy
