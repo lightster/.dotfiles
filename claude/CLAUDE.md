@@ -19,6 +19,7 @@ This file provides user-level guidance to Claude Code across all repositories.
 - Keep subject line concise but descriptive
 - Body (when needed) should explain **why**, not just what
 - Use bullet points (`-`) for listing multiple related changes
+- **Focus on what's being committed, not the development process**: Describe the actual changes in the repository, not feedback received or iterations during development (e.g., don't mention "remove redundant comments" if those comments were never committed)
 
 ## Code Style & General Principles
 
