@@ -8,11 +8,25 @@
       "Bash(tail:*)",
       "Bash(git check-ignore:*)",
       "Bash(git checkout:*)",
-      "Bash(git pull)"
+      "Bash(git pull)",
+      "Bash(git push:*)"
     ],
     "defaultMode": "default"
   },
   "model": "opusplan",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.dotfiles/claude/hooks/validate-git-push.sh"
+          }
+        ]
+      }
+    ]
+  },
   "statusLine": {
     "type": "command",
     "command": "source ~/.dotfiles/git/bin/git-prompt.sh 2>/dev/null; basename=$(basename \"$(pwd)\"); GIT_OPTIONAL_LOCKS=0; git_info=$(__git_ps1 \" (%s)\" 2>/dev/null || true); BLUE=$(printf '\\033[34m'); YELLOW=$(printf '\\033[33m'); RESET=$(printf '\\033[0m'); printf \"%s%s%s%s%s\\n\" \"$BLUE\" \"$basename\" \"$YELLOW\" \"$git_info\" \"$RESET\""
