@@ -11,6 +11,15 @@ This file provides user-level guidance to Claude Code across all repositories.
 - This prevents accidentally committing unintended changes (like local config files, temporary files, etc.)
 - Note: Generated files and templates (like `.env.example`) should be committed when appropriate
 
+### Commit Messages
+- Use imperative mood for subject line: "Add feature" not "Added feature" or "Adds feature"
+- Capitalize first letter of subject line
+- No period at end of subject line
+- Do NOT use conventional commit prefixes (feat:, fix:, chore:, etc.)
+- Keep subject line concise but descriptive
+- Body (when needed) should explain **why**, not just what
+- Use bullet points (`-`) for listing multiple related changes
+
 ## Code Style & General Principles
 
 ### Development Philosophy
