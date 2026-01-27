@@ -6,6 +6,7 @@ This file provides user-level guidance to Claude Code across all repositories.
 
 - **NEVER commit directly to `main` or `master`** - always create a feature branch and PR
 - Create a feature branch: `g go descriptive-name`
+- The `g go` alias automatically adds a username prefix for certain repos - do NOT add extra prefixes manually
 - **Never use `git add -A` or `git add .`** without specifying files
 - **Always explicitly list the files to add**: `git add file1 file2 file3`
 - This prevents accidentally committing unintended changes (like local config files, temporary files, etc.)
@@ -20,6 +21,7 @@ This file provides user-level guidance to Claude Code across all repositories.
 - Body (when needed) should explain **why**, not just what
 - Use bullet points (`-`) for listing multiple related changes
 - **Focus on what's being committed, not the development process**: Describe the actual changes in the repository, not feedback received or iterations during development (e.g., don't mention "remove redundant comments" if those comments were never committed)
+- When making multiple logical changes, break them into separate commits rather than one large commit
 
 ### Pull Requests
 - Title follows commit message conventions (imperative mood, capitalized, no period)
@@ -29,6 +31,7 @@ This file provides user-level guidance to Claude Code across all repositories.
 - Link related issues in description when applicable (e.g., "Closes #123")
 - Use sections (## Summary, ## Test Plan) for complex PRs; keep simple PRs minimal
 - Focus on what's in the PR, not the development process or iterations
+- Assign the PR/MR to me when creating it
 
 ## Code Style & General Principles
 
@@ -55,6 +58,7 @@ This file provides user-level guidance to Claude Code across all repositories.
 - `_` prefix is appropriate for ignored return values (Go) or unused interface parameters
 - Rather than comment out or circumvent linters when unused code is detected, delete the unused code
 - Use clear, descriptive names that make the code self-documenting
+- Match existing naming conventions in the codebase - consistency with surrounding code takes priority over personal style
 
 ### Working Directory
 - Prefer running commands from the project root directory
