@@ -19,6 +19,7 @@ This file provides user-level guidance to Claude Code across all repositories.
 - Do NOT use conventional commit prefixes (feat:, fix:, chore:, etc.)
 - Keep subject line concise but descriptive
 - Body (when needed) should explain **why**, not just what
+- When writing a body, start with the problem or business need, then describe what the changeset does
 - Use bullet points (`-`) for listing multiple related changes
 - **Focus on what's being committed, not the development process**: Describe the actual changes in the repository, not feedback received or iterations during development (e.g., don't mention "remove redundant comments" if those comments were never committed)
 - When making multiple logical changes, break them into separate commits rather than one large commit
