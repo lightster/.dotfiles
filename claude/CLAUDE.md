@@ -22,6 +22,7 @@ This file provides user-level guidance to Claude Code across all repositories.
 - Use bullet points (`-`) for listing multiple related changes
 - **Focus on what's being committed, not the development process**: Describe the actual changes in the repository, not feedback received or iterations during development (e.g., don't mention "remove redundant comments" if those comments were never committed)
 - When making multiple logical changes, break them into separate commits rather than one large commit
+- When work is tied to a ticket, put the ticket number on its own line at the end of the commit message body
 
 ### Pull Requests
 - Title follows commit message conventions (imperative mood, capitalized, no period)
