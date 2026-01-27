@@ -44,7 +44,14 @@ export PNPM_HOME="/Users/lightster/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
-eval "$(nodenv init -)"
+# Node version manager - prefer nvm, fall back to nodenv
+if [ -s "$HOME/.nvm/nvm.sh" ]; then
+  export NVM_DIR="$HOME/.nvm"
+  source "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+elif command -v nodenv &>/dev/null; then
+  eval "$(nodenv init -)"
+fi
 
 autoload -U +X bashcompinit && bashcompinit
 if [ -f "/opt/homebrew/bin/terraform" ]; then
