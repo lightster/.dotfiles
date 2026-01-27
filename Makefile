@@ -21,6 +21,7 @@ configs:
 	ln -sfn $(current_dir)/claude/settings.json ~/.claude/settings.json
 	ln -sfn $(current_dir)/claude/CLAUDE.md ~/.claude/CLAUDE.md
 	ln -sfn $(current_dir)/claude/rules ~/.claude/rules
+	ln -sfn $(current_dir)/claude/hooks ~/.claude/hooks
 
 pretty:
 	bash $(current_dir)/osx/bin/init-mac-more.sh
