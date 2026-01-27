@@ -34,6 +34,11 @@ This file provides user-level guidance to Claude Code across all repositories.
 - Use sections (## Summary, ## Test Plan) for complex PRs; keep simple PRs minimal
 - Focus on what's in the PR, not the development process or iterations
 - Assign the PR/MR to me when creating it
+- Scale description detail with complexity: simple config changes need 1-2 sentences; complex features or bug fixes warrant thorough descriptions
+- For bug fixes, include root cause analysis: what was observed, what was investigated, what caused it, and how the fix addresses it
+- Include testing/verification instructions for non-trivial changes — step-by-step procedures, specific records to check, or screenshots/videos as evidence
+- For multi-part MR series, number them (e.g., "1 of 4") and explain the scope of each MR
+- Link to external evidence (logs, traces, screenshots, videos) when it supports the description
 
 ## Code Style & General Principles
 
