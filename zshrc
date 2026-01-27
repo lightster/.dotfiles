@@ -58,6 +58,10 @@ if [ -f "/opt/homebrew/bin/terraform" ]; then
   complete -o nospace -C /opt/homebrew/bin/terraform terraform
 fi
 
+if command -v ngrok &>/dev/null; then
+  eval "$(ngrok completion)"
+fi
+
 if [ -d "${HOME}/.docker/completions" ]; then
   # The following lines have been added by Docker Desktop to enable Docker CLI completions.
   fpath=(${HOME}/.docker/completions $fpath)
