@@ -53,8 +53,8 @@ elif command -v nodenv &>/dev/null; then
   eval "$(nodenv init -)"
 fi
 
-autoload -U +X bashcompinit && bashcompinit
 if [ -f "/opt/homebrew/bin/terraform" ]; then
+  autoload -U +X bashcompinit && bashcompinit
   complete -o nospace -C /opt/homebrew/bin/terraform terraform
 fi
 
