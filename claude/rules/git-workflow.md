@@ -27,6 +27,7 @@
 - Title follows commit message conventions (imperative mood, capitalized, no period)
 - When project uses JIRA/ticket tracking, prefix title with ticket number: `[PROJ-123] Add feature`
 - Description should explain **why** the change is being made, not just what
+- Use complete sentences in paragraphs; bullet points can be concise fragments
 - Use bullet points (`-`) for listing multiple related changes
 - Link related issues in description when applicable (e.g., "Closes #123")
 - Use sections (## Summary, ## Test Plan) for complex PRs; keep simple PRs minimal
@@ -37,3 +38,10 @@
 - Include testing/verification instructions for non-trivial changes — step-by-step procedures, specific records to check, or screenshots/videos as evidence
 - For multi-part MR series, number them (e.g., "1 of 4") and explain the scope of each MR
 - Link to external evidence (logs, traces, screenshots, videos) when it supports the description
+
+### What NOT to Include
+
+- **Don't list file-by-file changes** - The code diff shows exactly what changed in each file; the description should focus on outcomes and impacts, not implementation details
+- **Don't document CI/CD responsibilities** - Never include items like "✅ All tests pass", "✅ Linter passes", or "✅ Build files updated" - pipelines verify these automatically
+- **Don't add a Testing section for CI-verified items** - Only include Testing/Verification sections when there are **manual** steps (e.g., "verify in Datadog that spans appear", "test the UI flow by clicking X then Y")
+- **Don't explain code mechanics** - Avoid describing which functions were added or which parameters changed; instead explain what capabilities were added or what behavior changed
