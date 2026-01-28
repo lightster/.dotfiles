@@ -1,0 +1,56 @@
+#compdef wt
+
+_wt_worktree_names() {
+  local repo_root
+  repo_root=$(git rev-parse --show-toplevel 2>/dev/null)
+  if [[ $? -ne 0 ]]; then
+    return 1
+  fi
+
+  local repo_name
+  repo_name=$(basename "$repo_root")
+
+  # Extract worktree names from paths
+  local -a names
+  git worktree list --porcelain | grep "^worktree " | while read -r _ path; do
+    if [[ "$path" != "$repo_root" ]]; then
+      local name="${path##*/}"
+      name="${name#${repo_name}-}"
+      echo "$name"
+    fi
+  done
+}
+
+_wt() {
+  local curcontext="$curcontext" state line
+  typeset -A opt_args
+
+  _arguments -C \
+    '1:subcommand:->subcommand' \
+    '*::arg:->args'
+
+  case $state in
+    subcommand)
+      local -a subcommands
+      subcommands=(
+        'go:Create or checkout a worktree'
+        'ls:List all worktrees'
+        'rm:Remove a worktree and its branch'
+        'clean:Interactively remove clean worktrees'
+      )
+      _describe -t subcommands 'wt subcommand' subcommands
+      ;;
+    args)
+      case $line[1] in
+        rm)
+          _arguments '1:worktree name:($(_wt_worktree_names))'
+          ;;
+        go)
+          _message 'worktree name'
+          ;;
+      esac
+      ;;
+  esac
+}
+
+_wt "$@"

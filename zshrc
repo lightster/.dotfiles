@@ -19,12 +19,15 @@ if [ -f "$DROPBOX_HISTFILE" ]; then
 fi
 
 fpath=(
+  "${ZSH_CUSTOM}/functions"
   "${ZSH_CUSTOM}/completions"
   "/Users/lightster/.zsh-completions/src"
   $fpath
 )
 
 source $ZSH/oh-my-zsh.sh
+
+autoload -Uz wt
 
 source ~/.dotfiles/shell/common
 
