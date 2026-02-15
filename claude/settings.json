@@ -11,9 +11,9 @@
       "Bash(git pull)",
       "Bash(git push:*)"
     ],
-    "defaultMode": "default"
+    "defaultMode": "plan"
   },
-  "model": "opusplan",
+  "model": "opus",
   "hooks": {
     "PreToolUse": [
       {
