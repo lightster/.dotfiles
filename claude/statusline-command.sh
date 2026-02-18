@@ -4,23 +4,11 @@
 input=$(cat)
 
 # Extract values from JSON
-model_id=$(echo "$input" | jq -r '.model.id // "unknown"')
 session_name=$(echo "$input" | jq -r '.session_name // empty')
 used_percentage=$(echo "$input" | jq -r '.context_window.used_percentage // empty')
 agent_name=$(echo "$input" | jq -r '.agent.name // empty')
 
-# Simplify effective model ID to match /model command format
-# Extract the model family name from the full ID
-if [[ "$model_id" == *"sonnet"* ]]; then
-  simplified_model="sonnet"
-elif [[ "$model_id" == *"opus"* ]]; then
-  simplified_model="opus"
-elif [[ "$model_id" == *"haiku"* ]]; then
-  simplified_model="haiku"
-else
-  # Fallback: use the full model_id if no pattern matches
-  simplified_model="$model_id"
-fi
+simplified_model=$(echo "$input" | jq -r '.model.display_name // "unknown"' | tr '[:upper:]' '[:lower:]')
 
 # Get directory basename
 basename=$(basename "$(pwd)")
