@@ -37,6 +37,7 @@
     "gopls-lsp@claude-plugins-official": true,
     "commit-commands@claude-plugins-official": true,
     "pr-review-toolkit@claude-plugins-official": true,
-    "github@claude-plugins-official": true
+    "github@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true
   }
 }
