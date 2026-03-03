@@ -6,7 +6,7 @@ all: git-pull configs app-store pretty done
 git-pull:
 	git pull
 
-configs:
+configs: build-hooks
 	mkdir -p ~/.tmp ~/.gnupg ~/.claude
 	ln -sfn $(current_dir)/git/config ~/.gitconfig
 	ln -sfn $(current_dir)/bash/bash_profile ~/.bash_profile
@@ -22,6 +22,9 @@ configs:
 	ln -sfn $(current_dir)/claude/CLAUDE.md ~/.claude/CLAUDE.md
 	ln -sfn $(current_dir)/claude/rules ~/.claude/rules
 	ln -sfn $(current_dir)/claude/hooks ~/.claude/hooks
+
+build-hooks:
+	cd $(current_dir)/claude/hooks/deny-rm-root && go build -o deny-rm-root .
 
 pretty:
 	bash $(current_dir)/osx/bin/init-mac-more.sh

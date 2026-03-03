@@ -22,6 +22,10 @@
           {
             "type": "command",
             "command": "~/.dotfiles/claude/hooks/validate-git-push.sh"
+          },
+          {
+            "type": "command",
+            "command": "~/.dotfiles/claude/hooks/deny-rm-root/deny-rm-root"
           }
         ]
       }
