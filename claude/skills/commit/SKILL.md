@@ -1,7 +1,7 @@
 ---
 name: commit
 description: Stage and commit changes with a reviewed commit message. Use this when the user asks to commit, or when a logical unit of work is complete and ready to be committed.
-allowed-tools: Bash(git status:*), Bash(git diff:*), Bash(git log:*), Bash(git add:*)
+allowed-tools: Bash(git status:*), Bash(git diff:*), Bash(git log:*), Bash(git add:*), Bash(git commit:*)
 ---
 
 Create a git commit for the current changes. Follow these steps exactly:
@@ -29,16 +29,15 @@ If the changes span multiple unrelated concerns, suggest splitting them into sep
 
 Do not stage files that likely contain secrets (`.env`, credentials, keys).
 
-## 3. Show the plan
+## 3. Present for review
 
-Before running any git commands, output:
-- Which files will be staged
-- The full commit message in a fenced code block
+Show the user which files will be staged and the full commit message. Then ask the user to approve, edit, or cancel.
 
-This gives the user a readable preview — the permission prompt on `git commit` serves as the final approval gate.
+Stop here and wait for the user to respond. Do NOT proceed to step 4 until the user approves.
 
 ## 4. Stage and commit
 
+When the user approves, resume by invoking the /commit skill and then:
 - Stage files explicitly (never `git add -A` or `git add .`)
 - Commit using a HEREDOC for the message
 - Run `git status` to verify
