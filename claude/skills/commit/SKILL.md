@@ -29,7 +29,15 @@ If the changes span multiple unrelated concerns, suggest splitting them into sep
 
 Do not stage files that likely contain secrets (`.env`, credentials, keys).
 
-## 3. Commit
+## 3. Show the plan
+
+Before running any git commands, output:
+- Which files will be staged
+- The full commit message in a fenced code block
+
+This gives the user a readable preview — the permission prompt on `git commit` serves as the final approval gate.
+
+## 4. Stage and commit
 
 - Stage files explicitly (never `git add -A` or `git add .`)
 - Commit using a HEREDOC for the message
