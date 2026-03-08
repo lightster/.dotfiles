@@ -9,7 +9,8 @@
       "Bash(git check-ignore:*)",
       "Bash(git checkout:*)",
       "Bash(git pull)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Skill(commit)"
     ],
     "defaultMode": "plan"
   },
