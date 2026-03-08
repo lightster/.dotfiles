@@ -22,6 +22,7 @@ configs: build-hooks
 	ln -sfn $(current_dir)/claude/CLAUDE.md ~/.claude/CLAUDE.md
 	ln -sfn $(current_dir)/claude/rules ~/.claude/rules
 	ln -sfn $(current_dir)/claude/hooks ~/.claude/hooks
+	ln -sfn $(current_dir)/claude/skills ~/.claude/skills
 
 build-hooks:
 	cd $(current_dir)/claude/hooks/deny-rm-root && go build -o deny-rm-root .
