@@ -62,6 +62,20 @@ else
   line2="${MAGENTA}${simplified_model}${RESET}"
 fi
 
+# Sandbox indicator - check project-level first, then user-level
+# Priority: .claude/settings.local.json > .claude/settings.json > ~/.claude/settings.json
+sandbox_enabled="false"
+for settings_file in ~/.claude/settings.json .claude/settings.json .claude/settings.local.json; do
+  val=$(jq -r 'if .sandbox and (.sandbox | has("enabled")) then .sandbox.enabled else empty end' "$settings_file" 2>/dev/null)
+  if [ -n "$val" ]; then
+    sandbox_enabled="$val"
+  fi
+done
+
+if [ "$sandbox_enabled" = "true" ]; then
+  line2="${line2} ${WHITE}sandbox${RESET}"
+fi
+
 # Agent name (white - basic ANSI) - only when in agent mode
 if [ -n "$agent_name" ]; then
   line2="${line2} ${WHITE}${agent_name}${RESET}"
