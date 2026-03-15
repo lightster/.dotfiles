@@ -46,5 +46,21 @@
     "superpowers@claude-plugins-official": true,
     "skill-creator@claude-plugins-official": true
   },
+  "sandbox": {
+    "enabled": true,
+    "allowUnsandboxedCommands": true,
+    "filesystem": {
+      "allowWrite": [
+        "~/.claude",
+        "~/.gnupg"
+      ]
+    },
+    "network": {
+      "allowUnixSockets": [
+        "~/.gnupg/S.gpg-agent"
+      ]
+    }
+  },
+  "autoUpdatesChannel": "stable",
   "effortLevel": "high"
 }
