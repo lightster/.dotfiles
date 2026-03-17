@@ -8,13 +8,13 @@
       "Bash(tail:*)",
       "Bash(git check-ignore:*)",
       "Bash(git checkout:*)",
+      "Bash(git fetch:*)",
       "Bash(git pull)",
       "Bash(git push:*)",
       "Skill(commit)"
     ],
     "defaultMode": "plan"
   },
-  "model": "opus",
   "hooks": {
     "PreToolUse": [
       {
@@ -48,20 +48,23 @@
   },
   "sandbox": {
     "enabled": true,
-    "allowUnsandboxedCommands": true,
+    "allowUnsandboxedCommands": [
+      "Bash(git fetch:*)",
+      "Bash(git pull)",
+      "Bash(git push:*)"
+    ],
+    "network": {
+      "allowUnixSockets": [
+        "~/.gnupg/S.gpg-agent"
+      ]
+    },
     "filesystem": {
       "allowWrite": [
         "~/.claude",
         "~/.gnupg"
       ]
-    },
-    "network": {
-      "allowUnixSockets": [
-        "~/.gnupg/S.gpg-agent",
-        "~/.ssh/agent.sock"
-      ]
     }
   },
   "autoUpdatesChannel": "stable",
-  "effortLevel": "high"
+  "model": "sonnet"
 }
