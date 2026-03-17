@@ -49,11 +49,6 @@
   "sandbox": {
     "enabled": true,
     "allowUnsandboxedCommands": true,
-    "excludedCommands": [
-      "git fetch:*",
-      "git pull",
-      "git push:*"
-    ],
     "network": {
       "allowUnixSockets": [
         "~/.gnupg/S.gpg-agent"
@@ -64,8 +59,13 @@
         "~/.claude",
         "~/.gnupg"
       ]
-    }
+    },
+    "excludedCommands": [
+      "git fetch:*",
+      "git pull",
+      "git push:*"
+    ]
   },
   "autoUpdatesChannel": "stable",
-  "model": "sonnet"
+  "model": "opus"
 }
