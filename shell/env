@@ -6,3 +6,10 @@ export HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S "
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages"
 export GOPATH="$HOME/go"
 export NVM_DIR="$HOME/.nvm"
+
+# Stable symlink for SSH agent socket (macOS launchd assigns a random path on boot)
+if [ -n "$SSH_AUTH_SOCK" ] && [ "$SSH_AUTH_SOCK" != "$HOME/.ssh/agent.sock" ]; then
+  mkdir -p "$HOME/.ssh"
+  ln -sf "$SSH_AUTH_SOCK" "$HOME/.ssh/agent.sock"
+  export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
+fi
