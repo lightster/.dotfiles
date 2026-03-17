@@ -48,10 +48,11 @@
   },
   "sandbox": {
     "enabled": true,
-    "allowUnsandboxedCommands": [
-      "Bash(git fetch:*)",
-      "Bash(git pull)",
-      "Bash(git push:*)"
+    "allowUnsandboxedCommands": true,
+    "excludedCommands": [
+      "git fetch:*",
+      "git pull",
+      "git push:*"
     ],
     "network": {
       "allowUnixSockets": [
