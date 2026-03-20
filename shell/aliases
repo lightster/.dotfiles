@@ -31,6 +31,7 @@ alias ideas="cd ~/Dropbox/Writing/zu-li-ideas"
 alias github="cd ~/github"
 
 alias vi='echo "Use vim, silly! 🤪"'
+alias clauder='claude --permission-mode default --resume'
 
 function to() {
   local project="$1"
