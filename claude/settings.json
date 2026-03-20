@@ -68,6 +68,5 @@
       "git push:*"
     ]
   },
-  "autoUpdatesChannel": "stable",
-  "model": "opus"
+  "autoUpdatesChannel": "latest"
 }
