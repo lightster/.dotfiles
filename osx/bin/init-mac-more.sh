@@ -30,6 +30,14 @@ if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
 fi;
 
 ###############################################################################
+# iTerm2
+###############################################################################
+
+# Load preferences from dotfiles and save changes back on quit
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${HOME}/.dotfiles/osx/iterm2"
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
+###############################################################################
 #
 ###############################################################################
 
