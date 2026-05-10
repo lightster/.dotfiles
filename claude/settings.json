@@ -70,5 +70,6 @@
       "git push:*"
     ]
   },
+  "effortLevel": "high",
   "autoUpdatesChannel": "latest"
 }
