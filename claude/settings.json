@@ -53,7 +53,8 @@
     "allowUnsandboxedCommands": true,
     "network": {
       "allowUnixSockets": [
-        "~/.gnupg/S.gpg-agent"
+        "~/.gnupg/S.gpg-agent",
+        "~/.gnupg/S.gpg-agent.ssh"
       ]
     },
     "filesystem": {

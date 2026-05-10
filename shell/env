@@ -6,3 +6,12 @@ export HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S "
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages"
 export GOPATH="$HOME/go"
 export NVM_DIR="$HOME/.nvm"
+
+# Use gpg-agent as the ssh-agent so SSH_AUTH_SOCK is a stable path. The
+# launchd ssh-agent's socket lives under /private/tmp/com.apple.launchd.*
+# which rotates per boot and breaks the Claude Code sandbox allowlist.
+export GPG_TTY="$(tty)"
+if command -v gpgconf &>/dev/null; then
+  SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+  export SSH_AUTH_SOCK
+fi
