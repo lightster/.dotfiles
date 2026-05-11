@@ -35,15 +35,36 @@ alias clauder='claude --permission-mode default --resume'
 
 function to() {
   local project="$1"
+  local code="${HOME}/code"
   local github="${HOME}/github"
 
-  if [ ! -d "${github}" ]; then
-    mkdir "${github}"
+  if [ "${project}" = "" ]; then
+    if [ -d "${code}" ]; then
+      cd "${code}"
+    else
+      if [ ! -d "${github}" ]; then
+        mkdir "${github}"
+      fi
+      cd "${github}"
+    fi
+    return
   fi
 
-  if [ "${project}" = "" ]; then
-    cd "${github}"
-  else
-    cd "${github}/"*"/${project}"
-  fi
+  local base match
+  for base in "${code}" "${github}"; do
+    [ -d "${base}" ] || continue
+    if [ -d "${base}/${project}" ]; then
+      cd "${base}/${project}"
+      return
+    fi
+    for match in "${base}"/*/"${project}"(N); do
+      if [ -d "${match}" ]; then
+        cd "${match}"
+        return
+      fi
+    done
+  done
+
+  echo "to: project '${project}' not found in ${code} or ${github}" >&2
+  return 1
 }
