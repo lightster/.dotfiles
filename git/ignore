@@ -44,3 +44,5 @@ Thumbs.db
 
 # Swap files
 *.swp
+
+mise.local.toml
