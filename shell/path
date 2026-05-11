@@ -1,5 +1,3 @@
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 # start from the same default $PATH every time
 if [[ "${DEFAULT_PATH+set}" != "set" ]]; then
     DEFAULT_PATH="${PATH}"
@@ -30,3 +28,7 @@ filtered_paths+=("${DEFAULT_PATH}")
 paths_str=$(printf ":%s" "${filtered_paths[@]}")
 
 PATH=".git/safe-bin/../../bin:${paths_str:1}"
+
+# run homebrew setup after PATH is set so homebrew
+# path gets added to the front of PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"
