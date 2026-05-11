@@ -4,3 +4,5 @@ cask "figma"
 cask "gcloud-cli"
 brew "kubectl"
 cask "notion"
+
+cask "loom"
