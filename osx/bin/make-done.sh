@@ -7,10 +7,20 @@ if [ ! -f "${HOME}/.ssh/id_rsa.${HOSTNAME}" ]; then
     exit 1
 fi
 
-echo "adding 'id_rsa.${HOSTNAME}' to ssh-agent..."
-ssh-add  --apple-use-keychain --apple-load-keychain "${HOME}/.ssh/id_rsa.${HOSTNAME}"
-echo "killing ssh-agent... "
-sudo killall ssh-agent
+# Reload gpg-agent so it picks up the latest gpg-agent.conf (with
+# enable-ssh-support) before we import the SSH key.
+echo "reloading gpg-agent..."
+gpgconf --kill gpg-agent
+gpg-connect-agent /bye >/dev/null
+
+# Make sure this script's ssh-add talks to gpg-agent rather than the
+# launchd ssh-agent the parent shell may have inherited.
+SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+export SSH_AUTH_SOCK
+
+echo "adding 'id_rsa.${HOSTNAME}' to gpg-agent..."
+echo "(pinentry-mac will prompt; check 'Save in Keychain' to skip re-prompting on reboot)"
+ssh-add "${HOME}/.ssh/id_rsa.${HOSTNAME}"
 echo "done"
 
 echo ""
