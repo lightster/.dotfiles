@@ -21,17 +21,16 @@ brew "vim"
 brew "zsh"
 
 cask "alfred"
-cask "docker"
+cask "docker-desktop"
 cask "gpg-suite"
 cask "google-chrome"
 cask "jetbrains-toolbox"
-cask "quicklook-json"
 cask "sketch"
 cask "spotify"
 cask "sublime-text"
 
 mas "Amphetamine", id: 937984704
-mas "Kindle", id: 405399194
+mas "Kindle", id: 302584613
 mas "Slack", id: 803453959
 mas "Magnet", id: 441258766
 mas "Bear", id: 1091189122
