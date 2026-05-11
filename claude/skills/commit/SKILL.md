@@ -29,15 +29,8 @@ If the changes span multiple unrelated concerns, suggest splitting them into sep
 
 Do not stage files that likely contain secrets (`.env`, credentials, keys).
 
-## 3. Present for review
+## 3. Stage and commit
 
-Show the user which files will be staged and the full commit message. Then ask the user to approve, edit, or cancel.
-
-Stop here and wait for the user to respond. Do NOT proceed to step 4 until the user approves.
-
-## 4. Stage and commit
-
-When the user approves, resume by invoking the /commit skill and then:
 - Stage files explicitly (never `git add -A` or `git add .`)
 - Commit using a HEREDOC for the message
 - Run `git status` to verify
