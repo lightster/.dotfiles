@@ -32,6 +32,16 @@
           }
         ]
       }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.dotfiles/claude/hooks/archive-sessions.sh"
+          }
+        ]
+      }
     ]
   },
   "statusLine": {
@@ -66,5 +76,6 @@
   "effortLevel": "high",
   "autoUpdatesChannel": "latest",
   "remoteControlAtStartup": true,
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "cleanupPeriodDays": 90
 }
