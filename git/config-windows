@@ -1,0 +1,8 @@
+# Windows-only git config.
+# Included by git/config via `~/.gitconfig-windows`, which windows/install.ps1
+# symlinks here. On macOS that path does not exist, so the include is skipped.
+[core]
+        sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+# No GPG secret key on Windows yet; signing here would fail every commit.
+[commit]
+        gpgsign = false

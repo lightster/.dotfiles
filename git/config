@@ -46,6 +46,10 @@
         path = ~/.dotfiles/git/config-personal
 [include]
         path = ~/.dotfiles/git/config-gpg
+# Windows-only: ~/.gitconfig-windows is symlinked by windows/install.ps1.
+# git silently skips this include on machines where the file is absent.
+[include]
+        path = ~/.gitconfig-windows
 [includeIf "gitdir:/**/github/kelvineducation/"]
         path = ~/.dotfiles/git/config-kelvin
 [includeIf "gitdir:/**/github/tinyprint/"]

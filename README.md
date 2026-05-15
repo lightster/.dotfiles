@@ -176,6 +176,25 @@ Sidebar settings:
 - Tags
   - [ ] Recent Tags
 
+## Windows setup
+
+The Windows setup links the git and Claude Code configs and a PowerShell profile.
+
+1. Clone the repo to `~/.dotfiles`.
+2. Enable Developer Mode (Settings → System → For developers → Developer Mode = On)
+   so symlinks can be created without elevation.
+3. Install `jq` (used by the Claude git-push hook and status line):
+   ```powershell
+   winget install jqlang.jq
+   ```
+4. Run the setup script from the repo root:
+   ```powershell
+   powershell -File windows\install.ps1
+   ```
+5. Restart Claude Code and open a new PowerShell session.
+
+Commit signing (`commit.gpgsign = true`) requires a GPG setup on the machine.
+
 ## Preparing a clean Mac
 
 Generally I recommend disabling internet connectivity so the Messages database is not updated during the snapshot or restore.
