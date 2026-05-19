@@ -6,3 +6,4 @@ brew "kubectl"
 cask "notion"
 
 cask "loom"
+cask "whimsical"
