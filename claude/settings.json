@@ -80,5 +80,6 @@
   "autoUpdatesChannel": "latest",
   "remoteControlAtStartup": true,
   "agentPushNotifEnabled": true,
-  "cleanupPeriodDays": 90
+  "cleanupPeriodDays": 90,
+  "skipAutoPermissionPrompt": true
 }
