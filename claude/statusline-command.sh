@@ -5,8 +5,16 @@ input=$(cat)
 
 # Extract values from JSON
 session_name=$(echo "$input" | jq -r '.session_name // empty')
+session_id=$(echo "$input" | jq -r '.session_id // empty')
 used_percentage=$(echo "$input" | jq -r '.context_window.used_percentage // empty')
 agent_name=$(echo "$input" | jq -r '.agent.name // empty')
+
+# Stranger Things character roleplay: read the persisted character for
+# this session_id (written by claude/hooks/random-st-character.sh).
+character=""
+if [ -n "$session_id" ] && [ -f "$HOME/.claude/st-characters/$session_id" ]; then
+  character=$(<"$HOME/.claude/st-characters/$session_id")
+fi
 
 simplified_model=$(echo "$input" | jq -r '.model.display_name // "unknown"' | tr '[:upper:]' '[:lower:]')
 
@@ -25,6 +33,7 @@ BLUE=$(printf '\033[34m')
 YELLOW=$(printf '\033[33m')
 CYAN=$(printf '\033[36m')
 MAGENTA=$(printf '\033[35m')
+BRIGHT_MAGENTA=$(printf '\033[95m')
 GREEN=$(printf '\033[32m')
 RED=$(printf '\033[31m')
 WHITE=$(printf '\033[37m')
@@ -36,6 +45,9 @@ if [ -n "$session_name" ]; then
   line1="${CYAN}[${session_name}]${RESET} "
 fi
 line1="${line1}${BLUE}${basename}${YELLOW}${git_info}${RESET}"
+if [ -n "$character" ]; then
+  line1="${line1} ${BRIGHT_MAGENTA}as ${character}${RESET}"
+fi
 
 # Build line 2: 18% sonnet agent
 # Format: percentage% model agent
