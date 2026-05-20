@@ -13,7 +13,8 @@
       "Bash(git push:*)",
       "Skill(commit)",
       "WebSearch",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:gitlab.atticus.com)"
     ],
     "defaultMode": "default"
   },
@@ -56,7 +57,8 @@
     "pr-review-toolkit@claude-plugins-official": true,
     "github@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
-    "skill-creator@claude-plugins-official": true
+    "skill-creator@claude-plugins-official": true,
+    "atlassian@claude-plugins-official": true
   },
   "sandbox": {
     "enabled": true,
@@ -69,7 +71,8 @@
     "filesystem": {
       "allowWrite": [
         "~/.claude",
-        "~/.gnupg"
+        "~/.gnupg",
+        "~/.config/glab-cli"
       ]
     }
   },
