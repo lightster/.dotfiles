@@ -67,6 +67,8 @@
   },
   "sandbox": {
     "enabled": true,
+    "allowUnsandboxedCommands": false,
+    "enableWeakerNetworkIsolation": true,
     "network": {
       "allowUnixSockets": [
         "~/.gnupg/S.gpg-agent",
