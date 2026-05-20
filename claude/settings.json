@@ -83,7 +83,6 @@
       ]
     }
   },
-  "effortLevel": "high",
   "autoUpdatesChannel": "latest",
   "remoteControlAtStartup": true,
   "agentPushNotifEnabled": true,
