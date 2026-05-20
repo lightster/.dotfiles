@@ -41,6 +41,10 @@
           {
             "type": "command",
             "command": "~/.dotfiles/claude/hooks/archive-sessions.sh"
+          },
+          {
+            "type": "command",
+            "command": "~/.dotfiles/claude/hooks/random-st-character.sh"
           }
         ]
       }
