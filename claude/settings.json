@@ -70,6 +70,10 @@
     "allowUnsandboxedCommands": false,
     "enableWeakerNetworkIsolation": true,
     "network": {
+      "allowedDomains": [
+        "proxy.golang.org",
+        "sum.golang.org"
+      ],
       "allowUnixSockets": [
         "~/.gnupg/S.gpg-agent",
         "~/.gnupg/S.gpg-agent.ssh"
@@ -79,7 +83,9 @@
       "allowWrite": [
         "~/.claude",
         "~/.gnupg",
-        "~/.config/glab-cli"
+        "~/.config/glab-cli",
+        "~/Library/Caches/go-build",
+        "~/go/pkg"
       ]
     },
     "excludedCommands": [
