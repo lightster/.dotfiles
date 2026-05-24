@@ -1,4 +1,5 @@
 {
+  "cleanupPeriodDays": 90,
   "permissions": {
     "allow": [
       "Bash(npm run check:*)",
@@ -28,6 +29,16 @@
           }
         ]
       }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.dotfiles/claude/hooks/random-st-character.sh"
+          }
+        ]
+      }
     ]
   },
   "statusLine": {
@@ -48,5 +59,5 @@
   "autoUpdatesChannel": "latest",
   "remoteControlAtStartup": true,
   "agentPushNotifEnabled": true,
-  "cleanupPeriodDays": 90
+  "skipAutoPermissionPrompt": true
 }
