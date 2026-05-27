@@ -81,7 +81,11 @@
         "~/.gnupg",
         "~/.config/glab-cli"
       ]
-    }
+    },
+    "excludedCommands": [
+      "git push",
+      "git push -u origin HEAD"
+    ]
   },
   "autoUpdatesChannel": "latest",
   "remoteControlAtStartup": true,
