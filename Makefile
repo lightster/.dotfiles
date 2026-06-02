@@ -6,7 +6,7 @@ all: git-pull configs app-store pretty done
 git-pull:
 	git pull
 
-configs: build-hooks
+configs: build-hooks claude-mcp
 	mkdir -p ~/.tmp ~/.gnupg ~/.claude
 	ln -sfn $(current_dir)/git/config ~/.gitconfig
 	ln -sfn $(current_dir)/bash/bash_profile ~/.bash_profile
@@ -26,6 +26,14 @@ configs: build-hooks
 
 build-hooks:
 	cd $(current_dir)/claude/hooks/deny-rm-root && go build -o deny-rm-root .
+
+claude-mcp:
+	@if command -v claude >/dev/null 2>&1 && [ -x /Applications/Bear.app/Contents/MacOS/bearcli ]; then \
+		claude mcp remove -s user bear >/dev/null 2>&1 || true; \
+		claude mcp add -s user bear -- /Applications/Bear.app/Contents/MacOS/bearcli mcp-server; \
+	else \
+		echo "Skipping bear MCP setup (claude CLI or Bear.app not found)"; \
+	fi
 
 pretty:
 	bash $(current_dir)/osx/bin/init-mac-more.sh
