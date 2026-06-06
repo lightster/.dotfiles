@@ -7,7 +7,7 @@ git-pull:
 	git pull
 
 configs: build-hooks claude-mcp
-	mkdir -p ~/.tmp ~/.gnupg ~/.claude
+	mkdir -p ~/.tmp ~/.gnupg ~/.claude ~/.config/zellij
 	ln -sfn $(current_dir)/git/config ~/.gitconfig
 	ln -sfn $(current_dir)/bash/bash_profile ~/.bash_profile
 	ln -sfn $(current_dir)/bash/bashrc ~/.bashrc
@@ -17,6 +17,7 @@ configs: build-hooks claude-mcp
 	ln -sfn $(current_dir)/osx/eslintrc ~/.eslintrc
 	ln -sfn $(current_dir)/osx/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 	ln -sfn $(current_dir)/tmux.conf ~/.tmux.conf
+	ln -sfn $(current_dir)/zellij/layouts ~/.config/zellij/layouts
 	ln -sfn $(current_dir)/zshrc ~/.zshrc
 	ln -sfn $(current_dir)/claude/settings.json ~/.claude/settings.json
 	ln -sfn $(current_dir)/claude/CLAUDE.md ~/.claude/CLAUDE.md

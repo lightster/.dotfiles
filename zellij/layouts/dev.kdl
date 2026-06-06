@@ -1,0 +1,11 @@
+layout {
+    tab name="edit" focus=true {
+        pane
+    }
+    tab name="shell" {
+        pane split_direction="vertical" {
+            pane
+            pane
+        }
+    }
+}
