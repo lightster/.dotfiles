@@ -46,3 +46,5 @@ Thumbs.db
 *.swp
 
 mise.local.toml
+
+**/.claude/settings.local.json
