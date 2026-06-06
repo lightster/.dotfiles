@@ -62,13 +62,11 @@
     "pr-review-toolkit@claude-plugins-official": true,
     "github@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
-    "skill-creator@claude-plugins-official": true,
-    "atlassian@claude-plugins-official": true
+    "skill-creator@claude-plugins-official": true
   },
   "sandbox": {
     "enabled": true,
     "allowUnsandboxedCommands": false,
-    "enableWeakerNetworkIsolation": true,
     "network": {
       "allowedDomains": [
         "proxy.golang.org",
@@ -88,6 +86,7 @@
         "~/go/pkg"
       ]
     },
+    "enableWeakerNetworkIsolation": true,
     "excludedCommands": [
       "git push",
       "git push -u origin HEAD"
