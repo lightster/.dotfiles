@@ -68,3 +68,12 @@ function to() {
   echo "to: project '${project}' not found in ${code} or ${github}" >&2
   return 1
 }
+
+function zw() {
+  local name="$1"
+  if zellij action query-tab-names | grep -qxF "${name}"; then
+    zellij action go-to-tab-name "${name}"
+  else
+    zellij action new-tab --layout "${name}"
+  fi
+}
