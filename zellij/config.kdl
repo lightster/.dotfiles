@@ -1,0 +1,5 @@
+keybinds {
+    shared_except "locked" {
+        unbind "Alt f"
+    }
+}

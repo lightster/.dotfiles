@@ -17,6 +17,7 @@ configs: build-hooks claude-mcp
 	ln -sfn $(current_dir)/osx/eslintrc ~/.eslintrc
 	ln -sfn $(current_dir)/osx/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 	ln -sfn $(current_dir)/tmux.conf ~/.tmux.conf
+	ln -sfn $(current_dir)/zellij/config.kdl ~/.config/zellij/config.kdl
 	ln -sfn $(current_dir)/zellij/layouts ~/.config/zellij/layouts
 	ln -sfn $(current_dir)/zshrc ~/.zshrc
 	ln -sfn $(current_dir)/claude/settings.json ~/.claude/settings.json
