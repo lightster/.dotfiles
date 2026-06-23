@@ -15,6 +15,10 @@
 - Don't add comments like "// Parse date" before `time.Parse()`
 - Only add comments where the logic isn't self-evident
 - Explain non-obvious reasoning or complex logic, not what the code does
+- **Write comments for a future reader who has only the repository** - they cannot see our conversation, the plan, or any design discussion; a comment that only makes sense with that context is worse than no comment
+- **Never reference ephemeral or out-of-repo artifacts by name** - e.g. "see the Plan B' identity-model section", "as discussed", "per the plan". The reader has no way to resolve these. If a decision genuinely needs external justification, link something durable: a committed doc/ADR or a ticket number
+- **Don't narrate the design process** - explain the constraint the code satisfies, not the path taken to it. "Equivalence is enforced case-insensitively at the index + ON CONFLICT layer" is a fine comment; wrapping it in references to which plan option it came from is not
+- **Place a comment next to the code it describes, not a layer away** - if the behavior a comment explains is enforced elsewhere (a DB index, a migration, middleware, another function), document it there. A comment whose subject isn't in the adjacent code reads as out of place and is a signal to either move it to the enforcement site or delete it
 
 ## Error Handling
 
