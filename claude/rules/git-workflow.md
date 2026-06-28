@@ -24,28 +24,5 @@
 
 ## Pull Requests
 
-- Title follows commit message conventions (imperative mood, capitalized, no period)
-- When project uses JIRA/ticket tracking, prefix title with ticket number: `[PROJ-123] Add feature`
-- Description should explain **why** the change is being made, not just what
-- Use complete sentences in paragraphs; bullet points can be concise fragments
-- Use bullet points (`-`) for listing multiple related changes
-- Link related issues in description when applicable (e.g., "Closes #123")
-- **Default to plain prose, scaled to the change.** Most PRs are 1–3 sentences that lead with *what changed and why*. Do not reach for `## Summary`/`## Review` headings, bullet lists, or checklists unless the PR genuinely needs them — multi-step manual setup, a PR series, or several independent changes worth enumerating. Structure is the exception, not the default.
-  - Example (simple PR): "Raise the tinyprint.dev zone's `min_tls_version` from `1.0` to `1.2`. TLS 1.0/1.1 are deprecated and insecure; only very old clients lack 1.2 support."
-- Focus on what's in the PR, not the development process or iterations
-- Assign the PR/MR to me when creating it
-- When a PR genuinely warrants depth (risky change, manual steps, a real feature), go thorough — but still lead with *why*, and cut anything the diff or checks already convey
-- For bug fixes, include root cause analysis: what was observed, what was investigated, what caused it, and how the fix addresses it
-- Include testing/verification instructions for non-trivial changes — step-by-step procedures, specific records to check, or screenshots/videos as evidence
-- For multi-part MR series, number them (e.g., "1 of 4") and explain the scope of each MR
-- Link to external evidence (logs, traces, screenshots, videos) when it supports the description
-
-### What NOT to Include
-
-- **Don't list file-by-file changes** - The code diff shows exactly what changed in each file; the description should focus on outcomes and impacts, not implementation details
-- **Don't document CI/CD responsibilities** - Never include items like "✅ All tests pass", "✅ Linter passes", or "✅ Build files updated" - pipelines verify these automatically
-- **Don't add a Testing section for CI-verified items** - Only include Testing/Verification sections when there are **manual** steps (e.g., "verify in Datadog that spans appear", "test the UI flow by clicking X then Y")
-- **Don't explain code mechanics** - Avoid describing which functions were added or which parameters changed; instead explain what capabilities were added or what behavior changed
-- **Don't restate what the diff or checks already show** - no plan/CI output ("5 to import, 0 to change"), no resource/file enumerations, no "how to review this" walkthroughs
-- **Don't tack on tangential or future context** - notes about deferred/follow-up work, future PRs, or unrelated caveats belong in an issue or the next PR, not this description
-- **Don't add a "Generated with Claude Code" footer to PR descriptions** - omit the `🤖 Generated with [Claude Code]` byline. This is PR-only; the `Co-Authored-By: Claude` trailer on commits is intentionally kept
+When creating a pull request or merge request, use the `pull-request` skill — it
+carries the full voice guide and worked examples.

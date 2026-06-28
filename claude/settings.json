@@ -13,6 +13,7 @@
       "Bash(git pull)",
       "Bash(git push:*)",
       "Skill(commit)",
+      "Skill(pull-request)",
       "WebSearch",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:gitlab.atticus.com)"
