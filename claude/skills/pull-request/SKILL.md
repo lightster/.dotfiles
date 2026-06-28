@@ -1,11 +1,17 @@
 ---
 name: pull-request
-description: Write a pull request or merge request title and description in Matt's voice. Use this whenever creating a PR or MR — including before running `gh pr create` or `glab mr create` — so the title and description sound like Matt wrote them instead of generic, impersonal, AI-generated boilerplate.
-allowed-tools: Bash(git status:*), Bash(git diff:*), Bash(git log:*), Bash(git remote:*), Bash(git branch:*), Bash(gh pr:*), Bash(glab mr:*)
+description: Write or revise a pull request or merge request title and description in Matt's voice. Use this whenever creating a PR or MR (including before running `gh pr create` or `glab mr create`), or when asked to align, clean up, or rewrite an existing PR/MR description, so the title and description sound like Matt wrote them instead of generic, impersonal, AI-generated boilerplate.
+allowed-tools: Bash(git status:*), Bash(git diff:*), Bash(git log:*), Bash(git remote -v), Bash(git branch --show-current), Bash(gh pr create:*), Bash(gh pr edit:*), Bash(gh pr view:*), Bash(glab mr create:*), Bash(glab mr update:*), Bash(glab mr view:*)
 ---
 
-Draft and open a pull request (GitHub) or merge request (GitLab) whose title and
-description read like Matt wrote them. Follow these steps in order.
+Write a pull request (GitHub) or merge request (GitLab) title and description that read
+like Matt wrote them. This covers two cases:
+
+- **Creating** a new PR/MR from the current branch.
+- **Revising** an existing PR/MR's description to align it with these guidelines —
+  including when another session is asked to clean up a description after the fact.
+
+Follow the steps in order; step 2 and step 4 branch on which case you are in.
 
 ## 1. Detect platform and context
 
@@ -35,6 +41,11 @@ Determine `<base>` from the branch you branched from. The Claude Code
 context is probably the best raw material but the commit messages can also be
 useful. The PR description is the same story told once, at the right altitude.
 
+**When revising an existing PR/MR**, also read its current title and description first
+so you preserve any genuinely useful content and only fix what is off-voice:
+- GitHub: `gh pr view <number> --json title,body`
+- GitLab: `glab mr view <id>`
+
 ## 3. Draft the title and description
 
 Read `voice.md` (how Matt writes) and `examples.md` (real PRs to pattern-match) in
@@ -53,12 +64,18 @@ this skill's directory, then draft.
 - For bug fixes, include root cause: what was observed, what caused it, how the fix addresses it.
 
 
-## 4. Create the PR / MR
+## 4. Create or update the PR / MR
 
-Open the merge request / pull request:
+Show Matt the drafted title and description and let him adjust before anything is
+written. Then, depending on the case:
 
+**Creating a new PR/MR** — assign it to Matt:
 - GitHub: `gh pr create --title "..." --body "..." --assignee @me`
 - GitLab: `glab mr create --title "..." --description "..." --assignee @me`
 
-Always assign it to Matt. Never add a "Generated with Claude Code" footer to the
-description.
+**Revising an existing PR/MR** — update only the title and description; leave assignee,
+reviewers, and labels as they are:
+- GitHub: `gh pr edit <number> --title "..." --body "..."`
+- GitLab: `glab mr update <id> --title "..." --description "..."`
+
+Never add a "Generated with Claude Code" footer to the description.
