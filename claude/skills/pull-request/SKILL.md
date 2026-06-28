@@ -51,8 +51,9 @@ so you preserve any genuinely useful content and only fix what is off-voice:
 Read `voice.md` (how Matt writes) and `examples.md` (real PRs to pattern-match) in
 this skill's directory, then draft.
 
-- **Title:** imperative, capitalized, no period. Prefix with the ticket for atticus
-  when applicable (`[PROJ-123] Add feature`).
+- **Title:** imperative, capitalized, no period, and concrete — name the change like the
+  example titles and make sure it reads as a complete phrase. Prefix with the ticket for
+  atticus when applicable (`[PROJ-123] Add feature`).
 - **Description:** lead with the *why* — the business need or current-state problem —
   then what the change does. Default to plain prose scaled to the change (often 1–3
   sentences). Reach for structure (a `## Verification` block, bullet lists) only when
