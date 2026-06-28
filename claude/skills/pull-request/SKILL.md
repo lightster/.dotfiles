@@ -1,7 +1,6 @@
 ---
 name: pull-request
 description: Write or revise a pull request or merge request title and description in Matt's voice. Use this whenever creating a PR or MR (including before running `gh pr create` or `glab mr create`), or when asked to align, clean up, or rewrite an existing PR/MR description, so the title and description sound like Matt wrote them instead of generic, impersonal, AI-generated boilerplate.
-allowed-tools: Bash(git status:*), Bash(git diff:*), Bash(git log:*), Bash(git remote -v), Bash(git branch --show-current), Bash(gh pr create:*), Bash(gh pr edit:*), Bash(gh pr view:*), Bash(glab mr create:*), Bash(glab mr update:*), Bash(glab mr view:*)
 ---
 
 Write a pull request (GitHub) or merge request (GitLab) title and description that read
