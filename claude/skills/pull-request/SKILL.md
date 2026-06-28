@@ -68,10 +68,8 @@ this skill's directory, then draft.
 
 ## 4. Create or update the PR / MR
 
-First, show Matt the drafted title and description and **wait for his explicit
-go-ahead**. This is a hard stop — do not run any `gh` or `glab` command until he
-approves; he may want to adjust the wording first. Once he confirms, create or update
-depending on the case:
+Create or update the PR/MR directly — no need to wait for Matt to review the draft
+first. Depending on the case:
 
 **Creating a new PR/MR** — assign it to Matt:
 - GitHub: `gh pr create --title "..." --body "..." --assignee @me`
