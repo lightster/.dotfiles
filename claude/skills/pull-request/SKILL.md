@@ -58,8 +58,10 @@ this skill's directory, then draft.
   sentences). Reach for structure (a `## Verification` block, bullet lists) only when
   the change genuinely earns it. Match the voice guide and examples exactly; the point
   of this skill is that the result does NOT read like generic AI output.
-- Don't restate the diff or document CI-verified work (no `✅ Tests pass`); add a
-  Verification section only for genuinely manual steps.
+- After drafting, cut every sentence the diff already makes self-evident — restated
+  changes, CI-verified work (no `✅ Tests pass`), and mechanical or secondary changes that
+  explain themselves. Being in the PR doesn't earn a sentence. Add a Verification section
+  only for genuinely manual steps.
 - Don't explain interim decisions we made in the branch but later changed our mind on.
 - For bug fixes, include root cause: what was observed, what caused it, how the fix addresses it.
 

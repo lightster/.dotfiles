@@ -40,6 +40,16 @@ Most descriptions follow the same arc:
    cycle, but these mocks are going to go away once we finish implementing email-code
    authentication, sessions, etc." (Ex 5).
 
+## What earns a place
+
+A description carries what the diff cannot: the why, the non-obvious reasoning, the
+boundaries, and how to verify. Since the diff already shows what changed, a sentence
+belongs only if the reviewer needs it beyond scrolling the diff. Cut anything
+self-evident — including mechanical or secondary changes that are part of the PR but
+explain themselves (a flag flipped, a config value allowlisted, a dependency bumped).
+Being in the PR is not enough to earn a sentence; default to the shortest description
+that still carries the why.
+
 ## Voice characteristics
 
 - **First person, team voice.** "we", "our", and "I" all appear naturally — "I bought
