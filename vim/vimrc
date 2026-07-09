@@ -54,6 +54,9 @@ set lazyredraw
 " allow switching to other buffers without saving / closing existing buffer
 set hidden
 
+" share the system clipboard
+set clipboard=unnamed,unnamedplus
+
 " command settings
 set showcmd                     " show pending command at the bottom right
 set history=1000                " remember last 1000 commands
