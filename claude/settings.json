@@ -94,6 +94,7 @@
     ]
   },
   "autoUpdatesChannel": "latest",
+  "tui": "fullscreen",
   "remoteControlAtStartup": true,
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true
