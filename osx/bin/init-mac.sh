@@ -23,6 +23,19 @@ if [ "$BUNDLE_NAME" != "" ]; then
   brew bundle --file ~/.dotfiles/osx/brew/"$BUNDLE_NAME".brewfile
 fi
 
+if [ -n "$BUNDLE_NAME" ] && [ -f ~/.dotfiles/mise/conf.d/"$BUNDLE_NAME".toml ]; then
+  mkdir -p ~/.config/mise/conf.d
+  ln -sfn ~/.dotfiles/mise/conf.d/"$BUNDLE_NAME".toml ~/.config/mise/conf.d/"$BUNDLE_NAME".toml
+fi
+
+if ! command -v mise &>/dev/null; then
+  curl https://mise.run | sh
+fi
+MISE="$(command -v mise || echo "$HOME/.local/bin/mise")"
+if [ -x "$MISE" ]; then
+  "$MISE" install
+fi
+
 git_clone()
 {
   local repo=$1
@@ -43,8 +56,6 @@ git_clone https://github.com/zsh-users/zsh-completions.git ~/.zsh-completions
 
 vim +PluginInstall +qall
 ~/.tmux/plugins/tpm/bin/install_plugins
-
-npm install -g npm http-server yarn
 
 sudo dscl . -create /Users/$USER UserShell /opt/homebrew/bin/zsh
 

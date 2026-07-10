@@ -1,0 +1,8 @@
+# Baseline mise tools, symlinked to ~/.config/mise/config.toml on every machine
+# (parallels core.brewfile). Per-bundle tool sets live in mise/conf.d/*.toml and
+# are symlinked selectively during bootstrap based on the chosen brew bundle.
+
+[tools]
+jq = "latest"
+ripgrep = "latest"
+zellij = "latest"

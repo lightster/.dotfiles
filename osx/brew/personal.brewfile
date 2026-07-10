@@ -1,7 +1,5 @@
-brew "ansible"
 brew "exiftool"
 brew "fdupes"
-brew "heroku"
 brew "mosh"
 brew "postgresql"
 
