@@ -1,2 +1,3 @@
 [tools]
 heroku = "latest"
+node = "24.18.0" # needed to run heroku cli
