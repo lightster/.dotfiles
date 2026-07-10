@@ -1,5 +1,3 @@
-# Symlinked to ~/.config/mise/conf.d/atticus.toml when the atticus bundle is set up.
-
 [tools]
 bazelisk = "latest"
 kubectl = "latest"
