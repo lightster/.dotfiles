@@ -28,6 +28,10 @@ if [ -n "$BUNDLE_NAME" ] && [ -f ~/.dotfiles/mise/conf.d/"$BUNDLE_NAME".toml ]; 
   ln -sfn ~/.dotfiles/mise/conf.d/"$BUNDLE_NAME".toml ~/.config/mise/conf.d/"$BUNDLE_NAME".toml
 fi
 
+if [ -n "$BUNDLE_NAME" ] && [ -f ~/.dotfiles/claude/rules.d/"$BUNDLE_NAME".md ] && [ -d ~/.claude/rules ]; then
+  ln -sfn ~/.dotfiles/claude/rules.d/"$BUNDLE_NAME".md ~/.claude/rules/"$BUNDLE_NAME".d.md
+fi
+
 if ! command -v mise &>/dev/null; then
   curl https://mise.run | sh
 fi

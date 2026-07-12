@@ -3,4 +3,5 @@ osx/bin/source/pier.sh
 /osx/brew/*.lock.json
 /git/config-gpg
 /.claude/*.local.*
+/claude/rules/*.d.md
 /claude/hooks/deny-rm-root/deny-rm-root
