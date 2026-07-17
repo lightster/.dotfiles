@@ -207,7 +207,7 @@ bash osx/bin/snapshot.sh
 ### On the new Mac / after wipe
 
 ```bash
-bash os/bin/restore.sh YYYY-MM-DD
+bash osx/bin/restore.sh YYYY-MM-DD
 ```
 
 ## Acknowledgements
