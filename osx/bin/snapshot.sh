@@ -15,7 +15,6 @@ rsync -a --partial ~/Library/Messages/ /Volumes/${BACKUP_VOLUME}/${BACKUP_NAME}/
 rsync -a --partial ~/.ssh/ /Volumes/${BACKUP_VOLUME}/${BACKUP_NAME}/hidden.ssh/
 rsync -a --partial ~/.tmux/ /Volumes/${BACKUP_VOLUME}/${BACKUP_NAME}/tmux/
 rsync -a --partial '"'${HOME}/Library/Application Support/'"' '"'/Volumes/${BACKUP_VOLUME}/${BACKUP_NAME}/Application Support/'"'
-pg_dump -U postgres -F c dev_sqlboss >/Volumes/${BACKUP_VOLUME}/${BACKUP_NAME}/sqlboss.pgc
 rsync -a --partial ~/.aws/ /Volumes/${BACKUP_VOLUME}/${BACKUP_NAME}/hidden.aws/
 rsync -a --partial ~/.gnupg/ /Volumes/${BACKUP_VOLUME}/${BACKUP_NAME}/hidden.gnupg/
 rsync -a --partial ~/.*history* /Volumes/${BACKUP_VOLUME}/${BACKUP_NAME}/history
