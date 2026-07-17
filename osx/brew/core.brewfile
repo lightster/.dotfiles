@@ -1,6 +1,5 @@
 brew "ctags"
 brew "dockutil"
-brew "gh"
 brew "git"
 brew "gnu-sed"
 brew "gpg"
