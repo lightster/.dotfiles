@@ -12,7 +12,6 @@ alias sudo='sudo '
 
 alias b='buoy $(< ~/.dotfiles/buoy)'
 alias g=git
-alias v=vagrant
 alias c='docker compose'
 alias d=docker
 alias m=make
