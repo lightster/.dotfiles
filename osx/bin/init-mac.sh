@@ -63,7 +63,8 @@ vim +PluginInstall +qall
 
 sudo dscl . -create /Users/$USER UserShell /opt/homebrew/bin/zsh
 
-sudo chown $UID:$GID /usr/local/bin
+sudo mkdir -p /usr/local/bin
+sudo chown $USER:staff /usr/local/bin
 
 echo ""
 echo -e "\033[0;32mFIN\033[0m"
