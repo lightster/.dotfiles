@@ -14,7 +14,6 @@ configs: build-hooks claude-mcp
 	ln -sfn $(current_dir)/osx/psqlrc ~/.psqlrc
 	ln -sfn $(current_dir)/vim/vimrc ~/.vimrc
 	ln -sfn $(current_dir)/vim/ctags ~/.ctags
-	ln -sfn $(current_dir)/osx/eslintrc ~/.eslintrc
 	ln -sfn $(current_dir)/osx/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 	ln -sfn $(current_dir)/tmux.conf ~/.tmux.conf
 	ln -sfn $(current_dir)/zellij/config.kdl ~/.config/zellij/config.kdl
