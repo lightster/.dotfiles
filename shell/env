@@ -3,7 +3,6 @@ export GIT_EDITOR="vim"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HISTCONTROL=ignorespace
 export HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S "
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages"
 
 # Use gpg-agent as the ssh-agent so SSH_AUTH_SOCK is a stable path. The
 # launchd ssh-agent's socket lives under /private/tmp/com.apple.launchd.*
