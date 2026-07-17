@@ -42,7 +42,6 @@ cd ~/.dotfiles
   ```bash
   make pretty
   make done
-  make atom
   ```
 
 ### System Preferences
