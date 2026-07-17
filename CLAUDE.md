@@ -26,7 +26,7 @@ profile (`windows/profile.ps1`). Requires Developer Mode.
 
 ## Key Aliases
 
-- `g` = git (via hub)
+- `g` = git
 - `g go <name>` = checkout or create branch (auto-prefixes in some repos)
 - `g po` = push with upstream tracking
 - `to <project>` = cd to ~/github/*/<project>
