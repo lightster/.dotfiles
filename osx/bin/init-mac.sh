@@ -51,7 +51,6 @@ git_clone()
 }
 
 git_clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-git_clone https://github.com/zsh-users/zsh-completions.git ~/.zsh-completions
 
 vim +PlugInstall +qall
 ~/.tmux/plugins/tpm/bin/install_plugins

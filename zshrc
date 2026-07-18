@@ -10,9 +10,17 @@ export SAVEHIST=$HISTSIZE
 fpath=(
   "${ZSH_CUSTOM}/functions"
   "${ZSH_CUSTOM}/completions"
-  "/Users/lightster/.zsh-completions/src"
   $fpath
 )
+
+# these need to load before compinit
+completion_plugins=(
+  zsh-completions
+)
+for plugin in $completion_plugins; do
+  plugin_file="${ZSH_CUSTOM}/plugins/${plugin}/${plugin}.plugin.zsh"
+  [ -f "$plugin_file" ] && source "$plugin_file"
+done
 
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
@@ -84,3 +92,13 @@ BUOY_CERT="${HOME}/.buoy/b-com-cert.pem"
 if [ -f "${BUOY_CERT}" ]; then
   export NODE_EXTRA_CA_CERTS="/Users/lightster/.buoy/b-com-cert.pem"
 fi
+
+# these need to load after compinit
+interactive_plugins=(
+  zsh-autosuggestions
+  zsh-syntax-highlighting # keep zsh-syntax-highlighting last
+)
+for plugin in $interactive_plugins; do
+  plugin_file="${ZSH_CUSTOM}/plugins/${plugin}/${plugin}.plugin.zsh"
+  [ -f "$plugin_file" ] && source "$plugin_file"
+done

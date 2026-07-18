@@ -6,7 +6,7 @@ all: git-pull configs app-store pretty done
 git-pull:
 	git pull
 
-configs: build-hooks claude-mcp
+configs: submodules build-hooks claude-mcp
 	mkdir -p ~/.tmp ~/.gnupg ~/.claude ~/.config/zellij ~/.config/mise
 	ln -sfn $(current_dir)/git/config ~/.gitconfig
 	ln -sfn $(current_dir)/bash/bash_profile ~/.bash_profile
@@ -25,6 +25,9 @@ configs: build-hooks claude-mcp
 	ln -sfn $(current_dir)/claude/rules ~/.claude/rules
 	ln -sfn $(current_dir)/claude/hooks ~/.claude/hooks
 	ln -sfn $(current_dir)/claude/skills ~/.claude/skills
+
+submodules:
+	git submodule update --init --recursive
 
 build-hooks:
 	cd $(current_dir)/claude/hooks/deny-rm-root && go build -o deny-rm-root .
