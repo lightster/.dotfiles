@@ -5,7 +5,12 @@
         excludesfile = ~/.dotfiles/git/ignore
         attributesfile = ~/.dotfiles/git/attributes
         autocrlf = input
-        pager = "less -F -X -R"
+        pager = delta
+[interactive]
+        diffFilter = delta --color-only
+[delta]
+        navigate = true
+        line-numbers = true
 [merge]
         tool = vimdiff
 [init]

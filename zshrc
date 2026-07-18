@@ -92,6 +92,14 @@ if command -v mise &> /dev/null; then
   eval "$(mise activate zsh)"
 fi
 
+if command -v fzf &>/dev/null; then
+  source <(fzf --zsh)
+fi
+
+if command -v zoxide &>/dev/null; then
+  eval "$(zoxide init zsh)"
+fi
+
 BUOY_CERT="${HOME}/.buoy/b-com-cert.pem"
 if [ -f "${BUOY_CERT}" ]; then
   export NODE_EXTRA_CA_CERTS="/Users/lightster/.buoy/b-com-cert.pem"

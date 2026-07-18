@@ -1,6 +1,5 @@
 [tools]
 bat = "latest"
-delta = "latest"
 direnv = "latest"
 fd = "latest"
 fzf = "latest"

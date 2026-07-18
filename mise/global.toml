@@ -1,4 +1,5 @@
 [tools]
+delta = "latest"
 gh = "latest"
 jq = "latest"
 ripgrep = "latest"
