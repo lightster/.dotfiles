@@ -13,6 +13,10 @@ fpath=(
   $fpath
 )
 
+if [ -d "${HOME}/.docker/completions" ]; then
+  fpath=("${HOME}/.docker/completions" $fpath)
+fi
+
 # these need to load before compinit
 completion_plugins=(
   zsh-completions
@@ -73,14 +77,6 @@ fi
 
 if command -v kubectl &>/dev/null; then
   source <(kubectl completion zsh)
-fi
-
-if [ -d "${HOME}/.docker/completions" ]; then
-  # The following lines have been added by Docker Desktop to enable Docker CLI completions.
-  fpath=(${HOME}/.docker/completions $fpath)
-  autoload -Uz compinit
-  compinit
-  # End of Docker CLI completions
 fi
 
 if command -v mise &> /dev/null; then
