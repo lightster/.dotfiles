@@ -53,12 +53,11 @@ git_clone()
   cd - >/dev/null
 }
 
-git_clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git_clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git_clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 git_clone https://github.com/zsh-users/zsh-completions.git ~/.zsh-completions
 
-vim +PluginInstall +qall
+vim +PlugInstall +qall
 ~/.tmux/plugins/tpm/bin/install_plugins
 
 sudo dscl . -create /Users/$USER UserShell /opt/homebrew/bin/zsh
