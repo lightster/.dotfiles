@@ -7,7 +7,7 @@ git-pull:
 	git pull
 
 configs: submodules build-hooks claude-mcp
-	mkdir -p ~/.tmp ~/.gnupg ~/.claude ~/.config/zellij ~/.config/mise
+	mkdir -p ~/.tmp ~/.gnupg ~/.claude ~/.config/zellij ~/.config/mise/conf.d
 	ln -sfn $(current_dir)/git/config ~/.gitconfig
 	ln -sfn $(current_dir)/bash/bash_profile ~/.bash_profile
 	ln -sfn $(current_dir)/bash/bashrc ~/.bashrc
@@ -19,6 +19,7 @@ configs: submodules build-hooks claude-mcp
 	ln -sfn $(current_dir)/zellij/config.kdl ~/.config/zellij/config.kdl
 	ln -sfn $(current_dir)/zellij/layouts ~/.config/zellij/layouts
 	ln -sfn $(current_dir)/mise/global.toml ~/.config/mise/config.toml
+	ln -sfn $(current_dir)/mise/try-me.toml ~/.config/mise/conf.d/try-me.toml
 	ln -sfn $(current_dir)/zshrc ~/.zshrc
 	ln -sfn $(current_dir)/claude/settings.json ~/.claude/settings.json
 	ln -sfn $(current_dir)/claude/CLAUDE.md ~/.claude/CLAUDE.md
