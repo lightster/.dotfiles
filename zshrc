@@ -62,11 +62,6 @@ autoload -Uz wt
 
 source ~/.dotfiles/shell/common
 
-# pnpm
-export PNPM_HOME="/Users/lightster/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-
 if [ -f "/opt/homebrew/bin/terraform" ]; then
   autoload -U +X bashcompinit && bashcompinit
   complete -o nospace -C /opt/homebrew/bin/terraform terraform
