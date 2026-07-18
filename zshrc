@@ -76,6 +76,10 @@ if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
 fi
 
+if command -v kubectl &>/dev/null; then
+  source <(kubectl completion zsh)
+fi
+
 if [ -d "${HOME}/.docker/completions" ]; then
   # The following lines have been added by Docker Desktop to enable Docker CLI completions.
   fpath=(${HOME}/.docker/completions $fpath)
