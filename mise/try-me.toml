@@ -1,0 +1,9 @@
+[tools]
+bat = "latest"
+delta = "latest"
+direnv = "latest"
+fd = "latest"
+fzf = "latest"
+lazygit = "latest"
+yq = "latest"
+zoxide = "latest"
