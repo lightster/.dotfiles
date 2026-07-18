@@ -1,22 +1,11 @@
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/lightster/.oh-my-zsh"
-
-# oh-my-zsh options
-ZSH_THEME="bash"
-DISABLE_LS_COLORS="true"
-ENABLE_CORRECTION="true"
-COMPLETION_WAITING_DOTS="true"
-HIST_STAMPS="yyyy-mm-dd"
 ZSH_CUSTOM=~/.dotfiles/zsh
 
-plugins=(
-)
-
-# shell options that need to be set before including oh-my-zsh
 DROPBOX_HISTFILE="$HOME/Dropbox/Application Support/bash_history/${HOST}.zsh_history"
 if [ -f "$DROPBOX_HISTFILE" ]; then
   HISTFILE="$DROPBOX_HISTFILE"
 fi
+export HISTSIZE=999999999
+export SAVEHIST=$HISTSIZE
 
 fpath=(
   "${ZSH_CUSTOM}/functions"
@@ -25,22 +14,45 @@ fpath=(
   $fpath
 )
 
-source $ZSH/oh-my-zsh.sh
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' menu select
+
+setopt \
+  extended_history \
+  hist_expire_dups_first \
+  hist_ignore_dups \
+  hist_ignore_space \
+  hist_verify \
+  share_history
+
+setopt correct
+
+# use emacs mode for command input
+bindkey -e
+
+autoload -U colors && colors
+
+SHORT_HOST=${HOST%%.*}
+setopt prompt_subst
+
+git_prompt_info() {
+  local ref
+  ref=$(git symbolic-ref --short HEAD 2>/dev/null) \
+    || ref=$(git rev-parse --short HEAD 2>/dev/null) \
+    || return 0
+  if [[ -n "$(git status --porcelain 2>/dev/null)" ]]; then
+    echo "${ZSH_THEME_GIT_PROMPT_PREFIX}${ref}${ZSH_THEME_GIT_PROMPT_DIRTY}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
+  else
+    echo "${ZSH_THEME_GIT_PROMPT_PREFIX}${ref}${ZSH_THEME_GIT_PROMPT_CLEAN}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
+  fi
+}
+
+source "${ZSH_CUSTOM}/bash.zsh-theme"
 
 autoload -Uz wt
 
 source ~/.dotfiles/shell/common
-
-export HISTSIZE=999999999
-export SAVEHIST=$HISTSIZE
-
-# remove oh-my-zsh's LSCOLORS and let Terminal.app's color theme handle ls colors
-unset LSCOLORS
-export CLICOLOR=1
-export CLICOLOR_FORCE=1
-
-unsetopt correct_all
-setopt correct
 
 # pnpm
 export PNPM_HOME="/Users/lightster/Library/pnpm"
