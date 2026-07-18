@@ -1,6 +1,5 @@
 [tools]
 bat = "latest"
-direnv = "latest"
 fd = "latest"
 fzf = "latest"
 lazygit = "latest"
