@@ -48,9 +48,6 @@ git_clone()
   if [ ! -d $destination ]; then
     git clone "$repo" "$destination"
   fi
-
-  cd $destination
-  cd - >/dev/null
 }
 
 git_clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
