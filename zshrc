@@ -62,7 +62,7 @@ git_prompt_info() {
 
 source "${ZSH_CUSTOM}/bash.zsh-theme"
 
-autoload -Uz wt
+autoload -Uz ${ZSH_CUSTOM}/functions/*(.N:t)
 
 source ~/.dotfiles/shell/common
 

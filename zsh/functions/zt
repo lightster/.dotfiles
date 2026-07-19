@@ -1,0 +1,9 @@
+# Zellij tab creation/switch
+# Usage: zt [tab name]
+
+local name="$1"
+if zellij action query-tab-names | grep -qxF "${name}"; then
+  zellij action go-to-tab-name "${name}"
+else
+  zellij action new-tab --layout "${name}"
+fi
