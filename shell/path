@@ -5,14 +5,10 @@ fi
 export DEFAULT_PATH
 
 paths=(
-    "/opt/homebrew/opt/openjdk/bin"
     "${HOME}/.local/bin"
     "${HOME}/.bin"
     "${HOME}/.dotfiles/osx/bin"
     "${HOME}/go/bin"
-    "${HOME}/.cargo/bin"
-    "${HOME}/.composer/vendor/bin"
-    "${HOME}/.yarn/bin"
     "/usr/local/bin"
     "/usr/local/sbin"
 )
@@ -26,8 +22,6 @@ done
 filtered_paths+=("${DEFAULT_PATH}")
 
 paths_str=$(printf ":%s" "${filtered_paths[@]}")
-
-PATH=".git/safe-bin/../../bin:${paths_str:1}"
 
 # run homebrew setup after PATH is set so homebrew
 # path gets added to the front of PATH
