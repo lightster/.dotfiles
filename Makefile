@@ -9,8 +9,6 @@ git-pull:
 configs: submodules build-hooks claude-mcp
 	mkdir -p ~/.tmp ~/.gnupg ~/.claude ~/.config/zellij ~/.config/mise/conf.d
 	ln -sfn $(current_dir)/git/config ~/.gitconfig
-	ln -sfn $(current_dir)/bash/bash_profile ~/.bash_profile
-	ln -sfn $(current_dir)/bash/bashrc ~/.bashrc
 	ln -sfn $(current_dir)/osx/psqlrc ~/.psqlrc
 	ln -sfn $(current_dir)/vim/vimrc ~/.vimrc
 	ln -sfn $(current_dir)/vim/ctags ~/.ctags
