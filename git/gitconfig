@@ -47,8 +47,6 @@
         branch = auto
         diff = auto
         status = auto
-[url "ssh://git@github.com/"]
-        insteadOf = https://github.com/
 
 [gpg]
         format = ssh
