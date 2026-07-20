@@ -76,8 +76,8 @@ $claudeDir = Join-Path $home_ '.claude'
 Write-Host "Linking dotfiles from $repoRoot" -ForegroundColor Cyan
 
 # git
-New-DotfilesSymlink -Link (Join-Path $home_ '.gitconfig')         -Target (Join-Path $repoRoot 'git\config')
-New-DotfilesSymlink -Link (Join-Path $home_ '.gitconfig-windows') -Target (Join-Path $repoRoot 'git\config-windows')
+New-DotfilesSymlink -Link (Join-Path $home_ '.gitconfig')         -Target (Join-Path $repoRoot 'git\gitconfig')
+New-DotfilesSymlink -Link (Join-Path $home_ '.gitconfig-windows') -Target (Join-Path $repoRoot 'git\config.d\windows.gitconfig')
 
 # Claude Code
 New-DotfilesSymlink -Link (Join-Path $claudeDir 'settings.json') -Target (Join-Path $repoRoot 'claude\settings.windows.json')

@@ -9,15 +9,10 @@ AVAILABLE_DIR="${REPO_DIR}/ssh/config.d/available"
 SSH_DIR="${HOME}/.ssh"
 PUBKEY_FILE="${SSH_DIR}/id_ed25519.pub"
 
-die() {
-  echo "ssh-setup: $*" >&2
-  exit 1
-}
-
 case "$(uname -s)" in
   Darwin) PLATFORM="macos" ;;
   Linux)  PLATFORM="linux" ;;
-  *)      die "unsupported platform: $(uname -s)" ;;
+  *)      echo "unsupported platform: $(uname -s)"; exit 1 ;;
 esac
 
 mkdir -p "${SSH_DIR}"

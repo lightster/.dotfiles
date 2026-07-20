@@ -3,8 +3,8 @@
         signingkey = ~/.ssh/id_ed25519.pub
 [core]
         editor = vim
-        excludesfile = ~/.dotfiles/git/ignore
-        attributesfile = ~/.dotfiles/git/attributes
+        excludesfile = ~/.dotfiles/git/gitignore
+        attributesfile = ~/.dotfiles/git/gitattributes
         autocrlf = input
         pager = delta
 [interactive]
@@ -56,7 +56,7 @@
         allowedSignersFile = ~/.dotfiles/ssh/allowed_signers
 
 [include]
-        path = ~/.dotfiles/git/config-personal
+        path = ~/.dotfiles/git/config.d/personal.gitconfig
 
 # these configs are optional / added on certain systems;
 # missing configs are silently ignored
@@ -66,15 +66,15 @@
         path = ~/.dotfiles/git/config.d/signing-1password.local.gitconfig
 
 [includeIf "gitdir:/**/github/kelvineducation/"]
-        path = ~/.dotfiles/git/config-kelvin
+        path = ~/.dotfiles/git/config.d/kelvin.gitconfig
 [includeIf "gitdir:/**/github/tinyprint/"]
-        path = ~/.dotfiles/git/config-tinyprint
+        path = ~/.dotfiles/git/config.d/tinyprint.gitconfig
 [includeIf "gitdir:/**/github/atticuslabs/"]
-        path = ~/.dotfiles/git/config-atticus
+        path = ~/.dotfiles/git/config.d/atticus.gitconfig
 [includeIf "gitdir:/**/github/atticus/"]
-        path = ~/.dotfiles/git/config-atticus
+        path = ~/.dotfiles/git/config.d/atticus.gitconfig
 [includeIf "gitdir:/**/code/atticus/"]
-        path = ~/.dotfiles/git/config-atticus
+        path = ~/.dotfiles/git/config.d/atticus.gitconfig
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
