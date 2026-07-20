@@ -6,13 +6,13 @@ The dotfiles I use on my machines
 
 ### Install .dotfiles
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/lightster/.dotfiles/HEAD/osx/bin/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/lightster/.dotfiles/HEAD/macos/bin/install.sh)"
 ```
 
 ### Install minimal dependencies
 ```bash
 cd ~/.dotfiles
-./osx/bin/init-minimal.sh <COMPUTER_NAME>
+./macos/bin/init-minimal.sh <COMPUTER_NAME>
 ```
 
 ### <a href="onepassword://">Setup 1password</a>
@@ -21,7 +21,7 @@ cd ~/.dotfiles
 
 ### Bootstrap the Mac
 ```bash
-./osx/bin/init-mac.sh <BUNDLE_NAME>
+./macos/bin/init-mac.sh <BUNDLE_NAME>
 ```
 
 ### Sign in to apps
@@ -202,13 +202,13 @@ Generally I recommend disabling internet connectivity so the Messages database i
 ### On the old Mac / before wipe
 
 ```bash
-bash osx/bin/snapshot.sh
+bash macos/bin/snapshot.sh
 ```
 
 ### On the new Mac / after wipe
 
 ```bash
-bash osx/bin/restore.sh YYYY-MM-DD
+bash macos/bin/restore.sh YYYY-MM-DD
 ```
 
 ## Acknowledgements

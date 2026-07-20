@@ -1,5 +1,4 @@
-osx/bin/source/pier.sh
-/osx/brew/*.lock.json
+/macos/brew/*.lock.json
 /claude/rules/*.d.md
 /claude/hooks/deny-rm-root/deny-rm-root
 *.local.*

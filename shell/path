@@ -7,7 +7,7 @@ export DEFAULT_PATH
 paths=(
     "${HOME}/.local/bin"
     "${HOME}/.bin"
-    "${HOME}/.dotfiles/osx/bin"
+    "${HOME}/.dotfiles/macos/bin"
     "${HOME}/go/bin"
     "/usr/local/bin"
     "/usr/local/sbin"

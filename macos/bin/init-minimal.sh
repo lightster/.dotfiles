@@ -34,7 +34,7 @@ fi
 export PATH="/opt/homebrew/sbin:$PATH"
 
 $BREW doctor
-$BREW bundle --file ~/.dotfiles/osx/brew/minimal.brewfile
+$BREW bundle --file ~/.dotfiles/macos/brew/minimal.brewfile
 
 echo ""
 echo -n "setting name of computer... "

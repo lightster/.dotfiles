@@ -11,7 +11,7 @@ git-pull:
 configs: submodules build-hooks claude-mcp
 	mkdir -p ~/.tmp ~/.gnupg ~/.claude ~/.config/zellij ~/.config/mise/conf.d
 	ln -sfn $(current_dir)/git/gitconfig ~/.gitconfig
-	ln -sfn $(current_dir)/osx/psqlrc ~/.psqlrc
+	ln -sfn $(current_dir)/macos/psqlrc ~/.psqlrc
 	ln -sfn $(current_dir)/vim/vimrc ~/.vimrc
 	ln -sfn $(current_dir)/vim/ctags ~/.ctags
 	ln -sfn $(current_dir)/tmux.conf ~/.tmux.conf
@@ -41,10 +41,10 @@ claude-mcp:
 	fi
 
 pretty:
-	bash $(current_dir)/osx/bin/init-mac-more.sh
+	bash $(current_dir)/macos/bin/init-mac-more.sh
 
 done:
-	bash $(current_dir)/osx/bin/make-done.sh
+	bash $(current_dir)/macos/bin/make-done.sh
 
 ssh:
 	bash $(current_dir)/ssh/bin/ssh-setup.sh

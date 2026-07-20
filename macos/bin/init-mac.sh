@@ -18,9 +18,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 
-brew bundle --file ~/.dotfiles/osx/brew/core.brewfile
+brew bundle --file ~/.dotfiles/macos/brew/core.brewfile
 if [ "$BUNDLE_NAME" != "" ]; then
-  brew bundle --file ~/.dotfiles/osx/brew/"$BUNDLE_NAME".brewfile
+  brew bundle --file ~/.dotfiles/macos/brew/"$BUNDLE_NAME".brewfile
 fi
 
 if [ -n "$BUNDLE_NAME" ] && [ -f ~/.dotfiles/mise/conf.d/"$BUNDLE_NAME".toml ]; then

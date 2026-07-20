@@ -21,7 +21,7 @@ profile (`windows/profile.ps1`). Requires Developer Mode.
 - `git/config` - Git configuration with per-organization includes (atticus, kelvin, tinyprint)
 - `git/bin/` - Git helper scripts (git-prompt.sh, git-completion.sh)
 - `claude/` - Claude Code settings and global CLAUDE.md (symlinked to ~/.claude/)
-- `osx/bin/` - Mac setup scripts (install.sh, init-minimal.sh, init-mac.sh)
+- `macos/bin/` - Mac setup scripts (install.sh, init-minimal.sh, init-mac.sh)
 - `windows/` - Windows setup: `install.ps1` (symlinks configs), `profile.ps1` (PowerShell profile)
 
 ## Key Aliases
