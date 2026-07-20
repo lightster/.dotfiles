@@ -1,6 +1,8 @@
 mkfile_path = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 current_dir = $(patsubst %/,%,$(dir $(mkfile_path)))
 
+.PHONY: all git-pull configs submodules build-hooks claude-mcp pretty done ssh
+
 all: git-pull configs app-store pretty done
 
 git-pull:
@@ -44,3 +46,6 @@ pretty:
 
 done:
 	bash $(current_dir)/osx/bin/make-done.sh
+
+ssh:
+	bash $(current_dir)/ssh/bin/ssh-setup.sh

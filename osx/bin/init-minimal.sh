@@ -41,6 +41,8 @@ echo -n "setting name of computer... "
 sudo scutil --set ComputerName "${COMPUTER_NAME}"
 sudo scutil --set HostName "${COMPUTER_NAME}.local"
 sudo scutil --set LocalHostName "${COMPUTER_NAME}"
+mkdir -p ~/.dotfiles/config/env.d
+echo "DOTFILES_DEVICE_NAME=${COMPUTER_NAME}" >~/.dotfiles/config/env.d/hostname.local.sh
 echo "done setting name of computer"
 
 echo ""

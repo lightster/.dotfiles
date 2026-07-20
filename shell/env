@@ -4,11 +4,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HISTCONTROL=ignorespace
 export HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S "
 
-# Use gpg-agent as the ssh-agent so SSH_AUTH_SOCK is a stable path. The
-# launchd ssh-agent's socket lives under /private/tmp/com.apple.launchd.*
-# which rotates per boot and breaks the Claude Code sandbox allowlist.
-export GPG_TTY="$(tty)"
-if command -v gpgconf &>/dev/null; then
-  SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-  export SSH_AUTH_SOCK
-fi
+# we change the socket location via ~/.ssh/config;
+# we need to update the env var to allow `ssh-add` to work
+[ "$(uname -s)" = Linux ] && export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.sock"

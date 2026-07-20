@@ -2,5 +2,6 @@
 delta = "latest"
 gh = "latest"
 jq = "latest"
+op = "latest"
 ripgrep = "latest"
 zellij = "latest"

@@ -1,5 +1,6 @@
 [user]
         name = Matt Light
+        signingkey = ~/.ssh/id_ed25519.pub
 [core]
         editor = vim
         excludesfile = ~/.dotfiles/git/ignore
@@ -40,6 +41,8 @@
         rebase = true
 [commit]
         gpgsign = true
+[tag]
+        gpgsign = true
 [color]
         branch = auto
         diff = auto
@@ -47,14 +50,21 @@
 [url "ssh://git@github.com/"]
         insteadOf = https://github.com/
 
+[gpg]
+        format = ssh
+[gpg "ssh"]
+        allowedSignersFile = ~/.dotfiles/ssh/allowed_signers
+
 [include]
         path = ~/.dotfiles/git/config-personal
-[include]
-        path = ~/.dotfiles/git/config-gpg
-# Windows-only: ~/.gitconfig-windows is symlinked by windows/install.ps1.
-# git silently skips this include on machines where the file is absent.
+
+# these configs are optional / added on certain systems;
+# missing configs are silently ignored
 [include]
         path = ~/.gitconfig-windows
+[include]
+        path = ~/.dotfiles/git/config.d/signing-1password.local.gitconfig
+
 [includeIf "gitdir:/**/github/kelvineducation/"]
         path = ~/.dotfiles/git/config-kelvin
 [includeIf "gitdir:/**/github/tinyprint/"]
@@ -70,3 +80,4 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+

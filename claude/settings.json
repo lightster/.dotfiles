@@ -75,7 +75,8 @@
       ],
       "allowUnixSockets": [
         "~/.gnupg/S.gpg-agent",
-        "~/.gnupg/S.gpg-agent.ssh"
+        "~/.gnupg/S.gpg-agent.ssh",
+        "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
       ]
     },
     "filesystem": {

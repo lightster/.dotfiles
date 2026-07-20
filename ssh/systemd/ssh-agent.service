@@ -1,0 +1,10 @@
+[Unit]
+Description=SSH agent on a fixed socket
+Documentation=man:ssh-agent(1)
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ssh-agent -D -a %t/ssh-agent.sock
+
+[Install]
+WantedBy=default.target

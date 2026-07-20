@@ -40,12 +40,13 @@ cd ~/.dotfiles
 
 - Authenticate GitHub CLI (needed for `git cl` clones)
   ```bash
-  gh auth login --web --clipboard --git-protocol ssh --skip-ssh-key
+  gh auth login --web --clipboard --git-protocol ssh --skip-ssh-key --scopes "admin:ssh_signing_key,admin:public_key"
   ```
 
 - Finish CLI setup
   ```bash
   make pretty
+  make ssh
   make done
   ```
 
