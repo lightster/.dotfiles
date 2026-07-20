@@ -1,14 +1,19 @@
 mkfile_path = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 current_dir = $(patsubst %/,%,$(dir $(mkfile_path)))
 
-.PHONY: all git-pull configs submodules build-hooks claude-mcp pretty done ssh
+.PHONY: all install git-pull mise configs submodules build-hooks claude-mcp pretty done ssh
 
 all: git-pull configs app-store pretty done
+
+install: submodules configs mise build-hooks claude-mcp
 
 git-pull:
 	git pull
 
-configs: submodules build-hooks claude-mcp
+mise:
+	mise install
+
+configs:
 	mkdir -p ~/.tmp ~/.gnupg ~/.claude ~/.config/zellij ~/.config/mise/conf.d
 	ln -sfn $(current_dir)/git/gitconfig ~/.gitconfig
 	ln -sfn $(current_dir)/macos/psqlrc ~/.psqlrc
