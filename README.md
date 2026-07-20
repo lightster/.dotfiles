@@ -31,11 +31,6 @@ cd ~/.dotfiles
 
 ### Setup Terminal
 
-- GPG
-  ```bash
-  gpg --import --allow-secret-key-import /path/to/private-key.asc
-  ```
-
 - Setup SSH key
 
 - Authenticate GitHub CLI (needed for `git cl` clones)
