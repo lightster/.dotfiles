@@ -23,6 +23,8 @@ filtered_paths+=("${DEFAULT_PATH}")
 
 paths_str=$(printf ":%s" "${filtered_paths[@]}")
 
-# run homebrew setup after PATH is set so homebrew
-# path gets added to the front of PATH
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ -d /opt/homebrew/bin/brew ]]; then
+    # run homebrew setup after PATH is set so homebrew
+    # path gets added to the front of PATH
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
