@@ -3,6 +3,8 @@ ZSH_CUSTOM=~/.dotfiles/zsh
 DROPBOX_HISTFILE="$HOME/Dropbox/Application Support/bash_history/${HOST}.zsh_history"
 if [ -f "$DROPBOX_HISTFILE" ]; then
   HISTFILE="$DROPBOX_HISTFILE"
+else
+  HISTFILE="$HOME/.zsh_history"
 fi
 export HISTSIZE=999999999
 export SAVEHIST=$HISTSIZE
