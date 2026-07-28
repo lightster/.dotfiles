@@ -29,7 +29,6 @@ for plugin in $completion_plugins; do
 done
 
 autoload -Uz compinit && compinit
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
 
 setopt \
