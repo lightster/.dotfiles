@@ -18,7 +18,7 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:gitlab.atticus.com)"
     ],
-    "defaultMode": "default"
+    "defaultMode": "auto"
   },
   "hooks": {
     "PreToolUse": [
