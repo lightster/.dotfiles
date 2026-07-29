@@ -21,6 +21,7 @@ cask "jetbrains-toolbox"
 cask "sketch"
 cask "spotify"
 cask "sublime-text"
+cask "todoist-app"
 
 mas "Amphetamine", id: 937984704
 mas "Kindle", id: 302584613
