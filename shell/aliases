@@ -21,3 +21,9 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 alias dotfiles="cd ~/.dotfiles"
+
+# mosh execs the command directly rather than through a login shell, so zsh -i
+# is needed to source ~/.zshrc and pick up mise's shims. Local echo is disabled
+# because mosh predicts keystrokes against the full terminal width and paints
+# them across zellij's pane boundaries.
+alias bob='mosh --predict=never bob -- zsh -ic "zellij attach -c dev"'
