@@ -2,6 +2,11 @@
 #MISE description="Authenticate the CLIs that need per-machine credentials"
 set -euo pipefail
 
+if command -v gh >/dev/null 2>&1 && ! gh auth status >/dev/null 2>&1 ; then
+  gh auth login --web --clipboard --git-protocol ssh --skip-ssh-key \
+    --scopes "admin:ssh_signing_key,admin:public_key"
+fi
+
 if command -v td >/dev/null 2>&1 && ! td auth status >/dev/null 2>&1 ; then
   echo "td is not authenticated. Copy your API token from"
   echo "  https://app.todoist.com/app/settings/integrations/developer"

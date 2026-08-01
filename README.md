@@ -17,13 +17,6 @@ The dotfiles I use on my machines
 - Dropbox
 - Google Chrome
 
-### Setup Terminal
-
-- Authenticate GitHub CLI (needed for `git cl` clones)
-  ```bash
-  gh auth login --web --clipboard --git-protocol ssh --skip-ssh-key --scopes "admin:ssh_signing_key,admin:public_key"
-  ```
-
 ### System Preferences
 
 #### Desktop & Dock

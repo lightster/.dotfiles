@@ -59,9 +59,6 @@ EOF
       cat <<'EOF'
   - Sign in to Dropbox
   - Sign in to Google Chrome
-  - Authenticate the GitHub CLI (needed for `git cl` clones):
-      gh auth login --web --clipboard --git-protocol ssh --skip-ssh-key \
-        --scopes "admin:ssh_signing_key,admin:public_key"
 EOF
       ;;
     system-prefs)
