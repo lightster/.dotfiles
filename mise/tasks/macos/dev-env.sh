@@ -11,7 +11,7 @@ vim +PlugInstall +qall
 
 mise run submodules
 mise run build-hooks
-mise run macos:claude-mcp
+mise run claude-integrations
 
 sudo dscl . -create /Users/"$USER" UserShell /opt/homebrew/bin/zsh
 

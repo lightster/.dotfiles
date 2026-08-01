@@ -68,7 +68,9 @@
     "network": {
       "allowedDomains": [
         "proxy.golang.org",
-        "sum.golang.org"
+        "sum.golang.org",
+        "api.todoist.com",
+        "files.todoist.com"
       ],
       "allowUnixSockets": [
         "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

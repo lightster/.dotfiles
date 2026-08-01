@@ -26,6 +26,7 @@ PHASES_LINUX=(
   "configs|auto|configs"
   "submodules|auto|submodules"
   "build-hooks|auto|build-hooks"
+  "claude-integrations|auto|claude-integrations"
   "auth|auto|auth"
   "ssh-setup|auto|ssh-setup"
   "finalize|auto|finalize"
