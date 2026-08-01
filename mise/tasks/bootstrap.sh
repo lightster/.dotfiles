@@ -15,6 +15,7 @@ PHASES_DARWIN=(
   "macos:packages|auto|macos:packages"
   "macos:dev-env|auto|macos:dev-env"
   "signin-apps|manual|"
+  "auth|auto|auth"
   "ssh-setup|auto|ssh-setup"
   "macos:defaults|auto|macos:defaults"
   "system-prefs|manual|"
@@ -25,6 +26,7 @@ PHASES_LINUX=(
   "configs|auto|configs"
   "submodules|auto|submodules"
   "build-hooks|auto|build-hooks"
+  "auth|auto|auth"
   "ssh-setup|auto|ssh-setup"
   "finalize|auto|finalize"
 )
