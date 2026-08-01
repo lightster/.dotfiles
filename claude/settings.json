@@ -56,14 +56,11 @@
     "command": "~/.dotfiles/claude/statusline-command.sh"
   },
   "enabledPlugins": {
-    "feature-dev@claude-plugins-official": true,
-    "frontend-design@claude-plugins-official": true,
-    "gopls-lsp@claude-plugins-official": true,
-    "commit-commands@claude-plugins-official": false,
-    "pr-review-toolkit@claude-plugins-official": true,
-    "github@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true,
-    "skill-creator@claude-plugins-official": true
+    "feature-dev@claude-plugins-official": false,
+    "frontend-design@claude-plugins-official": false,
+    "pr-review-toolkit@claude-plugins-official": false,
+    "github@claude-plugins-official": false,
+    "superpowers@claude-plugins-official": true
   },
   "sandbox": {
     "enabled": true,
