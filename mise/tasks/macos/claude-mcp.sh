@@ -9,8 +9,6 @@ if ! command -v claude >/dev/null 2>&1 ; then
   exit 0
 fi
 
-if [ -x "$BEARCLI" ] ; then
-  # Remove first so re-running does not create a duplicate server entry.
-  claude mcp remove -s user bear >/dev/null 2>&1 || true
+if [ -x "$BEARCLI" ] && ! claude mcp get bear >/dev/null 2>&1 ; then
   claude mcp add -s user bear -- "$BEARCLI" mcp-server
 fi
