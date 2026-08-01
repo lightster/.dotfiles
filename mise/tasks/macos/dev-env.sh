@@ -13,7 +13,12 @@ mise run submodules
 mise run build-hooks
 mise run claude-integrations
 
-sudo dscl . -create /Users/"$USER" UserShell /opt/homebrew/bin/zsh
+LOGIN_SHELL=/opt/homebrew/bin/zsh
+if [ "$(dscl . -read /Users/"$USER" UserShell | awk '{print $2}')" != "$LOGIN_SHELL" ]; then
+  sudo dscl . -create /Users/"$USER" UserShell "$LOGIN_SHELL"
+fi
 
-sudo mkdir -p /usr/local/bin
-sudo chown "$USER":staff /usr/local/bin
+if [ ! -d /usr/local/bin ] || [ "$(stat -f %Su /usr/local/bin)" != "$USER" ]; then
+  sudo mkdir -p /usr/local/bin
+  sudo chown "$USER":staff /usr/local/bin
+fi

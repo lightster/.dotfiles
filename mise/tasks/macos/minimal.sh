@@ -24,9 +24,20 @@ export PATH="/opt/homebrew/sbin:$PATH"
 brew doctor
 brew bundle --file "$DOTFILES/macos/brew/minimal.brewfile"
 
+set_computer_name() {
+  local key="$1" desired="$2"
+
+  if [ "$(scutil --get "$key" 2>/dev/null)" = "$desired" ]; then
+    echo "$key already set to $desired"
+    return
+  fi
+
+  echo -n "setting $key to $desired... "
+  sudo scutil --set "$key" "$desired"
+  echo "done"
+}
+
 echo ""
-echo -n "setting name of computer... "
-sudo scutil --set ComputerName "${DOTFILES_DEVICE_NAME}"
-sudo scutil --set HostName "${DOTFILES_DEVICE_NAME}.local"
-sudo scutil --set LocalHostName "${DOTFILES_DEVICE_NAME}"
-echo "done setting name of computer"
+set_computer_name ComputerName "${DOTFILES_DEVICE_NAME}"
+set_computer_name HostName "${DOTFILES_DEVICE_NAME}"
+set_computer_name LocalHostName "${DOTFILES_DEVICE_NAME}"
