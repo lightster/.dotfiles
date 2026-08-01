@@ -4,25 +4,13 @@ The dotfiles I use on my machines
 
 ## Setup
 
-### Install .dotfiles
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/lightster/.dotfiles/HEAD/macos/bin/install.sh)"
-```
-
-### Install minimal dependencies
-```bash
-cd ~/.dotfiles
-./macos/bin/init-minimal.sh <COMPUTER_NAME>
 ```
 
 ### <a href="onepassword://">Setup 1password</a>
 
 ### <a href="https://appstore.com">Login to the Mac App Store</a>
-
-### Bootstrap the Mac
-```bash
-./macos/bin/init-mac.sh <BUNDLE_NAME>
-```
 
 ### Sign in to apps
 
@@ -34,13 +22,6 @@ cd ~/.dotfiles
 - Authenticate GitHub CLI (needed for `git cl` clones)
   ```bash
   gh auth login --web --clipboard --git-protocol ssh --skip-ssh-key --scopes "admin:ssh_signing_key,admin:public_key"
-  ```
-
-- Finish CLI setup
-  ```bash
-  make pretty
-  make ssh
-  make done
   ```
 
 ### System Preferences

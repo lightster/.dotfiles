@@ -1,7 +1,7 @@
 #Requires -Version 5.1
 <#
 .SYNOPSIS
-    Windows equivalent of `make configs` - symlinks dotfiles into the home directory.
+    Windows equivalent of `mise run configs` - symlinks dotfiles into the home directory.
 .DESCRIPTION
     Links git, Claude Code, and PowerShell configuration into place using real
     symlinks. Requires Windows Developer Mode so symlinks can be created without

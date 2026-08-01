@@ -1,2 +1,31 @@
 [tools]
 go = "latest"
+
+[tasks.submodules]
+description = "Init and update git submodules"
+run = 'git -C "$MISE_PROJECT_ROOT" submodule update --init --recursive'
+
+[tasks.build-hooks]
+description = "Build the Claude Code hook binaries"
+run = '(cd "$MISE_PROJECT_ROOT/claude/hooks/deny-rm-root" && go build -o deny-rm-root .)'
+
+[tasks.ssh-setup]
+description = "Configure SSH auth and commit signing"
+run = 'bash "$MISE_PROJECT_ROOT/ssh/bin/ssh-setup.sh"'
+
+[tasks.finalize]
+description = "Finalize the dotfiles installation"
+run = 'bash "$MISE_PROJECT_ROOT/macos/bin/make-done.sh"'
+
+[tasks.setup]
+description = "Make a freshly cloned repo usable"
+depends = ["submodules", "configs", "build-hooks"]
+
+[tasks.update]
+description = "Pull dotfiles and reapply them"
+run = [
+  'git -C "$MISE_PROJECT_ROOT" pull',
+  "mise run configs",
+  "mise run submodules",
+  "mise install",
+]
