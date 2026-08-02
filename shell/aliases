@@ -13,7 +13,7 @@ alias b='buoy $(< ~/.dotfiles/buoy)'
 alias g=git
 alias c='docker compose'
 alias d=docker
-alias m=make
+alias m=mise
 
 alias ~='cd ~'
 alias -- -='cd -'
