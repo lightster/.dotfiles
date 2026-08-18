@@ -19,6 +19,7 @@ ln -sfn "$DOTFILES"/mise/try-me.toml ~/.config/mise/conf.d/try-me.toml
 ln -sfn "$DOTFILES"/zshrc ~/.zshrc
 ln -sfn "$DOTFILES"/claude/settings.json ~/.claude/settings.json
 ln -sfn "$DOTFILES"/claude/CLAUDE.md ~/.claude/CLAUDE.md
+ln -sfn "$DOTFILES"/claude/keybindings.json ~/.claude/keybindings.json
 ln -sfn "$DOTFILES"/claude/rules ~/.claude/rules
 ln -sfn "$DOTFILES"/claude/hooks ~/.claude/hooks
 ln -sfn "$DOTFILES"/claude/skills ~/.claude/skills
