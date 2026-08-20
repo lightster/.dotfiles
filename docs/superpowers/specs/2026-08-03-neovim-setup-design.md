@@ -17,7 +17,7 @@ not interfere with per-project tool versions managed by mise.
 | Language servers | gopls, lua_ls, yamlls, jsonls, bashls — installed via mise, no Mason |
 | Completion | Built-in `vim.lsp.completion` (Neovim 0.11+), no completion plugin |
 | Git | mini.diff for signs; lazygit for everything else |
-| Colorscheme | tokyonight (storm) |
+| Colorscheme | kanagawa (dragon) |
 | Clipboard | OSC 52 on yank only |
 
 ## Layout
@@ -131,7 +131,7 @@ environment, so tool versions resolve per nvim session.
 - **nvim-lspconfig** — used only as a source of server defaults; servers are
   enabled through the native `vim.lsp.config` / `vim.lsp.enable` API
 - **conform.nvim**
-- **tokyonight.nvim**
+- **kanagawa.nvim**
 
 The mini.nvim suite replaces `auto-pairs`, `vim-surround`, `tabular`, and
 `vim-airline` + `vim-airline-themes`. `vim-commentary` is dropped because
