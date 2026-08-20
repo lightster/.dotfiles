@@ -14,6 +14,8 @@ alias g=git
 alias c='docker compose'
 alias d=docker
 alias m=mise
+alias n=nvim
+alias vim='echo "use nvim instead"
 
 alias ~='cd ~'
 alias -- -='cd -'

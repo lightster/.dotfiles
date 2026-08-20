@@ -14,6 +14,7 @@ ln -sfn "$DOTFILES"/vim/ctags ~/.ctags
 ln -sfn "$DOTFILES"/tmux.conf ~/.tmux.conf
 ln -sfn "$DOTFILES"/zellij/config.kdl ~/.config/zellij/config.kdl
 ln -sfn "$DOTFILES"/zellij/layouts ~/.config/zellij/layouts
+ln -sfn "$DOTFILES"/nvim ~/.config/nvim
 ln -sfn "$DOTFILES"/mise/global.toml ~/.config/mise/config.toml
 ln -sfn "$DOTFILES"/mise/try-me.toml ~/.config/mise/conf.d/try-me.toml
 ln -sfn "$DOTFILES"/zshrc ~/.zshrc
@@ -23,6 +24,8 @@ ln -sfn "$DOTFILES"/claude/keybindings.json ~/.claude/keybindings.json
 ln -sfn "$DOTFILES"/claude/rules ~/.claude/rules
 ln -sfn "$DOTFILES"/claude/hooks ~/.claude/hooks
 ln -sfn "$DOTFILES"/claude/skills ~/.claude/skills
+
+mise trust "$DOTFILES"/nvim >/dev/null
 
 BUNDLE="${DOTFILES_BUNDLE:-}"
 

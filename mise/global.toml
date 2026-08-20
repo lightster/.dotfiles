@@ -2,6 +2,16 @@
 delta = "latest"
 gh = "latest"
 jq = "latest"
+neovim = "latest"
 op = "latest"
 ripgrep = "latest"
 zellij = "latest"
+
+# Used by neovim but installed globally so they are on PATH anywhere neovim is executed.
+go = "latest"
+"go:golang.org/x/tools/gopls" = "latest"
+"go:golang.org/x/tools/cmd/goimports" = "latest"
+lua-language-server = "latest"
+shfmt = "latest"
+stylua = "latest"
+tree-sitter = "latest"

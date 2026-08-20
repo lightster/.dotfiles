@@ -1,0 +1,10 @@
+# Language servers distributed as npm packages run through shims that resolve
+# `node` from PATH at run time. A project pinning an older Node would otherwise
+# run these servers under that Node and break them in that project alone.
+# Neovim invokes them with `mise exec -C ~/.config/nvim`, which resolves tools
+# from this file instead of the project's.
+[tools]
+node = "24.18.0"
+"npm:yaml-language-server" = "latest"
+"npm:vscode-langservers-extracted" = "latest"
+"npm:bash-language-server" = "latest"
