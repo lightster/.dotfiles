@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/zsh/plugins/zsh-autosuggestions" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/zsh/plugins/zsh-completions" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/zsh/plugins/zsh-syntax-highlighting" vcs="Git" />
+  </component>
+</project>

@@ -38,9 +38,25 @@ Thumbs.db
 # Project files #
 *.sublime-project
 *.sublime-workspace
-*.idea
 *.Ulysses*.plist
 *.tags
+
+# JetBrains IDEs #
+**/.idea/*
+!**/.idea/.gitignore
+!**/.idea/codeStyles/
+!**/.idea/fileTemplates/
+!**/.idea/inspectionProfiles/
+!**/.idea/runConfigurations/
+!**/.idea/scopes/
+!**/.idea/compiler.xml
+!**/.idea/encodings.xml
+!**/.idea/externalDependencies.xml
+!**/.idea/jsonSchemas.xml
+!**/.idea/misc.xml
+!**/.idea/modules.xml
+!**/.idea/sqldialects.xml
+!**/.idea/vcs.xml
 
 # Swap files
 *.swp
@@ -49,3 +65,4 @@ mise.local.toml
 
 **/.claude/settings.local.json
 **/.claude/.cc-writes/
+**/.claude/worktrees/
