@@ -17,6 +17,13 @@ if ! claude mcp get whimsical >/dev/null 2>&1 ; then
   claude mcp add -s user --transport http whimsical https://mcp.whimsical.com/mcp
 fi
 
+if command -v chromium >/dev/null 2>&1 && ! claude mcp get chrome-devtools >/dev/null 2>&1 ; then
+  claude mcp add -s user chrome-devtools -- \
+    npx chrome-devtools-mcp@latest \
+    --headless=true --isolated=true \
+    --executablePath="$(command -v chromium)"
+fi
+
 if command -v td >/dev/null 2>&1 ; then
   td skill install claude-code --force
 fi
