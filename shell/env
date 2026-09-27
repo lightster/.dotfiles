@@ -1,5 +1,6 @@
-export PSQL_EDITOR="vim"
-export GIT_EDITOR="vim"
+export EDITOR="nvim"
+export PSQL_EDITOR="nvim"
+export GIT_EDITOR="nvim"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HISTCONTROL=ignorespace
 export HISTTIMEFORMAT="%Y-%m-%dT%H:%M:%S "
