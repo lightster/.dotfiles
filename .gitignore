@@ -1,5 +1,6 @@
 /macos/brew/*.lock.json
 /claude/rules/*.d.md
 /claude/skills/todoist-cli/
+/claude/skills/synced/
 /claude/hooks/deny-rm-root/deny-rm-root
 *.local.*
