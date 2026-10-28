@@ -2,7 +2,7 @@ layout {
     cwd "/Users/lightster/.dotfiles"
     tab name="dotfiles" focus=true {
         pane size=1 borderless=true {
-            plugin location="zellij:tab-bar"
+            plugin location="tab-bar"
         }
         pane split_direction="vertical" {
             pane command="claude" {
