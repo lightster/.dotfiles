@@ -1,6 +1,6 @@
 ---
 name: commit
-description: Stage and commit changes with a reviewed commit message. Use this when the user asks to commit, or when a logical unit of work is complete and ready to be committed.
+description: Stage and commit changes with a reviewed commit message. Use this only when the user explicitly asks to commit.
 allowed-tools: Bash(git status:*), Bash(git diff:*), Bash(git log:*), Bash(git add:*), Bash(git commit:*)
 ---
 
