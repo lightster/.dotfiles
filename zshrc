@@ -43,6 +43,15 @@ setopt correct
 
 # use emacs mode for command input
 bindkey -e
+# forward-delete (fn+delete) sends ^[[3~, which emacs mode leaves unbound
+bindkey '^[[3~' delete-char
+# home/end send different sequences in normal mode, application mode, and tmux
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+bindkey '^[OH' beginning-of-line
+bindkey '^[OF' end-of-line
+bindkey '^[[1~' beginning-of-line
+bindkey '^[[4~' end-of-line
 
 autoload -U colors && colors
 
