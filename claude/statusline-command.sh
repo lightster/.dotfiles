@@ -8,6 +8,7 @@ session_name=$(echo "$input" | jq -r '.session_name // empty')
 session_id=$(echo "$input" | jq -r '.session_id // empty')
 used_percentage=$(echo "$input" | jq -r '.context_window.used_percentage // empty')
 agent_name=$(echo "$input" | jq -r '.agent.name // empty')
+effort_level=$(echo "$input" | jq -r '.effort.level // empty')
 
 # Stranger Things character roleplay: read the persisted character for
 # this session_id (written by claude/hooks/random-st-character.sh).
@@ -17,6 +18,9 @@ if [ -n "$session_id" ] && [ -f "$HOME/.claude/st-characters/$session_id" ]; the
 fi
 
 simplified_model=$(echo "$input" | jq -r '.model.display_name // "unknown"' | tr '[:upper:]' '[:lower:]')
+if [ -n "$effort_level" ]; then
+  simplified_model="${simplified_model} (${effort_level})"
+fi
 
 # Get directory basename
 basename=$(basename "$(pwd)")
